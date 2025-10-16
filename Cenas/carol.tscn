@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://di2y0wbeuqb53"]
+
+[ext_resource type="Script" uid="uid://d28cq7yc7sd7n" path="res://Cenas/carol.gd" id="1_g65h1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g65h1"]
+
+[node name="carol" type="CharacterBody2D"]
+script = ExtResource("1_g65h1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(13, 6)
+shape = SubResource("CircleShape2D_g65h1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, 1)
