@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dplk1qfepbjuh"
+path="res://.godot/imported/4. Canyon Echoes.mp3-98cf2c2e9a1cb43ff6992fdf8ac9d551.mp3str"
+
+[deps]
+
+source_file="res://Assets Cleópatra/Sons/Músicas/Loops/mp3/4. Canyon Echoes.mp3"
+dest_files=["res://.godot/imported/4. Canyon Echoes.mp3-98cf2c2e9a1cb43ff6992fdf8ac9d551.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dgyvx1fpak88j"
+path="res://.godot/imported/4. Canyon Echoes.ogg-d203ff2c0e55819d15388858f99a968f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets Cleópatra/Sons/Músicas/Loops/ogg/4. Canyon Echoes.ogg"
+dest_files=["res://.godot/imported/4. Canyon Echoes.ogg-d203ff2c0e55819d15388858f99a968f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
