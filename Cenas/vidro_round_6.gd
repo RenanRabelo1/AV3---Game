@@ -14,5 +14,8 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	$Jose/Label.show()
+	if area == $carol/Area2D:
+		$carol/Label.show()
+	if area == $Jose/Area2D:
+		$Jose/Label.show()
 	
