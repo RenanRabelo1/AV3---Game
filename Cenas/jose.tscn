@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://d3jkc0pqmw4x0"]
+[gd_scene load_steps=68 format=3 uid="uid://d3jkc0pqmw4x0"]
 
 [ext_resource type="Script" uid="uid://bfy48g1rwpdlk" path="res://Cenas/jose.gd" id="1_ednpb"]
 [ext_resource type="Texture2D" uid="uid://bwq8jrftjut85" path="res://Assets Cleópatra/Personagens/José(Masc)/Death/death_normal_down.png" id="1_fe2qg"]
@@ -443,6 +443,10 @@ animations = [{
 radius = 18.0
 height = 52.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ednpb"]
+radius = 16.0
+height = 50.0
+
 [node name="Jose" type="CharacterBody2D"]
 script = ExtResource("1_ednpb")
 
@@ -455,3 +459,9 @@ animation = &"death_normal_down"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(431, 248)
 shape = SubResource("CapsuleShape2D_ci5mp")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(431, 248)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_ednpb")
