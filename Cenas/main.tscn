@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://do0tml5m2xd4c"]
+
+[ext_resource type="Texture2D" uid="uid://bw5o54x77xdag" path="res://Assets/Pixel Ancient Egypt/Mapa inicial.png" id="1_74bqr"]
+[ext_resource type="Script" uid="uid://chh271dwc8t0f" path="res://Cenas/main.gd" id="1_ruij7"]
+[ext_resource type="Texture2D" uid="uid://cmkdepvxxufi2" path="res://Assets/Pixel Ancient Egypt/Back.png" id="2_ruij7"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_74bqr"]
+a = Vector2(45, -395.375)
+b = Vector2(45, 251.625)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ruij7"]
+a = Vector2(138, 2)
+b = Vector2(1042, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_lb8y5"]
+a = Vector2(138, 647)
+b = Vector2(1039, 647)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ja1os"]
+a = Vector2(1038, 1)
+b = Vector2(1037, 650)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ruij7"]
+size = Vector2(290, 134.25)
+
+[node name="main" type="Node"]
+script = ExtResource("1_ruij7")
+
+[node name="MapaInicial" type="Sprite2D" parent="."]
+position = Vector2(588, 323.875)
+scale = Vector2(0.352289, 0.252441)
+texture = ExtResource("1_74bqr")
+
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(591, 266)
+scale = Vector2(1.85156, 2.01563)
+texture = ExtResource("2_ruij7")
+
+[node name="AreaColisãoFora" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaColisãoFora"]
+position = Vector2(94, 395.375)
+shape = SubResource("SegmentShape2D_74bqr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="AreaColisãoFora"]
+shape = SubResource("SegmentShape2D_ruij7")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="AreaColisãoFora"]
+shape = SubResource("SegmentShape2D_lb8y5")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="AreaColisãoFora"]
+shape = SubResource("SegmentShape2D_ja1os")
+
+[node name="AreaEsfingeTexto" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEsfingeTexto"]
+position = Vector2(588, 388)
+shape = SubResource("RectangleShape2D_ruij7")
