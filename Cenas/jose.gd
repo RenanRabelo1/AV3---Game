@@ -48,3 +48,6 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play("idle_right_down") # Substitua pelo nome da sua animação idle
 
 	move_and_slide()
+
+func _die():
+	queue_free()

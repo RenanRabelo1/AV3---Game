@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://d3jkc0pqmw4x0"]
+[gd_scene load_steps=69 format=3 uid="uid://d3jkc0pqmw4x0"]
 
 [ext_resource type="Script" uid="uid://bfy48g1rwpdlk" path="res://Cenas/jose.gd" id="1_ednpb"]
 [ext_resource type="Texture2D" uid="uid://bwq8jrftjut85" path="res://Assets Cleópatra/Personagens/José(Masc)/Death/death_normal_down.png" id="1_fe2qg"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bvvtjetuqlxvt" path="res://Assets Cleópatra/Personagens/José(Masc)/Walk/walk_right_down.png" id="7_8wdh1"]
 [ext_resource type="Texture2D" uid="uid://myvv4p0prg2v" path="res://Assets Cleópatra/Personagens/José(Masc)/Walk/walk_right_up.png" id="8_6n0ma"]
 [ext_resource type="Texture2D" uid="uid://052xnfo14tv8" path="res://Assets Cleópatra/Personagens/José(Masc)/Walk/walk_up.png" id="9_a0uqs"]
+[ext_resource type="Script" uid="uid://byx3a2cxk2vaj" path="res://Cenas/animated_sprite_2d.gd" id="9_fe2qg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q6xjm"]
 atlas = ExtResource("1_fe2qg")
@@ -455,6 +456,7 @@ position = Vector2(429.5, 249.5)
 scale = Vector2(2.3125002, 2.0156252)
 sprite_frames = SubResource("SpriteFrames_k7ch2")
 animation = &"death_normal_down"
+script = ExtResource("9_fe2qg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(431, 248)
