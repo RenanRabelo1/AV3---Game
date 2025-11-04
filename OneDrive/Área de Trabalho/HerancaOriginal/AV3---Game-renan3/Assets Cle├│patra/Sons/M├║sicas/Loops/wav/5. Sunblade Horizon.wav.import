@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cee47h706f4sq"
+path="res://.godot/imported/5. Sunblade Horizon.wav-880c1922e926fc6b9be8c51d47a3a80e.sample"
+
+[deps]
+
+source_file="res://Assets Cleópatra/Sons/Músicas/Loops/wav/5. Sunblade Horizon.wav"
+dest_files=["res://.godot/imported/5. Sunblade Horizon.wav-880c1922e926fc6b9be8c51d47a3a80e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

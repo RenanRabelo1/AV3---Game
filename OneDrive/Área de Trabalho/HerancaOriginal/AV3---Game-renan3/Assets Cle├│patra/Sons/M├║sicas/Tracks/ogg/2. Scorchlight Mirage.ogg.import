@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bfc67yogy5ks7"
+path="res://.godot/imported/2. Scorchlight Mirage.ogg-b57a9581e060f9282e45ee161a3f42f5.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets Cleópatra/Sons/Músicas/Tracks/ogg/2. Scorchlight Mirage.ogg"
+dest_files=["res://.godot/imported/2. Scorchlight Mirage.ogg-b57a9581e060f9282e45ee161a3f42f5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

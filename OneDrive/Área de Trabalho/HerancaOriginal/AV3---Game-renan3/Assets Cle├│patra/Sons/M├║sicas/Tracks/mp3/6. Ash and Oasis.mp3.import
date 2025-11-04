@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dou7gbqyirg0"
+path="res://.godot/imported/6. Ash and Oasis.mp3-ee668f1aa0e314d9d27cd6d86c409a3b.mp3str"
+
+[deps]
+
+source_file="res://Assets Cleópatra/Sons/Músicas/Tracks/mp3/6. Ash and Oasis.mp3"
+dest_files=["res://.godot/imported/6. Ash and Oasis.mp3-ee668f1aa0e314d9d27cd6d86c409a3b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

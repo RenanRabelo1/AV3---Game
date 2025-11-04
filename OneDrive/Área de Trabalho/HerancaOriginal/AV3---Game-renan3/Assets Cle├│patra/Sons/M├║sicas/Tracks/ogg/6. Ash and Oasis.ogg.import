@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://kl6vweg1qtri"
+path="res://.godot/imported/6. Ash and Oasis.ogg-2e364899d7f14fe7fc4fdb71bddc098e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets Cleópatra/Sons/Músicas/Tracks/ogg/6. Ash and Oasis.ogg"
+dest_files=["res://.godot/imported/6. Ash and Oasis.ogg-2e364899d7f14fe7fc4fdb71bddc098e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

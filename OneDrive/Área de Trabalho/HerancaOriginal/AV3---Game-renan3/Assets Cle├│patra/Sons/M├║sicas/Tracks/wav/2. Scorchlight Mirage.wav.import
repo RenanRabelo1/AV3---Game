@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://hsxnkcj6dt7y"
+path="res://.godot/imported/2. Scorchlight Mirage.wav-93006011d2c02171a7ee575feb7fe78c.sample"
+
+[deps]
+
+source_file="res://Assets Cleópatra/Sons/Músicas/Tracks/wav/2. Scorchlight Mirage.wav"
+dest_files=["res://.godot/imported/2. Scorchlight Mirage.wav-93006011d2c02171a7ee575feb7fe78c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
