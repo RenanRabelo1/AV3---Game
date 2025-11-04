@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://coe2c8bi6tm30"]
+
+[ext_resource type="PackedScene" uid="uid://di2y0wbeuqb53" path="res://Cenas/carol.tscn" id="1_rqvi6"]
+[ext_resource type="PackedScene" uid="uid://d3jkc0pqmw4x0" path="res://Cenas/jose.tscn" id="2_nsgl5"]
+
+[node name="JogoDasFlechas" type="Node"]
+
+[node name="carol" parent="." instance=ExtResource("1_rqvi6")]
+position = Vector2(268, 16)
+
+[node name="Jose" parent="." instance=ExtResource("2_nsgl5")]
+position = Vector2(268, 16)

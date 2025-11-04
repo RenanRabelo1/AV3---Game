@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://broaga8mm7ir6"]
+
+[ext_resource type="PackedScene" uid="uid://d3jkc0pqmw4x0" path="res://Cenas/jose.tscn" id="1_jjlrl"]
+[ext_resource type="PackedScene" uid="uid://di2y0wbeuqb53" path="res://Cenas/carol.tscn" id="2_lbji7"]
+
+[node name="FaseFinal" type="Node"]
+
+[node name="Jose" parent="." instance=ExtResource("1_jjlrl")]
+
+[node name="carol" parent="." instance=ExtResource("2_lbji7")]
