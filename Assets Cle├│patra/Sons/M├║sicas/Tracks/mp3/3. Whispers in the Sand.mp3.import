@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6o1r6f2rqgqw"
+path="res://.godot/imported/3. Whispers in the Sand.mp3-fa61f1bec6c6ce717486d41aea1d2928.mp3str"
+
+[deps]
+
+source_file="res://Assets Cle├│patra/Sons/M├║sicas/Tracks/mp3/3. Whispers in the Sand.mp3"
+dest_files=["res://.godot/imported/3. Whispers in the Sand.mp3-fa61f1bec6c6ce717486d41aea1d2928.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

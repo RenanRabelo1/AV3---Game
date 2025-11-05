@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://kl6vweg1qtri"
+path="res://.godot/imported/6. Ash and Oasis.ogg-ddbea06c84ea3ab177bde25b36a9c7e1.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets Cle├│patra/Sons/M├║sicas/Tracks/ogg/6. Ash and Oasis.ogg"
+dest_files=["res://.godot/imported/6. Ash and Oasis.ogg-ddbea06c84ea3ab177bde25b36a9c7e1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
