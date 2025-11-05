@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b4y63q06roa5k"
+path="res://.godot/imported/2. Scorchlight Mirage.wav-a8078d8377971f94f7ac24958b0610ee.sample"
+
+[deps]
+
+source_file="res://Assets Cle├│patra/Sons/M├║sicas/Loops/wav/2. Scorchlight Mirage.wav"
+dest_files=["res://.godot/imported/2. Scorchlight Mirage.wav-a8078d8377971f94f7ac24958b0610ee.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

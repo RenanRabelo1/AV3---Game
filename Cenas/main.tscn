@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://do0tml5m2xd4c"]
+[gd_scene load_steps=11 format=3 uid="uid://do0tml5m2xd4c"]
 
 [ext_resource type="Texture2D" uid="uid://bw5o54x77xdag" path="res://Assets/Pixel Ancient Egypt/Mapa inicial.png" id="1_74bqr"]
 [ext_resource type="Script" uid="uid://chh271dwc8t0f" path="res://Cenas/main.gd" id="1_ruij7"]
 [ext_resource type="Texture2D" uid="uid://cmkdepvxxufi2" path="res://Assets/Pixel Ancient Egypt/Back.png" id="2_ruij7"]
+[ext_resource type="PackedScene" uid="uid://d3jkc0pqmw4x0" path="res://Cenas/jose.tscn" id="4_ja1os"]
+[ext_resource type="PackedScene" uid="uid://di2y0wbeuqb53" path="res://Cenas/carol.tscn" id="4_lb8y5"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_74bqr"]
 a = Vector2(45, -395.375)
@@ -57,3 +59,7 @@ shape = SubResource("SegmentShape2D_ja1os")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEsfingeTexto"]
 position = Vector2(588, 388)
 shape = SubResource("RectangleShape2D_ruij7")
+
+[node name="Jose" parent="." instance=ExtResource("4_ja1os")]
+
+[node name="carol" parent="." instance=ExtResource("4_lb8y5")]
