@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dufkhhevbgc4p"]
+
+[ext_resource type="Texture2D" uid="uid://bj6vx8yldl6la" path="res://Assets/Pixel Art Ancient Egypt Full Version Asset Pack/vermelho.jpg" id="1_34hvj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gil3p"]
+size = Vector2(1152.5, 392)
+
+[node name="lava" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578, 224)
+scale = Vector2(2.75962, 0.927885)
+texture = ExtResource("1_34hvj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(577.75, 221)
+shape = SubResource("RectangleShape2D_gil3p")

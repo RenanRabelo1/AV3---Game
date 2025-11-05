@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cj06fecrx0vb0"]
+
+[ext_resource type="Texture2D" uid="uid://hubx2xeflckt" path="res://Arrow.png" id="1_avdy5"]
+[ext_resource type="Script" uid="uid://cmom55jt65p7l" path="res://Cenas/flechas.gd" id="1_gvkv7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gvkv7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_avdy5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nfmsr"]
+a = Vector2(385, 242)
+b = Vector2(443, 242)
+
+[node name="flechas" type="RigidBody2D"]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_gvkv7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(403.75, 239.5)
+scale = Vector2(0.18067223, 0.38157895)
+sprite_frames = SubResource("SpriteFrames_gvkv7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7, -1)
+shape = SubResource("SegmentShape2D_nfmsr")

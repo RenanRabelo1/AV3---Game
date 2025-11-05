@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj7mvlgmfwhb2"]
+
+[ext_resource type="Texture2D" uid="uid://c5hyxrpxexi67" path="res://Assets/Pixel Art Ancient Egypt Full Version Asset Pack/preta.jpg" id="1_l1i3f"]
+
+[node name="hud_vidro" type="CanvasLayer"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(118, 110)
+scale = Vector2(0.297778, 0.133779)
+texture = ExtResource("1_l1i3f")
+
+[node name="num1" type="Label" parent="."]
+offset_left = 59.0
+offset_top = 91.0
+offset_right = 90.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 25
+text = "X"
+
+[node name="num2" type="Label" parent="."]
+offset_left = 108.0
+offset_top = 92.0
+offset_right = 148.0
+offset_bottom = 161.0
+theme_override_font_sizes/font_size = 25
+text = "X"
+
+[node name="num3" type="Label" parent="."]
+offset_left = 157.0
+offset_top = 91.0
+offset_right = 197.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 25
+text = "X"
+
+[node name="op1" type="Label" parent="."]
+offset_left = 83.0
+offset_top = 86.0
+offset_right = 123.0
+offset_bottom = 128.0
+theme_override_font_sizes/font_size = 30
+text = "+"
+
+[node name="op2" type="Label" parent="."]
+offset_left = 132.0
+offset_top = 89.0
+offset_right = 172.0
+offset_bottom = 131.0
+theme_override_font_sizes/font_size = 30
+text = "+"

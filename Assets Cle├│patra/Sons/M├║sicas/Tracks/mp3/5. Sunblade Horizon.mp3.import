@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cxxhxfglwoxqy"
+path="res://.godot/imported/5. Sunblade Horizon.mp3-7d4e97714e713f0f0ebcaa8a7655f8ff.mp3str"
+
+[deps]
+
+source_file="res://Assets Cle├│patra/Sons/M├║sicas/Tracks/mp3/5. Sunblade Horizon.mp3"
+dest_files=["res://.godot/imported/5. Sunblade Horizon.mp3-7d4e97714e713f0f0ebcaa8a7655f8ff.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

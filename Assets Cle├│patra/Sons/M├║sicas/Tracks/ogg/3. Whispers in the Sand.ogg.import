@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bidcsjm45l40"
+path="res://.godot/imported/3. Whispers in the Sand.ogg-e973615d96edaca840e353bb406fe55e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets Cle├│patra/Sons/M├║sicas/Tracks/ogg/3. Whispers in the Sand.ogg"
+dest_files=["res://.godot/imported/3. Whispers in the Sand.ogg-e973615d96edaca840e353bb406fe55e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
