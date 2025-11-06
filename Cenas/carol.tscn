@@ -1,11 +1,11 @@
 [gd_scene load_steps=50 format=3 uid="uid://di2y0wbeuqb53"]
 
 [ext_resource type="Script" uid="uid://d28cq7yc7sd7n" path="res://Cenas/carol.gd" id="1_g65h1"]
-[ext_resource type="Texture2D" uid="uid://545mvd68lqj4" path="res://Assets Cleópatra/Personagens/Carol(Fem)/Walk/walk_Down.png" id="2_48uk2"]
-[ext_resource type="Texture2D" uid="uid://cx1261phxx3g0" path="res://Assets Cleópatra/Personagens/Carol(Fem)/Idle/Idle_Right_Down.png" id="2_lae8x"]
-[ext_resource type="Texture2D" uid="uid://bgfw8er50603u" path="res://Assets Cleópatra/Personagens/Carol(Fem)/Walk/walk_Right_Down.png" id="3_lae8x"]
-[ext_resource type="Texture2D" uid="uid://fmp64dl0kl23" path="res://Assets Cleópatra/Personagens/Carol(Fem)/Walk/walk_Right_Up.png" id="4_jj7dm"]
-[ext_resource type="Texture2D" uid="uid://cwe4hpmjmuwbe" path="res://Assets Cleópatra/Personagens/Carol(Fem)/Walk/walk_Up.png" id="5_e1sol"]
+[ext_resource type="Texture2D" uid="uid://545mvd68lqj4" path="res://Assets Cle├│patra/Personagens/Carol(Fem)/Walk/walk_Down.png" id="2_48uk2"]
+[ext_resource type="Texture2D" uid="uid://cx1261phxx3g0" path="res://Assets Cle├│patra/Personagens/Carol(Fem)/Idle/Idle_Right_Down.png" id="2_lae8x"]
+[ext_resource type="Texture2D" uid="uid://bgfw8er50603u" path="res://Assets Cle├│patra/Personagens/Carol(Fem)/Walk/walk_Right_Down.png" id="3_lae8x"]
+[ext_resource type="Texture2D" uid="uid://fmp64dl0kl23" path="res://Assets Cle├│patra/Personagens/Carol(Fem)/Walk/walk_Right_Up.png" id="4_jj7dm"]
+[ext_resource type="Texture2D" uid="uid://cwe4hpmjmuwbe" path="res://Assets Cle├│patra/Personagens/Carol(Fem)/Walk/walk_Up.png" id="5_e1sol"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jj7dm"]
 atlas = ExtResource("2_lae8x")
@@ -337,6 +337,8 @@ position = Vector2(196, 204)
 shape = SubResource("CapsuleShape2D_iquw8")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(197, 206)
