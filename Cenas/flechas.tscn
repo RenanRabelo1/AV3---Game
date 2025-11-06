@@ -1,13 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cj06fecrx0vb0"]
+[gd_scene load_steps=6 format=3 uid="uid://cj06fecrx0vb0"]
 
-[ext_resource type="Texture2D" uid="uid://bkcf3xaf781wt" path="res://Assets Cleópatra/Personagens/Arrow.png" id="1_avdy5"]
 [ext_resource type="Script" uid="uid://cmom55jt65p7l" path="res://Cenas/flechas.gd" id="1_gvkv7"]
+[ext_resource type="Texture2D" uid="uid://c5l0qmecrp0nc" path="res://Assets Cle├│patra/Personagens/Monstros/Monstro 4/flecha.png" id="2_gvkv7"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gvkv7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gvkv7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_avdy5")
+"texture": ExtResource("2_gvkv7")
 }],
 "loop": true,
 "name": &"default",
@@ -16,18 +18,22 @@ animations = [{
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_nfmsr"]
 a = Vector2(385, 242)
-b = Vector2(443, 242)
+b = Vector2(436, 242)
 
 [node name="flechas" type="RigidBody2D"]
-collision_mask = 0
+position = Vector2(-512, 96)
+collision_layer = 8
+mass = 90.0
+physics_material_override = SubResource("PhysicsMaterial_gvkv7")
 gravity_scale = 0.0
 script = ExtResource("1_gvkv7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(403.75, 239.5)
+position = Vector2(403.99994, 241.99998)
+rotation = 3.1415927
 scale = Vector2(0.18067223, 0.38157895)
 sprite_frames = SubResource("SpriteFrames_gvkv7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-7, -1)
+position = Vector2(-6, -1)
 shape = SubResource("SegmentShape2D_nfmsr")
