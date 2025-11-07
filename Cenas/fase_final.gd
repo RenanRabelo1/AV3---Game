@@ -3,6 +3,7 @@ var carol = 6
 var jose = 6
 var cena_flechas = preload("res://Cenas/flechas.tscn")
 var pistas_esquerda_direita_y = [28, 103, -91]
+var chave_prateada = 0
 
 # Pistas para carros da DIREITA → ESQUERDA  
 var pistas_direita_esquerda_y = [160, 216, 324, 384, 438, 544, 600]
@@ -113,12 +114,12 @@ func _on_certa_body_entered(body: Node2D) -> void:
 
 func _on_errada_body_entered(body: Node2D) -> void:
 	if body.name == "Jose":
+		body.global_position = Vector2(361, 97)
 		_jose_die()
-		body.global_position.y += 150
 		print("gol")
 	if body.name == "carol":
 		_carol_die()
-		body.global_position.y += 150
+		body.global_position = Vector2(361, 97)
 		print("gol")
 	
 	$Timer.start()
@@ -134,3 +135,23 @@ func _on_flechas_body_entered(body: Node) -> void:
 		_carol_die()
 	if body.name == "Jose":
 		_jose_die()
+
+
+func _on_chave_prateada_body_entered(body: Node2D) -> void:
+	$PortaDesbloqueadaP.set_collision_layer_value(2, false)
+
+
+func _on_certa_2_body_entered(body: Node2D) -> void:
+	$PortaChaveDourada.set_collision_layer_value(2, false)
+
+
+func _on_chave_dourada_body_entered(body: Node2D) -> void:
+	$PortaFinal.set_collision_layer_value(2, false)
+
+
+
+func _on_certa_3_body_entered(body: Node2D) -> void:
+	$PortaTesouro.set_collision_layer_value(2, false)
+
+func _on_tesouro_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://Cenas/esfinge_falando.tscn")

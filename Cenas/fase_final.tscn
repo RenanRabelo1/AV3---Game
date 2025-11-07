@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://broaga8mm7ir6"]
+[gd_scene load_steps=83 format=3 uid="uid://broaga8mm7ir6"]
 
 [ext_resource type="PackedScene" uid="uid://d3jkc0pqmw4x0" path="res://Cenas/jose.tscn" id="1_jjlrl"]
 [ext_resource type="Script" uid="uid://c42ud6abhufds" path="res://Cenas/fase_final.gd" id="1_lbji7"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://8itpuyg5ogxl" path="res://Assets/Desert_Dungeon_Pack/Props+Items.png" id="2_lrpn3"]
 [ext_resource type="Texture2D" uid="uid://bettet0lmliyg" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/vecteezy_pixel-game-life-bar-vector_14235511-removebg-preview.png" id="3_t8v10"]
 [ext_resource type="PackedScene" uid="uid://cj06fecrx0vb0" path="res://Cenas/flechas.tscn" id="4_ca6vr"]
+[ext_resource type="Texture2D" uid="uid://dasdnrpqgd4gv" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Props+Items.png" id="7_5dk8m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lrpn3"]
 atlas = ExtResource("2_lrpn3")
@@ -327,6 +328,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xepik"]
+size = Vector2(49, 32)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lrpn3"]
 size = Vector2(49, 34.25)
 
@@ -336,9 +340,16 @@ size = Vector2(49, 34.25)
 a = Vector2(360, -431)
 b = Vector2(287, -431)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yl3xy"]
+size = Vector2(108.5, 20)
+
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_sa7q3"]
 a = Vector2(549, 519)
 b = Vector2(414, 515)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_wo8nk"]
+a = Vector2(225, 515)
+b = Vector2(140, 516)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5dk8m"]
 size = Vector2(105.75, 20)
@@ -352,6 +363,39 @@ size = Vector2(120.5, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhf5j"]
 size = Vector2(134.25, 20)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_yl3xy"]
+a = Vector2(4, -2)
+b = Vector2(-167, -2)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_c1blg"]
+a = Vector2(432, -568)
+b = Vector2(217, -570)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wo8nk"]
+size = Vector2(115.60156, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c1blg"]
+size = Vector2(131.40625, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0lct"]
+size = Vector2(418.375, 35.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oaado"]
+size = Vector2(408.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77vs7"]
+size = Vector2(141.52573, 20)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_p0lct"]
+a = Vector2(1104, -482)
+b = Vector2(1112, -131)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tqq2t"]
+size = Vector2(425, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fqw0j"]
+size = Vector2(59, 51)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kdqhk"]
 size = Vector2(49, 36)
 
@@ -360,7 +404,8 @@ a = Vector2(-50, -518)
 b = Vector2(-48, 128)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_kdqhk"]
-b = Vector2(1151, -2)
+a = Vector2(-14, -24)
+b = Vector2(1139, -24)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_vhf5j"]
 a = Vector2(1104, 129)
@@ -369,6 +414,46 @@ b = Vector2(-46, 127)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_xepik"]
 a = Vector2(1105, -522)
 b = Vector2(1104, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_msl6a"]
+size = Vector2(61.5, 50.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_auvpk"]
+size = Vector2(58, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g0uvq"]
+size = Vector2(68, 41.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0mtx"]
+size = Vector2(73, 43)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_samgr"]
+size = Vector2(61, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ryto"]
+size = Vector2(71, 45)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_oaado"]
+a = Vector2(767, 475)
+b = Vector2(699, 543)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqq2t"]
+atlas = ExtResource("7_5dk8m")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pq2lp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqq2t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6j1d"]
+size = Vector2(33, 32)
 
 [node name="FaseFinal" type="Node"]
 script = ExtResource("1_lbji7")
@@ -387,18 +472,19 @@ position = Vector2(45.69493, -32.176407)
 shape = SubResource("SegmentShape2D_lrpn3")
 
 [node name="ChaveDourada" type="Area2D" parent="."]
-position = Vector2(872.25, 45.90625)
+position = Vector2(845.25, -29.999992)
 scale = Vector2(3.8437445, 3.0117185)
+collision_layer = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ChaveDourada"]
-position = Vector2(-101.00827, 179.33853)
+position = Vector2(-96.845665, 194.57329)
 scale = Vector2(0.9512205, 0.6650453)
 sprite_frames = SubResource("SpriteFrames_tqq2t")
 frame = 3
 frame_progress = 0.15154016
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChaveDourada"]
-position = Vector2(-108.813156, 179.33853)
+position = Vector2(-103.87007, 193.90923)
 shape = SubResource("SegmentShape2D_pq2lp")
 
 [node name="Jose" parent="." instance=ExtResource("1_jjlrl")]
@@ -412,7 +498,7 @@ sprite_frames = SubResource("SpriteFrames_lrpn3")
 animation = &"6"
 
 [node name="carol" parent="." instance=ExtResource("2_lbji7")]
-position = Vector2(35, 92)
+position = Vector2(361, 97)
 collision_mask = 11
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="carol"]
@@ -423,6 +509,13 @@ animation = &"6"
 
 [node name="flechas" parent="." instance=ExtResource("4_ca6vr")]
 position = Vector2(-365, 89)
+
+[node name="Certa2" type="Area2D" parent="."]
+position = Vector2(293, 577)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Certa2"]
+position = Vector2(27, 50)
+shape = SubResource("RectangleShape2D_xepik")
 
 [node name="Certa" type="Area2D" parent="."]
 position = Vector2(35, 577)
@@ -441,12 +534,29 @@ gravity_scale = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortaChavePrateada"]
 shape = SubResource("SegmentShape2D_5dk8m")
 
+[node name="PortaFinal" type="RigidBody2D" parent="."]
+collision_layer = 2
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortaFinal"]
+position = Vector2(728, 201.09375)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_yl3xy")
+
 [node name="PortaChaveDourada" type="RigidBody2D" parent="."]
 collision_layer = 2
 gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortaChaveDourada"]
+position = Vector2(0, 3)
 shape = SubResource("SegmentShape2D_sa7q3")
+
+[node name="PortaDesbloqueadaP" type="RigidBody2D" parent="."]
+collision_layer = 2
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortaDesbloqueadaP"]
+shape = SubResource("SegmentShape2D_wo8nk")
 
 [node name="Barreiras" type="CharacterBody2D" parent="."]
 position = Vector2(35, 577)
@@ -484,6 +594,55 @@ shape = SubResource("RectangleShape2D_vhf5j")
 position = Vector2(447.875, 62)
 shape = SubResource("RectangleShape2D_vhf5j")
 
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Barreiras"]
+position = Vector2(357, -60)
+shape = SubResource("SegmentShape2D_yl3xy")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Barreiras"]
+position = Vector2(102, -59)
+shape = SubResource("SegmentShape2D_yl3xy")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Barreiras"]
+shape = SubResource("SegmentShape2D_c1blg")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Barreiras"]
+position = Vector2(692.5, -264.10547)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_wo8nk")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Barreiras"]
+position = Vector2(692, -490.60938)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_c1blg")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Barreiras"]
+position = Vector2(890, -189.90625)
+shape = SubResource("RectangleShape2D_p0lct")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Barreiras"]
+position = Vector2(886.25, -565.90625)
+shape = SubResource("RectangleShape2D_oaado")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Barreiras"]
+position = Vector2(644.54205, 11.029724)
+rotation = 1.0471976
+shape = SubResource("RectangleShape2D_77vs7")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Barreiras"]
+position = Vector2(-20, -75)
+shape = SubResource("SegmentShape2D_p0lct")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Barreiras"]
+position = Vector2(902.5, -125)
+shape = SubResource("RectangleShape2D_tqq2t")
+
+[node name="Certa3" type="Area2D" parent="."]
+position = Vector2(797, 332.09375)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Certa3"]
+position = Vector2(273, -2)
+shape = SubResource("RectangleShape2D_fqw0j")
+
 [node name="Errada" type="Area2D" parent="."]
 position = Vector2(49, 519)
 
@@ -491,15 +650,23 @@ position = Vector2(49, 519)
 position = Vector2(-24, -442)
 shape = SubResource("RectangleShape2D_kdqhk")
 
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Errada"]
+position = Vector2(3, 104)
+shape = SubResource("RectangleShape2D_kdqhk")
+
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Errada"]
 position = Vector2(143, -440)
+shape = SubResource("RectangleShape2D_kdqhk")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Errada"]
+position = Vector2(132, 104)
 shape = SubResource("RectangleShape2D_kdqhk")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Errada"]
 shape = SubResource("SegmentShape2D_a8iuh")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Errada"]
-position = Vector2(-49, -519)
+position = Vector2(-33, -494)
 shape = SubResource("SegmentShape2D_kdqhk")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Errada"]
@@ -508,11 +675,43 @@ shape = SubResource("SegmentShape2D_vhf5j")
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Errada"]
 shape = SubResource("SegmentShape2D_xepik")
 
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Errada"]
+position = Vector2(736, -453.90625)
+shape = SubResource("RectangleShape2D_msl6a")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Errada"]
+position = Vector2(1023, -452.90625)
+shape = SubResource("RectangleShape2D_auvpk")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Errada"]
+position = Vector2(749, -187.90625)
+shape = SubResource("RectangleShape2D_g0uvq")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Errada"]
+position = Vector2(873, -452.90625)
+shape = SubResource("RectangleShape2D_x0mtx")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Errada"]
+position = Vector2(1028, -317.90625)
+shape = SubResource("RectangleShape2D_samgr")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Errada"]
+position = Vector2(876, -187.90625)
+shape = SubResource("RectangleShape2D_3ryto")
+
+[node name="PortaTesouro" type="RigidBody2D" parent="."]
+collision_layer = 2
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortaTesouro"]
+position = Vector2(-46, -16)
+shape = SubResource("SegmentShape2D_oaado")
+
 [node name="Button" type="Button" parent="."]
-offset_left = 117.0
-offset_top = 552.0
-offset_right = 235.0
-offset_bottom = 594.0
+offset_left = 366.0
+offset_top = 380.0
+offset_right = 484.0
+offset_bottom = 422.0
 text = "10
 "
 
@@ -530,12 +729,28 @@ one_shot = true
 
 [node name="TimerTotal" type="Timer" parent="."]
 
+[node name="Tesouro" type="Area2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Tesouro"]
+position = Vector2(906, 550)
+scale = Vector2(4.093747, 3.5312507)
+sprite_frames = SubResource("SpriteFrames_pq2lp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tesouro"]
+position = Vector2(908, 551)
+shape = SubResource("RectangleShape2D_l6j1d")
+
+[connection signal="body_entered" from="ChavePrateada" to="." method="_on_chave_prateada_body_entered"]
+[connection signal="body_entered" from="ChaveDourada" to="." method="_on_chave_dourada_body_entered"]
 [connection signal="body_entered" from="flechas" to="." method="_on_flechas_body_entered"]
+[connection signal="body_entered" from="Certa2" to="." method="_on_certa_2_body_entered"]
 [connection signal="body_entered" from="Certa" to="." method="_on_certa_body_entered"]
 [connection signal="body_entered" from="PortaChavePrateada" to="." method="_on_rigid_body_2d_body_entered"]
+[connection signal="body_entered" from="Certa3" to="." method="_on_certa_3_body_entered"]
 [connection signal="body_entered" from="Errada" to="." method="_on_errada_body_entered"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="TimerBaixo" to="." method="_on_timer_baixo_timeout"]
 [connection signal="timeout" from="TimerCima" to="." method="_on_timer_cima_timeout"]
+[connection signal="body_entered" from="Tesouro" to="." method="_on_tesouro_body_entered"]

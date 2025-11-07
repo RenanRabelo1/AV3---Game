@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dkk4g0dp0s2c8"
+path="res://.godot/imported/monster-footstep-162883.mp3-73a868ae045face8eda7d9668dc4080b.mp3str"
+
+[deps]
+
+source_file="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/monster-footstep-162883.mp3"
+dest_files=["res://.godot/imported/monster-footstep-162883.mp3-73a868ae045face8eda7d9668dc4080b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
