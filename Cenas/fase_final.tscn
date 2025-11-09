@@ -488,7 +488,7 @@ position = Vector2(-103.87007, 193.90923)
 shape = SubResource("SegmentShape2D_pq2lp")
 
 [node name="Jose" parent="." instance=ExtResource("1_jjlrl")]
-position = Vector2(-141, 34)
+position = Vector2(-96, 47)
 collision_mask = 11
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Jose"]

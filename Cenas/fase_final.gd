@@ -114,7 +114,7 @@ func _on_certa_body_entered(body: Node2D) -> void:
 
 func _on_errada_body_entered(body: Node2D) -> void:
 	if body.name == "Jose":
-		body.global_position = Vector2(361, 97)
+		body.global_position = Vector2(96, 47)
 		_jose_die()
 		print("gol")
 	if body.name == "carol":
