@@ -1,5 +1,6 @@
 extends CharacterBody2D
 signal dor
+signal Stop
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
