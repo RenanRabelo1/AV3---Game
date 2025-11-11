@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=4 uid="uid://broaga8mm7ir6"]
+[gd_scene load_steps=111 format=4 uid="uid://broaga8mm7ir6"]
 
 [ext_resource type="PackedScene" uid="uid://d3jkc0pqmw4x0" path="res://Cenas/jose.tscn" id="1_jjlrl"]
 [ext_resource type="Script" uid="uid://88ksfib3po44" path="res://Cenas/fase_final.gd" id="1_lbji7"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cxqe3e0eacgv0" path="res://Assets/Pixel Ancient Egypt/Vase.png" id="13_wo8nk"]
 [ext_resource type="Texture2D" uid="uid://ulh0bkmisglt" path="res://Assets/Desert_Dungeon_Pack/Fire.png" id="14_c1blg"]
 [ext_resource type="Texture2D" uid="uid://bwsfdo6jdfhkj" path="res://Assets Cle├│patra/Chat BalloonsBubbles - Pixel Art/Chat-1.png" id="16_p0lct"]
+[ext_resource type="Texture2D" uid="uid://bnyxstp45nv8k" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Back.png" id="17_oaado"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p0lct"]
 texture = ExtResource("8_c1blg")
@@ -928,7 +929,7 @@ size = Vector2(213, 144)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_773te"]
 atlas = ExtResource("16_p0lct")
-region = Rect2(396, 168, 99, 56)
+region = Rect2(415, 174, 81, 58)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5pxke"]
 animations = [{
@@ -941,8 +942,30 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_c1ai6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_oaado")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pq2lp"]
 size = Vector2(56.216415, 29.021042)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hwx0j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_oaado")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_025n4"]
 size = Vector2(60, 183)
@@ -951,7 +974,22 @@ size = Vector2(60, 183)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_773te")
+"texture": ExtResource("17_oaado")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5t8ot"]
+atlas = ExtResource("16_p0lct")
+region = Rect2(415, 174, 81, 58)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qtw11"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5t8ot")
 }],
 "loop": true,
 "name": &"default",
@@ -1582,6 +1620,12 @@ position = Vector2(101.25, 50.5)
 scale = Vector2(3.0454545, 1.6964285)
 sprite_frames = SubResource("SpriteFrames_5pxke")
 
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Pergunta1"]
+visible = false
+position = Vector2(309.00003, 160.00003)
+scale = Vector2(1.1926491, 0.7583705)
+sprite_frames = SubResource("SpriteFrames_c1ai6")
+
 [node name="Label" type="Label" parent="Pergunta1"]
 visible = false
 offset_left = 69.0
@@ -1628,6 +1672,12 @@ text = "PlaceHolder"
 wait_time = 5.0
 one_shot = true
 
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Pergunta2"]
+visible = false
+position = Vector2(101.70896, 200.71579)
+scale = Vector2(0.545534, 0.5898026)
+sprite_frames = SubResource("SpriteFrames_hwx0j")
+
 [node name="Pergunta3" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pergunta3"]
@@ -1655,6 +1705,11 @@ text = "PlaceHolder"
 
 [node name="Timeracabar3" type="Timer" parent="Pergunta3"]
 autostart = true
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Pergunta3"]
+visible = false
+position = Vector2(644, 76)
+sprite_frames = SubResource("SpriteFrames_qtw11")
 
 [connection signal="body_entered" from="ChavePrateada" to="." method="_on_chave_prateada_body_entered"]
 [connection signal="body_entered" from="ChaveDourada" to="." method="_on_chave_dourada_body_entered"]
