@@ -26,18 +26,20 @@ var lava = false
 var impedir_j=0
 var impedir_c=0
 var passar=0
-
+var falha=0
 var tempo0 = 0
+var falha2=0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	jose = get_node_or_null("Jose")
 	carol = get_node_or_null("carol")
 	
-
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
 	if not lava:
 		tempo0 += delta
 		
@@ -129,6 +131,7 @@ func _process(delta: float) -> void:
 				hud1=0
 				print(repete)
 				round3_j=0
+			
 				
 			elif (soma1_j==35 && repete==1):
 				$hud_vidro/num1.text=str("ACERTOU")
@@ -149,6 +152,7 @@ func _process(delta: float) -> void:
 				$hud_vidro/num3.hide()
 				$hud_vidro/op1.hide()
 				$hud_vidro/op2.hide()
+				falha=1
 				
 		if (hud2>=3):
 			if (soma1_c==40 && repete_c<1):
@@ -185,7 +189,7 @@ func _process(delta: float) -> void:
 				$hud_carol/num3.hide()
 				$hud_carol/op1.hide()
 				$hud_carol/op2.hide()
-				
+				falha2=1
 			
 			
 			
@@ -722,13 +726,11 @@ func _on_piso_lava_body_exited(body: Node2D) -> void:
 		
 func _DanoLava():
 	if virou == 1:
-		
-
 		if jose and not salvo_j:
-			jose.queue_free()
+			get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 		
 		if carol and not salvo_c:
-			carol.queue_free()
+			get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 
 
 func _on_timer_hud_timeout() -> void:
@@ -774,6 +776,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		
 func _derrota():
 		if !jose || !carol:
+			get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
+			
+		elif falha==1 && falha2==1:
 			get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 
 

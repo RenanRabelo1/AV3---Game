@@ -71,9 +71,9 @@ func _on_timer_cima_timeout() -> void:
 
 func morrer():
 	if carol == 0:
-		$carol.queue_free()
+		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 	if jose == 0:
-		$Jose.queue_free()
+		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 func life_animated_jose():
 	if jose == 6:
 		$Jose/AnimatedSprite2D2.play("6")
@@ -138,10 +138,12 @@ func _on_flechas_body_entered(body: Node) -> void:
 
 func _on_chave_prateada_body_entered(body: Node2D) -> void:
 	$PortaDesbloqueadaP.set_collision_layer_value(2, false)
+	$Pergunta2/CollisionShape2D.disabled = false
 
 
 func _on_certa_2_body_entered(body: Node2D) -> void:
 	$PortaChaveDourada.set_collision_layer_value(2, false)
+	$Pergunta3/CollisionShape2D.disabled = false
 
 
 func _on_chave_dourada_body_entered(body: Node2D) -> void:
@@ -152,3 +154,53 @@ func _on_certa_3_body_entered(body: Node2D) -> void:
 
 func _on_tesouro_body_entered(body: Node2D) -> void:
 	get_tree().change_scene_to_file("res://Cenas/esfinge_falando.tscn")
+
+
+func _on_pergunta_1_body_entered(body: Node2D) -> void:
+	$Pergunta1/Timer1.start()
+	$Pergunta1/Label.show()
+	$Pergunta1/AnimatedSprite2D.show()
+	$Pergunta1/Timeracabar1.start()
+
+
+
+
+func _on_timer_1_timeout() -> void:
+	$Pergunta1/CollisionShape2D.disabled = true
+
+
+func _on_timer_4_timeout() -> void:
+	$Pergunta2/CollisionShape2D.disabled = true
+
+
+func _on_pergunta_2_body_entered(body: Node2D) -> void:
+	$Pergunta2/Timer4.start()
+	$Pergunta2/AnimatedSprite2D2.show()
+	$Pergunta2/Label2.show()
+	$Pergunta2/Timeracabar2.start()
+
+
+func _on_timeracabar_1_timeout() -> void:
+	$Pergunta1/Label.hide()
+	$Pergunta1/AnimatedSprite2D.hide()
+
+
+func _on_timeracabar_2_timeout() -> void:
+	$Pergunta2/AnimatedSprite2D2.hide()
+	$Pergunta2/Label2.hide()
+
+
+func _on_pergunta_3_body_entered(body: Node2D) -> void:
+	$Pergunta3/Timer6.start()
+	$Pergunta3/Label.show()
+	$Pergunta3/AnimatedSprite2D.show()
+	$Pergunta3/Timeracabar3.start()
+
+
+func _on_timeracabar_3_timeout() -> void:
+	$Pergunta3/Label.hide()
+	$Pergunta3/AnimatedSprite2D.hide()
+
+
+func _on_timer_6_timeout() -> void:
+	$Pergunta3/CollisionShape2D.disabled = true

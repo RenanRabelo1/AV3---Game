@@ -63,9 +63,9 @@ func _on_errada_body_entered(body: Node2D) -> void:
 
 func morrer():
 	if carol == 0:
-		$carol.queue_free()
+		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 	if jose == 0:
-		$Jose.queue_free()
+		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Jose":

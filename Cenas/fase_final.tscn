@@ -1,20 +1,21 @@
-[gd_scene load_steps=99 format=4 uid="uid://broaga8mm7ir6"]
+[gd_scene load_steps=106 format=4 uid="uid://broaga8mm7ir6"]
 
 [ext_resource type="PackedScene" uid="uid://d3jkc0pqmw4x0" path="res://Cenas/jose.tscn" id="1_jjlrl"]
-[ext_resource type="Script" uid="uid://c42ud6abhufds" path="res://Cenas/fase_final.gd" id="1_lbji7"]
+[ext_resource type="Script" uid="uid://88ksfib3po44" path="res://Cenas/fase_final.gd" id="1_lbji7"]
 [ext_resource type="PackedScene" uid="uid://di2y0wbeuqb53" path="res://Cenas/carol.tscn" id="2_lbji7"]
 [ext_resource type="Texture2D" uid="uid://8itpuyg5ogxl" path="res://Assets/Desert_Dungeon_Pack/Props+Items.png" id="2_lrpn3"]
 [ext_resource type="Texture2D" uid="uid://bettet0lmliyg" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/vecteezy_pixel-game-life-bar-vector_14235511-removebg-preview.png" id="3_t8v10"]
 [ext_resource type="PackedScene" uid="uid://cj06fecrx0vb0" path="res://Cenas/flechas.tscn" id="4_ca6vr"]
 [ext_resource type="Texture2D" uid="uid://dasdnrpqgd4gv" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Props+Items.png" id="7_5dk8m"]
 [ext_resource type="Texture2D" uid="uid://bxsn5r0wqmsoe" path="res://Assets/Desert_Dungeon_Pack/teste.png" id="8_c1blg"]
-[ext_resource type="Texture2D" uid="uid://dr6xjjoa4gnlb" path="res://Assets/Desert_Dungeon_Pack/Props+Door.png" id="8_kdqhk"]
+[ext_resource type="Texture2D" uid="uid://ccx4swyhhoc57" path="res://Assets/Desert_Dungeon_Pack/Props+Door.png" id="8_kdqhk"]
 [ext_resource type="Texture2D" uid="uid://dqyrr5ha1e7g6" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Wall.png" id="9_vhf5j"]
 [ext_resource type="Texture2D" uid="uid://cj0bw740fslg8" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Pillar.png" id="10_xepik"]
 [ext_resource type="Texture2D" uid="uid://c43wrh57pv0yd" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Pila2.png" id="11_xepik"]
 [ext_resource type="Texture2D" uid="uid://xhohpa2svct2" path="res://Assets/Desert_Dungeon_Pack/butao.png" id="12_yl3xy"]
 [ext_resource type="Texture2D" uid="uid://cxqe3e0eacgv0" path="res://Assets/Pixel Ancient Egypt/Vase.png" id="13_wo8nk"]
 [ext_resource type="Texture2D" uid="uid://ulh0bkmisglt" path="res://Assets/Desert_Dungeon_Pack/Fire.png" id="14_c1blg"]
+[ext_resource type="Texture2D" uid="uid://bwsfdo6jdfhkj" path="res://Assets Cle├│patra/Chat BalloonsBubbles - Pixel Art/Chat-1.png" id="16_p0lct"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p0lct"]
 texture = ExtResource("8_c1blg")
@@ -922,6 +923,41 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0lct"]
+size = Vector2(213, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_773te"]
+atlas = ExtResource("16_p0lct")
+region = Rect2(396, 168, 99, 56)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5pxke"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_773te")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pq2lp"]
+size = Vector2(56.216415, 29.021042)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_025n4"]
+size = Vector2(60, 183)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ujhqd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_773te")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="FaseFinal" type="Node"]
 script = ExtResource("1_lbji7")
 
@@ -1028,6 +1064,12 @@ gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortaDesbloqueadaP"]
 shape = SubResource("SegmentShape2D_wo8nk")
+
+[node name="Props+door2" type="Sprite2D" parent="PortaDesbloqueadaP/CollisionShape2D"]
+position = Vector2(158.00002, 523.4477)
+rotation = -3.1415925
+scale = Vector2(2.5241938, 1.0657694)
+texture = ExtResource("8_kdqhk")
 
 [node name="Barreiras" type="CharacterBody2D" parent="."]
 position = Vector2(35, 577)
@@ -1414,12 +1456,6 @@ rotation = 1.5707964
 scale = Vector2(2.28311, 1.1478748)
 texture = ExtResource("9_vhf5j")
 
-[node name="Props+door2" type="Sprite2D" parent="."]
-position = Vector2(158.00002, 523.4477)
-rotation = 3.1415927
-scale = Vector2(2.5241938, 1.0657694)
-texture = ExtResource("8_kdqhk")
-
 [node name="Wall25" type="Sprite2D" parent="."]
 position = Vector2(437.125, 526)
 scale = Vector2(5.820651, 1)
@@ -1520,6 +1556,93 @@ position = Vector2(804, 378.00003)
 scale = Vector2(1.28125, 1.2968746)
 texture = ExtResource("12_yl3xy")
 
+[node name="Pergunta1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pergunta1"]
+position = Vector2(134, 220)
+shape = SubResource("RectangleShape2D_p0lct")
+
+[node name="Timer1" type="Timer" parent="Pergunta1"]
+one_shot = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pergunta1"]
+visible = false
+position = Vector2(101.25, 50.5)
+scale = Vector2(3.0454545, 1.6964285)
+sprite_frames = SubResource("SpriteFrames_5pxke")
+
+[node name="Label" type="Label" parent="Pergunta1"]
+visible = false
+offset_left = 69.0
+offset_top = 25.000002
+offset_right = 197.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "PlaceHolder"
+
+[node name="Timeracabar1" type="Timer" parent="Pergunta1"]
+wait_time = 5.0
+one_shot = true
+
+[node name="Pergunta2" type="Area2D" parent="."]
+position = Vector2(101.25, 50.5)
+scale = Vector2(3.0454545, 1.6964285)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pergunta2"]
+visible = false
+position = Vector2(19.619396, 249.41579)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_pq2lp")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Pergunta2"]
+visible = false
+position = Vector2(77.082085, 240.8)
+scale = Vector2(1.2242194, 0.86926705)
+sprite_frames = SubResource("SpriteFrames_5pxke")
+
+[node name="Timer4" type="Timer" parent="Pergunta2"]
+one_shot = true
+
+[node name="Label2" type="Label" parent="Pergunta2"]
+visible = false
+offset_left = 63.94776
+offset_top = 236.08421
+offset_right = 157.94775
+offset_bottom = 259.08423
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 9
+text = "PlaceHolder"
+
+[node name="Timeracabar2" type="Timer" parent="Pergunta2"]
+wait_time = 5.0
+
+[node name="Pergunta3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pergunta3"]
+visible = false
+position = Vector2(699, 200)
+shape = SubResource("RectangleShape2D_025n4")
+
+[node name="Timer6" type="Timer" parent="Pergunta3"]
+one_shot = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pergunta3"]
+visible = false
+position = Vector2(631, 76)
+scale = Vector2(1.8737373, 1)
+sprite_frames = SubResource("SpriteFrames_ujhqd")
+
+[node name="Label" type="Label" parent="Pergunta3"]
+visible = false
+offset_left = 613.0
+offset_top = 67.0
+offset_right = 680.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "PlaceHolder"
+
+[node name="Timeracabar3" type="Timer" parent="Pergunta3"]
+
 [connection signal="body_entered" from="ChavePrateada" to="." method="_on_chave_prateada_body_entered"]
 [connection signal="body_entered" from="ChaveDourada" to="." method="_on_chave_dourada_body_entered"]
 [connection signal="body_entered" from="flechas" to="." method="_on_flechas_body_entered"]
@@ -1533,3 +1656,14 @@ texture = ExtResource("12_yl3xy")
 [connection signal="timeout" from="TimerBaixo" to="." method="_on_timer_baixo_timeout"]
 [connection signal="timeout" from="TimerCima" to="." method="_on_timer_cima_timeout"]
 [connection signal="body_entered" from="Tesouro" to="." method="_on_tesouro_body_entered"]
+[connection signal="body_entered" from="Pergunta1" to="." method="_on_pergunta_1_body_entered"]
+[connection signal="timeout" from="Pergunta1/Timer1" to="." method="_on_timer_1_timeout"]
+[connection signal="timeout" from="Pergunta1/Timer1" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Pergunta1/Timeracabar1" to="." method="_on_timeracabar_1_timeout"]
+[connection signal="body_entered" from="Pergunta2" to="." method="_on_pergunta_2_body_entered"]
+[connection signal="timeout" from="Pergunta2/Timer4" to="." method="_on_timer_4_timeout"]
+[connection signal="timeout" from="Pergunta2/Timer4" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Pergunta2/Timeracabar2" to="." method="_on_timeracabar_2_timeout"]
+[connection signal="body_entered" from="Pergunta3" to="." method="_on_pergunta_3_body_entered"]
+[connection signal="timeout" from="Pergunta3/Timer6" to="." method="_on_timer_6_timeout"]
+[connection signal="timeout" from="Pergunta3/Timeracabar3" to="." method="_on_timeracabar_3_timeout"]
