@@ -23,7 +23,10 @@ var salvo_j = false
 var tempo=0
 var parou = 0
 var lava = false
+var impedir_j=0
+var impedir_c=0
 
+var tempo0 = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,9 +37,17 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
+	if not lava:
+		tempo0 += delta
+		
+		if tempo >= 25 and tempo <= 31:
+			$alerta.show()
+		else:
+			$alerta.hide()
+	else:
+		$alerta.hide()
 
-	
+	_derrota()
 	_DanoLava()
 	if entrou_c==0 && entrou_j==0:
 		$piso6/CollisionShape2D.disabled = true
@@ -60,17 +71,11 @@ func _process(delta: float) -> void:
 			$carol/Label.hide()
 		
 		
-		$round2/round2_.show()
-		$round2/round2_4.show()
-		$round2/round2_2.show()
-		$round2/round2_3.show()
+		$round2.show()
 		
 	if entrou_c==2 && entrou_j==2:
 		
-		$round2/round2_.hide()
-		$round2/round2_4.hide()
-		$round2/round2_2.hide()
-		$round2/round2_3.hide()
+		$round2.hide()
 		$Jose/Label2.hide()
 		$carol/Label2.hide()
 		
@@ -86,6 +91,8 @@ func _process(delta: float) -> void:
 		$piso9.show()
 		$piso10.show()
 		$piso11.show()
+		
+		
 		
 		$piso/CollisionShape2D.disabled = true
 		$piso2/CollisionShape2D.disabled = true
@@ -112,6 +119,7 @@ func _process(delta: float) -> void:
 				$hud_vidro/num3.text=str("X")
 				$hud_vidro/op1.text=str("+")
 				$hud_vidro/op2.text=str("+")
+				$hud_vidro/ponto.text=str("1")
 				repete+=1
 				soma1_j=0
 				hud1=0
@@ -124,6 +132,7 @@ func _process(delta: float) -> void:
 				$hud_vidro/num3.hide()
 				$hud_vidro/op1.hide()
 				$hud_vidro/op2.hide()
+				$hud_vidro/ponto.text=str("2")
 			
 				
 				
@@ -143,6 +152,7 @@ func _process(delta: float) -> void:
 				$hud_carol/num3.text=str("X")
 				$hud_carol/op1.text=str("+")
 				$hud_carol/op2.text=str("+")
+				$hud_carol/ponto.text=str("1")
 				repete_c+=1
 				soma1_c=0
 				hud2=0
@@ -155,6 +165,7 @@ func _process(delta: float) -> void:
 				$hud_carol/num3.hide()
 				$hud_carol/op1.hide()
 				$hud_carol/op2.hide()
+				$hud_carol/ponto.text=str("2")
 			
 			# 10 + 13 + 17
 			# 8 + 15 + 17
@@ -163,7 +174,7 @@ func _process(delta: float) -> void:
 				
 			else:
 		
-				$hud_carol/num1.text=str(soma1_c)
+				$hud_carol/num1.text=str("ERRADO")
 				$hud_carol/num2.hide()
 				$hud_carol/num3.hide()
 				$hud_carol/op1.hide()
@@ -182,35 +193,8 @@ func _process(delta: float) -> void:
 	
 		
 		
-func _on_area_2d_area_entered(area: Area2D) -> void:
+
 	
-	
-	if area == $Jose/Area2D:
-		round_j+=1
-		if round_j==1:
-			$Jose/Label.show()
-		
-		
-		if round_j==2:
-			$Jose/Label2.show()
-			
-		if round_j==3:
-			$Jose/Label3.show()
-			
-		
-	if area == $carol/Area2D:
-		round_c+=1
-			
-		if round_c==1:
-			$carol/Label.show()
-	
-		
-		if round_c==2:
-			$carol/Label2.show()
-			
-		if round_c==3:
-			$carol/Label3.show()
-		
 
 
 func _on_piso_body_entered(body: Node2D) -> void:
@@ -218,9 +202,11 @@ func _on_piso_body_entered(body: Node2D) -> void:
 		if round_c==1 && body.has_method("_die"):
 			body._die()
 			
+			
 		if round_c==2:
 			entrou_c=2
 			$carol/Label2.hide()
+			$impedir_carol/c_c.call_deferred("set_disabled", true)
 			
 			
 		
@@ -240,6 +226,7 @@ func _on_piso_2_body_entered(body: Node2D) -> void:
 			$carol/Label.hide()
 			entrou_c=1
 			bug_c=1
+			$impedir_carol/c_c.call_deferred("set_disabled", true)
 		
 			
 			
@@ -268,6 +255,7 @@ func _on_piso_3_body_entered(body: Node2D) -> void:
 			$Jose/Label.hide()
 			entrou_j=1
 			bug_j=1;
+			$impedir_jose/CollisionShape2D.call_deferred("set_disabled", true)
 			
 			
 		if round_j==2 && body.has_method("_die"):
@@ -292,6 +280,7 @@ func _on_piso_4_body_entered(body: Node2D) -> void:
 		if round_j==2:
 				$Jose/Label2.hide()
 				entrou_j=2;
+				$impedir_jose/CollisionShape2D.call_deferred("set_disabled", true)
 				
 
 
@@ -643,35 +632,44 @@ func _on_button_2_pressed() -> void:
 	get_tree().reload_current_scene()
 
 
+
+
 func _on_timer_timeout() -> void:
 	
 	
+
+	
+
+	
 	if lava:
-		
+		$Timer.wait_time = 35.0
 		$lava.hide()
+		$lava2.hide()
+		$lava3.hide()
+		$lava4.hide()
+		$lava/CollisionS
 		$lava/CollisionShape2D.disabled = true
-		$Timer.wait_time = 5.0
+		$alerta.hide()
 		
 		lava = false
-		virou=0
-		
-		tempo=0
+		virou = 0
+		tempo = 0
 		$hudTempo/Label.text = str(tempo)
 		
+
+		
 	else:
-	
 		$lava.show()
+		$lava2.show()
+		$lava3.show()
+		$lava4.show()
 		$lava/CollisionShape2D.disabled = false
 		$Timer.wait_time = 5.0
-		
 		lava = true
 		virou = 1
+		$hudTempo/Label.text = "CUIDADO"
 		
-		$hudTempo/Label.text = str("CUIDADO")
-		
-		
-
-	$Timer.start()  
+	$Timer.start()
 
 		
 
@@ -735,3 +733,48 @@ func _on_timer_hud_timeout() -> void:
 	if virou == 0:
 		tempo += 1
 		$hudTempo/Label.text = str(tempo)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print("entrou")	
+	
+	if body.name=="Jose":
+		round_j+=1
+		if round_j==1:
+			$Jose/Label.show()
+			$impedir_jose/CollisionShape2D.call_deferred("set_disabled", false)
+			
+		
+		
+		if round_j==2:
+			$Jose/Label2.show()
+			$impedir_jose/CollisionShape2D.call_deferred("set_disabled", false)
+			
+		if round_j==3:
+			$Jose/Label3.show()
+			$impedir_jose/CollisionShape2D.call_deferred("set_disabled", false)
+			
+		
+	if body.name=="carol":
+		round_c+=1
+			
+		if round_c==1:
+			$carol/Label.show()
+			$impedir_carol/c_c.call_deferred("set_disabled", false)
+	
+		
+		if round_c==2:
+			$carol/Label2.show()
+			$impedir_carol/c_c.call_deferred("set_disabled", false)
+		if round_c==3:
+			$carol/Label3.show()
+			$impedir_carol/c_c.call_deferred("set_disabled", false)
+		
+func _derrota():
+		if !jose || !carol:
+			$Node2D2.show()
+			$hudTempo.hide()
+
+
+func _on_aviso_timeout() -> void:
+	pass
