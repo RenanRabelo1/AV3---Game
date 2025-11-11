@@ -1041,6 +1041,11 @@ gravity_scale = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortaChavePrateada"]
 shape = SubResource("SegmentShape2D_5dk8m")
 
+[node name="Props+door" type="Sprite2D" parent="PortaChavePrateada/CollisionShape2D"]
+position = Vector2(324.875, -434.5)
+scale = Vector2(2.5241938, 0.96875)
+texture = ExtResource("8_kdqhk")
+
 [node name="PortaFinal" type="RigidBody2D" parent="."]
 collision_layer = 2
 gravity_scale = 0.0
@@ -1050,6 +1055,11 @@ position = Vector2(736, 204)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_yl3xy")
 
+[node name="Props+door5" type="Sprite2D" parent="PortaFinal/CollisionShape2D"]
+position = Vector2(-1.9282074, -2.999939)
+scale = Vector2(3.2292395, 0.96875)
+texture = ExtResource("8_kdqhk")
+
 [node name="PortaChaveDourada" type="RigidBody2D" parent="."]
 collision_layer = 2
 gravity_scale = 0.0
@@ -1057,6 +1067,12 @@ gravity_scale = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortaChaveDourada"]
 position = Vector2(0, 3)
 shape = SubResource("SegmentShape2D_sa7q3")
+
+[node name="Props+door3" type="Sprite2D" parent="PortaChaveDourada/CollisionShape2D"]
+position = Vector2(480.00003, 523)
+rotation = -3.1415925
+scale = Vector2(2.5241938, 1.0657694)
+texture = ExtResource("8_kdqhk")
 
 [node name="PortaDesbloqueadaP" type="RigidBody2D" parent="."]
 collision_layer = 2
@@ -1216,6 +1232,12 @@ gravity_scale = 0.0
 position = Vector2(5, -23)
 shape = SubResource("SegmentShape2D_oaado")
 
+[node name="Props+door4" type="Sprite2D" parent="PortaTesouro/CollisionShape2D"]
+position = Vector2(677.4342, 475.81577)
+rotation = -3.1415925
+scale = Vector2(2.6897326, 1.5147833)
+texture = ExtResource("8_kdqhk")
+
 [node name="Timer2" type="Timer" parent="."]
 one_shot = true
 
@@ -1243,11 +1265,6 @@ shape = SubResource("RectangleShape2D_l6j1d")
 
 [node name="Props+itemsAll" type="Sprite2D" parent="."]
 position = Vector2(247, 376)
-
-[node name="Props+door" type="Sprite2D" parent="."]
-position = Vector2(371.875, 121.5)
-scale = Vector2(2.5241938, 0.96875)
-texture = ExtResource("8_kdqhk")
 
 [node name="Wall28" type="Sprite2D" parent="."]
 position = Vector2(824, 453)
@@ -1461,18 +1478,6 @@ position = Vector2(437.125, 526)
 scale = Vector2(5.820651, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Props+door3" type="Sprite2D" parent="."]
-position = Vector2(480.00003, 526)
-rotation = -3.1415925
-scale = Vector2(2.5241938, 1.0657694)
-texture = ExtResource("8_kdqhk")
-
-[node name="Props+door4" type="Sprite2D" parent="."]
-position = Vector2(682.4342, 452.81577)
-rotation = 3.1415927
-scale = Vector2(2.6897326, 1.5147833)
-texture = ExtResource("8_kdqhk")
-
 [node name="Wall31" type="Sprite2D" parent="."]
 position = Vector2(623.00006, 482)
 rotation = 1.5707964
@@ -1514,12 +1519,6 @@ position = Vector2(739.19025, 303.76746)
 rotation = 1.5707964
 scale = Vector2(2.2942379, 1.0576627)
 texture = ExtResource("9_vhf5j")
-
-[node name="Props+door5" type="Sprite2D" parent="."]
-position = Vector2(738.99994, 202.0718)
-rotation = 1.5707964
-scale = Vector2(3.2292395, 0.96875)
-texture = ExtResource("8_kdqhk")
 
 [node name="Butao7" type="Sprite2D" parent="."]
 position = Vector2(813.99994, 69)
@@ -1589,10 +1588,10 @@ position = Vector2(101.25, 50.5)
 scale = Vector2(3.0454545, 1.6964285)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pergunta2"]
-visible = false
 position = Vector2(19.619396, 249.41579)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_pq2lp")
+disabled = true
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Pergunta2"]
 visible = false
@@ -1615,13 +1614,14 @@ text = "PlaceHolder"
 
 [node name="Timeracabar2" type="Timer" parent="Pergunta2"]
 wait_time = 5.0
+one_shot = true
 
 [node name="Pergunta3" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pergunta3"]
-visible = false
 position = Vector2(699, 200)
 shape = SubResource("RectangleShape2D_025n4")
+disabled = true
 
 [node name="Timer6" type="Timer" parent="Pergunta3"]
 one_shot = true
@@ -1642,6 +1642,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "PlaceHolder"
 
 [node name="Timeracabar3" type="Timer" parent="Pergunta3"]
+autostart = true
 
 [connection signal="body_entered" from="ChavePrateada" to="." method="_on_chave_prateada_body_entered"]
 [connection signal="body_entered" from="ChaveDourada" to="." method="_on_chave_dourada_body_entered"]

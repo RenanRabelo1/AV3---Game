@@ -139,7 +139,9 @@ func _on_flechas_body_entered(body: Node) -> void:
 func _on_chave_prateada_body_entered(body: Node2D) -> void:
 	$PortaDesbloqueadaP.set_collision_layer_value(2, false)
 	$Pergunta2/CollisionShape2D.disabled = false
-
+	$ChavePrateada/AnimatedSprite2D.queue_free()
+	$Pergunta2/AnimatedSprite2D2.show()
+	$Pergunta2/Label2.show()
 
 func _on_certa_2_body_entered(body: Node2D) -> void:
 	$PortaChaveDourada.set_collision_layer_value(2, false)
@@ -148,6 +150,11 @@ func _on_certa_2_body_entered(body: Node2D) -> void:
 
 func _on_chave_dourada_body_entered(body: Node2D) -> void:
 	$PortaFinal.set_collision_layer_value(2, false)
+	$ChaveDourada/AnimatedSprite2D.queue_free()
+	$Pergunta2/AnimatedSprite2D2.hide()
+	$Pergunta2/Label2.hide()
+	$Pergunta3/Label.show()
+	$Pergunta3/AnimatedSprite2D.show()
 
 func _on_certa_3_body_entered(body: Node2D) -> void:
 	$PortaTesouro.set_collision_layer_value(2, false)
@@ -175,8 +182,6 @@ func _on_timer_4_timeout() -> void:
 
 func _on_pergunta_2_body_entered(body: Node2D) -> void:
 	$Pergunta2/Timer4.start()
-	$Pergunta2/AnimatedSprite2D2.show()
-	$Pergunta2/Label2.show()
 	$Pergunta2/Timeracabar2.start()
 
 
@@ -195,11 +200,6 @@ func _on_pergunta_3_body_entered(body: Node2D) -> void:
 	$Pergunta3/Label.show()
 	$Pergunta3/AnimatedSprite2D.show()
 	$Pergunta3/Timeracabar3.start()
-
-
-func _on_timeracabar_3_timeout() -> void:
-	$Pergunta3/Label.hide()
-	$Pergunta3/AnimatedSprite2D.hide()
 
 
 func _on_timer_6_timeout() -> void:
