@@ -695,22 +695,26 @@ func _on_piso_lava_body_entered(body: Node2D) -> void:
 	if body.name=="carol":
 		salvo_c=true
 		
-
+var dentro_c=0
+var dentro_j=0
 
 func _on_piso_lava_2_body_entered(body: Node2D) -> void:
 	if body.name=="Jose":
 		salvo_j=true
 		
+		
 	if body.name=="carol":
 		salvo_c=true
+		
 		
 
 
 func _on_piso_lava_2_body_exited(body: Node2D) -> void:
-	if body.name=="Jose" && virou==1:
+	if body.name=="Jose" :
 		salvo_j=false
 		
-	if body.name=="carol":
+		
+	if body.name=="carol" :
 		salvo_c=false
 		
 
@@ -729,9 +733,8 @@ func _DanoLava():
 		if jose and not salvo_j:
 			get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 		
-		if carol and not salvo_c:
+		elif carol and not salvo_c:
 			get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
-
 
 func _on_timer_hud_timeout() -> void:
 	if virou == 0:
