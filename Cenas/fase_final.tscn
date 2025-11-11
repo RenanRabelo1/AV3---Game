@@ -769,8 +769,8 @@ a = Vector2(549, 519)
 b = Vector2(414, 515)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_wo8nk"]
-a = Vector2(225, 515)
-b = Vector2(140, 516)
+a = Vector2(196, 517)
+b = Vector2(124, 518)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5dk8m"]
 size = Vector2(105.75, 20)
@@ -785,7 +785,7 @@ size = Vector2(120.5, 20)
 size = Vector2(134.25, 12)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_yl3xy"]
-a = Vector2(4, -2)
+a = Vector2(-13, -1)
 b = Vector2(-167, -2)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_c1blg"]
@@ -1078,14 +1078,15 @@ texture = ExtResource("8_kdqhk")
 collision_layer = 2
 gravity_scale = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PortaDesbloqueadaP"]
-shape = SubResource("SegmentShape2D_wo8nk")
-
-[node name="Props+door2" type="Sprite2D" parent="PortaDesbloqueadaP/CollisionShape2D"]
-position = Vector2(158.00002, 523.4477)
+[node name="Props+door2" type="Sprite2D" parent="PortaDesbloqueadaP"]
+position = Vector2(155.00002, 473)
 rotation = -3.1415925
 scale = Vector2(2.5241938, 1.0657694)
 texture = ExtResource("8_kdqhk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortaDesbloqueadaP"]
+position = Vector2(-6, -33)
+shape = SubResource("SegmentShape2D_wo8nk")
 
 [node name="Barreiras" type="CharacterBody2D" parent="."]
 position = Vector2(35, 577)
@@ -1124,11 +1125,11 @@ position = Vector2(447.875, 66)
 shape = SubResource("RectangleShape2D_vhf5j")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Barreiras"]
-position = Vector2(357, -60)
+position = Vector2(361, -101)
 shape = SubResource("SegmentShape2D_yl3xy")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Barreiras"]
-position = Vector2(102, -59)
+position = Vector2(102, -95)
 shape = SubResource("SegmentShape2D_yl3xy")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Barreiras"]
@@ -1457,13 +1458,19 @@ rotation = 1.5707964
 scale = Vector2(2.28311, 1.1478748)
 texture = ExtResource("9_vhf5j")
 
+[node name="Wall35" type="Sprite2D" parent="."]
+position = Vector2(413, 515)
+rotation = 1.5707964
+scale = Vector2(2.28311, 1.1478748)
+texture = ExtResource("9_vhf5j")
+
 [node name="Wall22" type="Sprite2D" parent="."]
-position = Vector2(319.25, 525)
-scale = Vector2(5.3369565, 1)
+position = Vector2(293.625, 473)
+scale = Vector2(4.407608, 1)
 texture = ExtResource("9_vhf5j")
 
 [node name="Wall23" type="Sprite2D" parent="."]
-position = Vector2(23, 523)
+position = Vector2(18.000002, 474)
 scale = Vector2(4.326087, 1)
 texture = ExtResource("9_vhf5j")
 
@@ -1474,8 +1481,13 @@ scale = Vector2(2.28311, 1.1478748)
 texture = ExtResource("9_vhf5j")
 
 [node name="Wall25" type="Sprite2D" parent="."]
-position = Vector2(437.125, 526)
-scale = Vector2(5.820651, 1)
+position = Vector2(572, 520)
+scale = Vector2(2.4565215, 1)
+texture = ExtResource("9_vhf5j")
+
+[node name="Wall36" type="Sprite2D" parent="."]
+position = Vector2(419, 520)
+scale = Vector2(1.0543478, 1)
 texture = ExtResource("9_vhf5j")
 
 [node name="Wall31" type="Sprite2D" parent="."]
