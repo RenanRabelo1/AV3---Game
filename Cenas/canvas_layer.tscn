@@ -7,8 +7,8 @@
 script = ExtResource("1_83l6y")
 
 [node name="TelaInicial" type="Sprite2D" parent="."]
-position = Vector2(590, 324.50003)
-scale = Vector2(0.92175275, 0.9011143)
+position = Vector2(600.0391, 324.50003)
+scale = Vector2(0.9374389, 0.9011143)
 texture = ExtResource("1_wfeud")
 
 [node name="Quit" type="Button" parent="."]
