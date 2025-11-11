@@ -77,3 +77,17 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_fim_body_entered(body: Node2D) -> void:
 	get_tree().change_scene_to_file("res://Cenas/fim.tscn")
+
+
+func _on_pergunta_body_entered(body: Node2D) -> void:
+	$Label.show()
+	$AnimatedSprite2D.show()
+	$Back.show()
+	$Label2.show()
+	$Label3.show()
+	$Label4.show()
+	$Label5.show()
+	$Label6.show()
+	$Label7.show()
+	
+	
