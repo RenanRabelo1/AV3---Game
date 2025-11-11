@@ -1,9 +1,11 @@
-[gd_scene load_steps=26 format=3 uid="uid://boxlec6xmkkuu"]
+[gd_scene load_steps=28 format=3 uid="uid://boxlec6xmkkuu"]
 
 [ext_resource type="Script" uid="uid://bep8buge7ic1k" path="res://fim.gd" id="1_1i7i0"]
 [ext_resource type="Texture2D" uid="uid://bw5o54x77xdag" path="res://Assets/Pixel Ancient Egypt/Mapa inicial.png" id="2_alv5u"]
 [ext_resource type="Texture2D" uid="uid://bwsfdo6jdfhkj" path="res://Assets Cle├│patra/Chat BalloonsBubbles - Pixel Art/Chat-1.png" id="3_alv5u"]
 [ext_resource type="Texture2D" uid="uid://cmkdepvxxufi2" path="res://Assets/Pixel Ancient Egypt/Back.png" id="3_f8j1y"]
+[ext_resource type="PackedScene" uid="uid://d3jkc0pqmw4x0" path="res://Cenas/jose.tscn" id="5_84nx8"]
+[ext_resource type="PackedScene" uid="uid://di2y0wbeuqb53" path="res://Cenas/carol.tscn" id="6_7w1x0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n00j1"]
 atlas = ExtResource("3_alv5u")
@@ -264,5 +266,10 @@ shape = SubResource("SegmentShape2D_tbfwu")
 [node name="CollisionShape2D27" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(215, 0.625)
 shape = SubResource("SegmentShape2D_tbfwu")
+
+[node name="Jose" parent="." instance=ExtResource("5_84nx8")]
+position = Vector2(286, 271)
+
+[node name="carol" parent="Jose" instance=ExtResource("6_7w1x0")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
