@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://cl2bv84kyovrl"]
+
+[ext_resource type="Script" uid="uid://bi8tceoa86mqo" path="res://Cenas/esfinge_falando___copia_(2).gd" id="1_imahg"]
+[ext_resource type="AudioStream" uid="uid://1s372kwn2r1l" path="res://Assets Cle├│patra/Cen├írios/monster-footstep-162883.mp3" id="1_ynijy"]
+[ext_resource type="Texture2D" uid="uid://donr5waw70s5d" path="res://Assets Cle├│patra/Cleopatra falando/pós-main 3.png" id="3_imahg"]
+[ext_resource type="Texture2D" uid="uid://bo2v3lueuoi2l" path="res://Assets Cle├│patra/Cleopatra falando/pós-main 2.png" id="4_rerdm"]
+[ext_resource type="Texture2D" uid="uid://dhw8yatxjcmiy" path="res://Assets Cle├│patra/Cleopatra falando/pós-main 1.png" id="5_1h8vq"]
+
+[node name="EsfingeFalando(pós-main)" type="CanvasLayer"]
+script = ExtResource("1_imahg")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(573.5, 324.75)
+scale = Vector2(2.3225155, 1.7110817)
+stream = ExtResource("1_ynijy")
+volume_db = 24.0
+
+[node name="Cena3" type="Sprite2D" parent="."]
+position = Vector2(575.5, 326.25)
+rotation = -0.0031000385
+scale = Vector2(1.2955804, 0.9520567)
+texture = ExtResource("3_imahg")
+
+[node name="Cena2" type="Sprite2D" parent="."]
+position = Vector2(572, 323.25)
+scale = Vector2(1.2764319, 0.9342213)
+texture = ExtResource("4_rerdm")
+
+[node name="Cena1" type="Sprite2D" parent="."]
+position = Vector2(573.5, 324.75)
+rotation = 0.0027262555
+scale = Vector2(1.2931912, 0.9628741)
+texture = ExtResource("5_1h8vq")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1040.0
+offset_top = 18.0
+offset_right = 1122.0
+offset_bottom = 57.0
+text = "Aperte P"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
