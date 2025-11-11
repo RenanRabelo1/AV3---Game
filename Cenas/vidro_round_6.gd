@@ -25,6 +25,7 @@ var parou = 0
 var lava = false
 var impedir_j=0
 var impedir_c=0
+var passar=0
 
 var tempo0 = 0
 
@@ -49,6 +50,9 @@ func _process(delta: float) -> void:
 
 	_derrota()
 	_DanoLava()
+	
+	if passar>=1:
+		get_tree().change_scene_to_file("res://Cenas/fase_final.tscn")
 	if entrou_c==0 && entrou_j==0:
 		$piso6/CollisionShape2D.disabled = true
 		$piso7/CollisionShape2D.disabled = true
@@ -133,6 +137,7 @@ func _process(delta: float) -> void:
 				$hud_vidro/op1.hide()
 				$hud_vidro/op2.hide()
 				$hud_vidro/ponto.text=str("2")
+				passar+=1
 			
 				
 				
@@ -166,6 +171,7 @@ func _process(delta: float) -> void:
 				$hud_carol/op1.hide()
 				$hud_carol/op2.hide()
 				$hud_carol/ponto.text=str("2")
+				passar+=1
 			
 			# 10 + 13 + 17
 			# 8 + 15 + 17
@@ -724,10 +730,6 @@ func _DanoLava():
 		if carol and not salvo_c:
 			carol.queue_free()
 
-	
-	
-		
-
 
 func _on_timer_hud_timeout() -> void:
 	if virou == 0:
@@ -772,8 +774,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		
 func _derrota():
 		if !jose || !carol:
-			$Node2D2.show()
-			$hudTempo.hide()
+			get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 
 
 func _on_aviso_timeout() -> void:
