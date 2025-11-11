@@ -71,9 +71,9 @@ func _on_timer_cima_timeout() -> void:
 
 func morrer():
 	if carol == 0:
-		$carol.queue_free()
+		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 	if jose == 0:
-		$Jose.queue_free()
+		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 func life_animated_jose():
 	if jose == 6:
 		$Jose/AnimatedSprite2D2.play("6")

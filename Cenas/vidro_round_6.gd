@@ -722,13 +722,11 @@ func _on_piso_lava_body_exited(body: Node2D) -> void:
 		
 func _DanoLava():
 	if virou == 1:
-		
-
 		if jose and not salvo_j:
-			jose.queue_free()
+			get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 		
 		if carol and not salvo_c:
-			carol.queue_free()
+			get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 
 
 func _on_timer_hud_timeout() -> void:
