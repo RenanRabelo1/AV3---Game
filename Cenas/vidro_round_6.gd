@@ -54,7 +54,7 @@ func _process(delta: float) -> void:
 	_DanoLava()
 	
 	if passar>=1:
-		get_tree().change_scene_to_file("res://Cenas/fase_final.tscn")
+		get_tree().change_scene_to_file("res://Cenas/esfinge_falando - Copia (3).tscn")
 	if entrou_c==0 && entrou_j==0:
 		$piso6/CollisionShape2D.disabled = true
 		$piso7/CollisionShape2D.disabled = true
