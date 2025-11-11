@@ -7,8 +7,8 @@
 script = ExtResource("1_ii7ww")
 
 [node name="TelaDeVitória" type="Sprite2D" parent="."]
-position = Vector2(541, 335.25)
-scale = Vector2(1, 0.56977737)
+position = Vector2(541, 334)
+scale = Vector2(1, 0.57191783)
 texture = ExtResource("1_ax0x4")
 
 [node name="JogarDenovo" type="Button" parent="."]
