@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cmkdepvxxufi2" path="res://Assets/Pixel Ancient Egypt/Back.png" id="2_ruij7"]
 [ext_resource type="PackedScene" uid="uid://d3jkc0pqmw4x0" path="res://Cenas/jose.tscn" id="4_ja1os"]
 [ext_resource type="PackedScene" uid="uid://di2y0wbeuqb53" path="res://Cenas/carol.tscn" id="4_lb8y5"]
-[ext_resource type="Texture2D" uid="uid://bwsfdo6jdfhkj" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Chat BalloonsBubbles - Pixel Art/Chat-1.png" id="6_qns0q"]
+[ext_resource type="Texture2D" uid="uid://bwsfdo6jdfhkj" path="res://Assets Cle├│patra/Chat BalloonsBubbles - Pixel Art/Chat-1.png" id="6_qns0q"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_qns0q"]
 a = Vector2(46, -390.375)
@@ -347,6 +347,5 @@ position = Vector2(-2, 4)
 shape = SubResource("SegmentShape2D_vi8pf")
 
 [connection signal="body_entered" from="AreaEsfingeTexto" to="." method="_on_area_esfinge_texto_body_entered"]
-[connection signal="Stop" from="carol" to="." method="_on_carol_stop"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="entrando" to="." method="_on_entrando_body_entered"]

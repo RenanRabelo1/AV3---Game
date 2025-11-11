@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://baeedfpw1t7tu"]
 
 [ext_resource type="Script" uid="uid://btkp6mgbohxs3" path="res://Cenas/canvas_layer.gd" id="1_83l6y"]
-[ext_resource type="Texture2D" uid="uid://dv7c0m75wfi8" path="res://Assets/Tela Inicial.jpg" id="1_wfeud"]
+[ext_resource type="Texture2D" uid="uid://dt8ypt6lgxvm5" path="res://Assets Cle├│patra/1618a48c-d14d-4349-9246-ace5c3115484.jpg" id="1_wfeud"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_83l6y")
