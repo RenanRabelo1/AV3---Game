@@ -9,6 +9,11 @@ position = Vector2(114, 200)
 scale = Vector2(0.297778, 0.133779)
 texture = ExtResource("1_xl880")
 
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(219, 200)
+scale = Vector2(0.08888901, 0.13043465)
+texture = ExtResource("1_xl880")
+
 [node name="num1" type="Label" parent="."]
 offset_left = 55.0001
 offset_top = 181.0
@@ -26,12 +31,20 @@ theme_override_font_sizes/font_size = 25
 text = "X"
 
 [node name="num3" type="Label" parent="."]
-offset_left = 153.0
-offset_top = 181.0
-offset_right = 193.0
-offset_bottom = 250.0
+offset_left = 152.0
+offset_top = 182.0
+offset_right = 192.0
+offset_bottom = 251.0
 theme_override_font_sizes/font_size = 25
 text = "X"
+
+[node name="ponto" type="Label" parent="."]
+offset_left = 210.0
+offset_top = 182.0
+offset_right = 250.0
+offset_bottom = 251.0
+theme_override_font_sizes/font_size = 25
+text = "0"
 
 [node name="op1" type="Label" parent="."]
 offset_left = 79.0001
@@ -42,9 +55,9 @@ theme_override_font_sizes/font_size = 30
 text = "+"
 
 [node name="op2" type="Label" parent="."]
-offset_left = 128.0
-offset_top = 179.0
-offset_right = 168.0
-offset_bottom = 221.0
+offset_left = 127.0
+offset_top = 177.0
+offset_right = 167.0
+offset_bottom = 219.0
 theme_override_font_sizes/font_size = 30
 text = "+"

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://baeedfpw1t7tu"]
+
+[ext_resource type="Script" uid="uid://btkp6mgbohxs3" path="res://Cenas/canvas_layer.gd" id="1_83l6y"]
+[ext_resource type="Texture2D" uid="uid://dt8ypt6lgxvm5" path="res://Assets Cle├│patra/1618a48c-d14d-4349-9246-ace5c3115484.jpg" id="1_wfeud"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_83l6y")
+
+[node name="TelaInicial" type="Sprite2D" parent="."]
+position = Vector2(590, 324.50003)
+scale = Vector2(0.92175275, 0.9011143)
+texture = ExtResource("1_wfeud")
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 890.0
+offset_top = 74.0
+offset_right = 1140.0
+offset_bottom = 182.0
+
+[node name="play" type="Button" parent="."]
+offset_left = 39.0
+offset_top = 73.0
+offset_right = 296.0
+offset_bottom = 190.0
+
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]

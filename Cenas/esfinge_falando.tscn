@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0dfw83vdcwvr"]
+
+[ext_resource type="Script" uid="uid://pk8ran7qdtla" path="res://Cenas/esfinge_falando.gd" id="1_227tr"]
+[ext_resource type="AudioStream" uid="uid://1s372kwn2r1l" path="res://Assets Cle├│patra/Cen├írios/monster-footstep-162883.mp3" id="1_ynijy"]
+[ext_resource type="Texture2D" uid="uid://d2xh8082p54te" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Screenshot 2025-11-07 at 18-56-55 Pixel Art Game Cutscene – Figma Make.png" id="2_ytnj6"]
+[ext_resource type="Texture2D" uid="uid://e8dhyx2uayoq" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Screenshot 2025-11-07 at 18-57-19 Pixel Art Game Cutscene – Figma Make.png" id="3_k2km7"]
+[ext_resource type="Texture2D" uid="uid://bhn1802ves4kx" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Screenshot 2025-11-07 at 18-57-10 Pixel Art Game Cutscene – Figma Make.png" id="4_xpkdt"]
+[ext_resource type="VideoStream" uid="uid://b5vx62p3r8pe3" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/VideoBola.ogv" id="6_k2km7"]
+
+[node name="EsfingeFalando" type="CanvasLayer"]
+script = ExtResource("1_227tr")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(573.5, 324.75)
+scale = Vector2(2.3225155, 1.7110817)
+stream = ExtResource("1_ynijy")
+volume_db = 24.0
+
+[node name="Cena3" type="Sprite2D" parent="."]
+position = Vector2(575.5, 326.25)
+scale = Vector2(2.2757936, 1.6782945)
+texture = ExtResource("3_k2km7")
+
+[node name="Cena2" type="Sprite2D" parent="."]
+position = Vector2(572, 323.25)
+scale = Vector2(2.3052208, 1.6766233)
+texture = ExtResource("4_xpkdt")
+
+[node name="Cena1" type="Sprite2D" parent="."]
+position = Vector2(573.5, 324.75)
+scale = Vector2(2.3225155, 1.7110817)
+texture = ExtResource("2_ytnj6")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1040.0
+offset_top = 18.0
+offset_right = 1122.0
+offset_bottom = 57.0
+text = "Aperte P"
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = 6.0
+offset_top = 2.0
+offset_right = 1158.0
+offset_bottom = 650.0
+stream = ExtResource("6_k2km7")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

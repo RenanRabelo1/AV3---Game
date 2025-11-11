@@ -3,15 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://bj6vx8yldl6la" path="res://Assets/Pixel Art Ancient Egypt Full Version Asset Pack/vermelho.jpg" id="1_34hvj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gil3p"]
-size = Vector2(1152.5, 392)
+size = Vector2(1143, 630.25)
 
 [node name="lava" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(578, 224)
-scale = Vector2(2.75962, 0.927885)
+position = Vector2(549, 333)
+scale = Vector2(2.7439914, 1.5156251)
 texture = ExtResource("1_34hvj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(577.75, 221)
+position = Vector2(556, 334)
 shape = SubResource("RectangleShape2D_gil3p")
