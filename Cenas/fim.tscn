@@ -151,6 +151,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Place holder 3"
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.001
 one_shot = true
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
