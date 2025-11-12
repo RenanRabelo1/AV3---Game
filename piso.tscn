@@ -23,11 +23,10 @@ size = Vector2(572, 75)
 [node name="piso" type="Area2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(335.5, 172.50002)
-scale = Vector2(9.5, 1.9137933)
+position = Vector2(560, 518.25)
+scale = Vector2(12.478261, 1.3189658)
 sprite_frames = SubResource("SpriteFrames_kijln")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(424, 205.5)
+position = Vector2(561, 520)
 shape = SubResource("RectangleShape2D_t6b2e")

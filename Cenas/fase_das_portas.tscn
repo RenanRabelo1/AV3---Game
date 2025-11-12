@@ -305,7 +305,7 @@ b = Vector2(1307, -104)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_kxkpw"]
 a = Vector2(1150, 170)
-b = Vector2(1367, 141)
+b = Vector2(1361, 142)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_gpu8x"]
 a = Vector2(1169, 382)
@@ -320,8 +320,8 @@ a = Vector2(1161, 64)
 b = Vector2(1347, 35)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_wthdh"]
-a = Vector2(1349, 42)
-b = Vector2(1468, 127)
+a = Vector2(1348, 37)
+b = Vector2(1477, 126)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_k7gdm"]
 a = Vector2(1479, 201)
@@ -329,7 +329,7 @@ b = Vector2(1478, 129)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_hclq0"]
 a = Vector2(1569, 210)
-b = Vector2(1478, 206)
+b = Vector2(1478, 201)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_fv5ix"]
 a = Vector2(1476, 270)
@@ -356,7 +356,7 @@ a = Vector2(2684, 77)
 b = Vector2(2689, 205)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_hi7si"]
-a = Vector2(1158, 169)
+a = Vector2(1159, 183)
 b = Vector2(1155, 348)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_u6pfx"]
