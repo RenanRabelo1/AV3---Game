@@ -110,6 +110,10 @@ func _jose_die():
 
 func _on_certa_body_entered(body: Node2D) -> void:
 	$PortaChavePrateada.set_collision_layer_value(2, false)  
+	$AnimatedSprite2D4.show()
+	$Pergunta1/AnimatedSprite2D.hide()
+	$Pergunta1/AnimatedSprite2D2.hide()
+	$Pergunta1/Label.hide()
 
 
 func _on_errada_body_entered(body: Node2D) -> void:
@@ -143,24 +147,38 @@ func _on_chave_prateada_body_entered(body: Node2D) -> void:
 	$Pergunta2/AnimatedSprite2D2.show()
 	$Pergunta2/Label2.show()
 	$Pergunta2/AnimatedSprite2D3.show()
+	$AnimatedSprite2D4.hide()
+	$AnimatedSprite2D5.show()
+
 	
 func _on_certa_2_body_entered(body: Node2D) -> void:
 	$PortaChaveDourada.set_collision_layer_value(2, false)
 	$Pergunta3/CollisionShape2D.disabled = false
+	$AnimatedSprite2D5.hide()
+	$AnimatedSprite2D6.show()
+	$Pergunta2/AnimatedSprite2D3.hide()
+	$Pergunta2/AnimatedSprite2D2.hide()
+	$Pergunta2/Label2.hide()
 
 
 func _on_chave_dourada_body_entered(body: Node2D) -> void:
 	$PortaFinal.set_collision_layer_value(2, false)
 	$ChaveDourada/AnimatedSprite2D.queue_free()
-	$Pergunta2/AnimatedSprite2D2.hide()
 	$Pergunta2/Label2.hide()
 	$Pergunta3/Label.show()
 	$Pergunta3/AnimatedSprite2D.show()
 	$Pergunta3/AnimatedSprite2D2.show()
-	$Pergunta2/AnimatedSprite2D3.hide()
+	$AnimatedSprite2D7.show()
+	$AnimatedSprite2D6.hide()
+
 	
 func _on_certa_3_body_entered(body: Node2D) -> void:
 	$PortaTesouro.set_collision_layer_value(2, false)
+	$AnimatedSprite2D7.hide()
+	$AnimatedSprite2D8.show()
+	$Pergunta3/AnimatedSprite2D.hide()
+	$Pergunta3/Label.hide()
+	$Pergunta3/AnimatedSprite2D2.hide()
 
 func _on_tesouro_body_entered(body: Node2D) -> void:
 	get_tree().change_scene_to_file("res://Cenas/esfinge_falando.tscn")
@@ -172,6 +190,7 @@ func _on_pergunta_1_body_entered(body: Node2D) -> void:
 	$Pergunta1/AnimatedSprite2D.show()
 	$Pergunta1/Timeracabar1.start()
 	$Pergunta1/AnimatedSprite2D2.show()
+	$AnimatedSprite2D3.hide()
 
 
 
@@ -188,11 +207,6 @@ func _on_pergunta_2_body_entered(body: Node2D) -> void:
 	$Pergunta2/Timer4.start()
 	$Pergunta2/Timeracabar2.start()
 
-
-func _on_timeracabar_1_timeout() -> void:
-	$Pergunta1/Label.hide()
-	$Pergunta1/AnimatedSprite2D.hide()
-	$Pergunta1/AnimatedSprite2D2.hide()
 
 
 func _on_timeracabar_2_timeout() -> void:
