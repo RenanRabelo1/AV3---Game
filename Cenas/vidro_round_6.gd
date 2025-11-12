@@ -673,6 +673,8 @@ func _on_timer_timeout() -> void:
 		$lava2.show()
 		$lava3.show()
 		$lava4.show()
+		$lava5.show()
+		$lava6.show()
 		$lava/CollisionShape2D.disabled = false
 		$Timer.wait_time = 5.0
 		lava = true
@@ -739,7 +741,7 @@ func _DanoLava():
 func _on_timer_hud_timeout() -> void:
 	if virou == 0:
 		tempo += 1
-		$hudTempo/Label.text = str(tempo)
+		$hudTempo/Label.text = str("Tempo restante: ", 35 - tempo)
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
