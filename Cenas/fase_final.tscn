@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=4 uid="uid://broaga8mm7ir6"]
+[gd_scene load_steps=113 format=4 uid="uid://broaga8mm7ir6"]
 
 [ext_resource type="PackedScene" uid="uid://d3jkc0pqmw4x0" path="res://Cenas/jose.tscn" id="1_jjlrl"]
 [ext_resource type="Script" uid="uid://88ksfib3po44" path="res://Cenas/fase_final.gd" id="1_lbji7"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://ulh0bkmisglt" path="res://Assets/Desert_Dungeon_Pack/Fire.png" id="14_c1blg"]
 [ext_resource type="Texture2D" uid="uid://bwsfdo6jdfhkj" path="res://Assets Cle├│patra/Chat BalloonsBubbles - Pixel Art/Chat-1.png" id="16_p0lct"]
 [ext_resource type="Texture2D" uid="uid://bnyxstp45nv8k" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Back.png" id="17_oaado"]
+[ext_resource type="Texture2D" uid="uid://w4k32iyxix5p" path="res://Assets Cle├│patra/buttons-pixel-art-set-square-600nw-2194665507-removebg-preview.png" id="18_fqw0j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p0lct"]
 texture = ExtResource("8_c1blg")
@@ -996,6 +997,17 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_msl6a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_fqw0j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="FaseFinal" type="Node"]
 script = ExtResource("1_lbji7")
 
@@ -1710,6 +1722,41 @@ autostart = true
 visible = false
 position = Vector2(644, 76)
 sprite_frames = SubResource("SpriteFrames_qtw11")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(71, 354)
+rotation = -1.5707964
+sprite_frames = SubResource("SpriteFrames_msl6a")
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(499, 203)
+rotation = -2.443461
+sprite_frames = SubResource("SpriteFrames_msl6a")
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(152, 358)
+rotation = 1.5707964
+sprite_frames = SubResource("SpriteFrames_msl6a")
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(496, 400)
+rotation = 1.5707964
+sprite_frames = SubResource("SpriteFrames_msl6a")
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(601, 202)
+rotation = 6.2831855
+sprite_frames = SubResource("SpriteFrames_msl6a")
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(673, 346)
+rotation = 1.5707964
+sprite_frames = SubResource("SpriteFrames_msl6a")
 
 [connection signal="body_entered" from="ChavePrateada" to="." method="_on_chave_prateada_body_entered"]
 [connection signal="body_entered" from="ChaveDourada" to="." method="_on_chave_dourada_body_entered"]

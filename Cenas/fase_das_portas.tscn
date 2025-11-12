@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://b87qu7l3pj37e"]
+[gd_scene load_steps=49 format=4 uid="uid://b87qu7l3pj37e"]
 
 [ext_resource type="Script" uid="uid://b20lxkv2qnl0v" path="res://Cenas/fase_das_portas.gd" id="1_t2rxp"]
 [ext_resource type="Texture2D" uid="uid://c12l72fh8a3cj" path="res://Assets/Desert_Dungeon_Pack/Tileset_Dungeon.png" id="1_u0akp"]
@@ -301,6 +301,8 @@ b = Vector2(1549, 149)
 a = Vector2(1308, -35)
 b = Vector2(1307, -104)
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ykflc"]
+
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_kxkpw"]
 a = Vector2(1150, 170)
 b = Vector2(1367, 141)
@@ -478,6 +480,8 @@ scale = Vector2(2.2874787, 1.2684671)
 texture = ExtResource("7_lu7us")
 
 [node name="Barreiras" type="RigidBody2D" parent="."]
+mass = 1000.0
+physics_material_override = SubResource("PhysicsMaterial_ykflc")
 gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barreiras"]
