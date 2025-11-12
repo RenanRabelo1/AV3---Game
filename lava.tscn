@@ -1,17 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://dufkhhevbgc4p"]
 
-[ext_resource type="Texture2D" uid="uid://bj6vx8yldl6la" path="res://Assets/Pixel Art Ancient Egypt Full Version Asset Pack/vermelho.jpg" id="1_34hvj"]
+[ext_resource type="Texture2D" uid="uid://cyjerpyvxxl2b" path="res://Assets Cle├│patra/Cleopatra falando/Screenshot_4.png" id="1_34hvj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gil3p"]
-size = Vector2(1143, 630.25)
+size = Vector2(983, 569)
 
 [node name="lava" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(549, 333)
-scale = Vector2(2.7439914, 1.5156251)
+position = Vector2(562.00006, 330.5)
+scale = Vector2(2.6612463, 2.6933959)
 texture = ExtResource("1_34hvj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(556, 334)
+position = Vector2(560.5, 326.5)
 shape = SubResource("RectangleShape2D_gil3p")
