@@ -91,3 +91,15 @@ func _on_pergunta_body_entered(body: Node2D) -> void:
 	$Label7.show()
 	
 	
+
+
+func _on_porta_certa_1_body_entered(body: Node2D) -> void:
+	$"Props+door3".hide()
+
+
+func _on_porta_certa_2_body_entered(body: Node2D) -> void:
+	$"Props+door4".hide()
+
+
+func _on_porta_certa_3_body_entered(body: Node2D) -> void:
+	$"Props+door6".hide()

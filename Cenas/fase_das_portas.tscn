@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://b87qu7l3pj37e"]
+[gd_scene load_steps=52 format=4 uid="uid://b87qu7l3pj37e"]
 
 [ext_resource type="Script" uid="uid://b20lxkv2qnl0v" path="res://Cenas/fase_das_portas.gd" id="1_t2rxp"]
 [ext_resource type="Texture2D" uid="uid://c12l72fh8a3cj" path="res://Assets/Desert_Dungeon_Pack/Tileset_Dungeon.png" id="1_u0akp"]
@@ -378,6 +378,18 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_mrx6s"]
+a = Vector2(1850, 347)
+b = Vector2(1851, 410)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_obpvj"]
+a = Vector2(2168, 147)
+b = Vector2(2167, 73)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_j8do2"]
+a = Vector2(2385, 144)
+b = Vector2(2384, 75)
+
 [node name="FaseDasPortas" type="Node"]
 script = ExtResource("1_t2rxp")
 
@@ -438,9 +450,9 @@ scale = Vector2(2.2874787, 1.2684671)
 texture = ExtResource("7_lu7us")
 
 [node name="Props+door4" type="Sprite2D" parent="."]
-position = Vector2(2168, 106.00001)
+position = Vector2(2168, 109.91733)
 rotation = 1.5707964
-scale = Vector2(2.2874787, 1.2684671)
+scale = Vector2(2.5402093, 1.2684671)
 texture = ExtResource("7_lu7us")
 
 [node name="Props+door5" type="Sprite2D" parent="."]
@@ -450,9 +462,9 @@ scale = Vector2(2.2874787, 1.2684671)
 texture = ExtResource("7_lu7us")
 
 [node name="Props+door6" type="Sprite2D" parent="."]
-position = Vector2(2385, 106.99997)
+position = Vector2(2385, 108.07723)
 rotation = 1.5707964
-scale = Vector2(2.2874787, 1.2684671)
+scale = Vector2(2.3569796, 1.2684671)
 texture = ExtResource("7_lu7us")
 
 [node name="Props+door7" type="Sprite2D" parent="."]
@@ -642,8 +654,27 @@ offset_right = 2351.0
 offset_bottom = 416.0
 text = "Place Holder"
 
+[node name="PortaCerta1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortaCerta1"]
+position = Vector2(27, 10)
+shape = SubResource("SegmentShape2D_mrx6s")
+
+[node name="PortaCerta2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortaCerta2"]
+shape = SubResource("SegmentShape2D_obpvj")
+
+[node name="PortaCerta3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortaCerta3"]
+shape = SubResource("SegmentShape2D_j8do2")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="fim" to="." method="_on_fim_body_entered"]
 [connection signal="body_shape_entered" from="fim" to="." method="_on_fim_body_shape_entered"]
 [connection signal="body_entered" from="errada" to="." method="_on_errada_body_entered"]
 [connection signal="body_entered" from="Barreiras/Pergunta" to="." method="_on_pergunta_body_entered"]
+[connection signal="body_entered" from="PortaCerta1" to="." method="_on_porta_certa_1_body_entered"]
+[connection signal="body_entered" from="PortaCerta2" to="." method="_on_porta_certa_2_body_entered"]
+[connection signal="body_entered" from="PortaCerta3" to="." method="_on_porta_certa_3_body_entered"]
