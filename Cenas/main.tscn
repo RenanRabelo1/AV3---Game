@@ -145,6 +145,7 @@ texture = ExtResource("2_ruij7")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2(94, 395.375)
+mass = 1000.0
 gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
@@ -329,6 +330,7 @@ offset_bottom = 64.0
 text = "Aperte P para pular"
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.001
 one_shot = true
 
 [node name="entrando" type="Area2D" parent="."]

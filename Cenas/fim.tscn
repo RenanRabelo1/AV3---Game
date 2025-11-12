@@ -155,6 +155,7 @@ one_shot = true
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2(94, 395.375)
+mass = 10000.0
 gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
