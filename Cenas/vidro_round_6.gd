@@ -147,7 +147,7 @@ func _process(delta: float) -> void:
 				
 			else:
 		
-				$hud_vidro/num1.text=str(soma1_j)
+				$hud_vidro/num1.text=str("ERRADO")
 				$hud_vidro/num2.hide()
 				$hud_vidro/num3.hide()
 				$hud_vidro/op1.hide()
@@ -421,6 +421,7 @@ func _on_piso_6_body_entered(body: Node2D) -> void:
 	
 	
 	if body.name=="Jose":
+	
 		var limite=0
 		
 		if round_j==3:
@@ -435,6 +436,7 @@ func _on_piso_6_body_entered(body: Node2D) -> void:
 				$hud_vidro/num1.text=str(nome_j)
 				soma1_j+=13
 				hud1+=1
+				
 			if limite==1 && round3_j==2:
 				$hud_vidro/num2.text=str(nome_j)
 				soma1_j+=13
@@ -653,6 +655,8 @@ func _on_timer_timeout() -> void:
 	
 	if lava:
 		$Timer.wait_time = 35.0
+		$lava6.hide()
+		$lava5.hide()
 		$lava.hide()
 		$lava2.hide()
 		$lava3.hide()
@@ -746,6 +750,7 @@ func _on_timer_hud_timeout() -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("entrou")	
+	$Node2D3.hide()
 	
 	if body.name=="Jose":
 		round_j+=1
@@ -778,7 +783,15 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		if round_c==3:
 			$carol/Label3.show()
 			$impedir_carol/c_c.call_deferred("set_disabled", false)
+			
+	if round_j==1 && round_c==1:
+		$Node2D4.show()
 		
+	elif round_j==2 && round_c==2:
+		$Node2D4.hide()
+		
+	elif round_j==3 && round_c==3:
+		$Node.show()
 func _derrota():
 		if !jose || !carol:
 			get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
