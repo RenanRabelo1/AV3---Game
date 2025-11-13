@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgsbff1hc0b78"]
+[gd_scene load_steps=4 format=3 uid="uid://cgsbff1hc0b78"]
 
 [ext_resource type="PackedScene" uid="uid://di2y0wbeuqb53" path="res://Cenas/carol.tscn" id="1_523wv"]
 [ext_resource type="PackedScene" uid="uid://bd8oxh6ppsycf" path="res://Cenas/cleopatra.tscn" id="1_hjcgo"]
+[ext_resource type="PackedScene" uid="uid://d3jkc0pqmw4x0" path="res://Cenas/jose.tscn" id="3_ahjnr"]
 
 [node name="boss_egito" type="Node2D"]
 
 [node name="carol" parent="." instance=ExtResource("1_523wv")]
 
 [node name="cleopatra" parent="." instance=ExtResource("1_hjcgo")]
-position = Vector2(143, 69)
+position = Vector2(146, 76)
+
+[node name="Jose" parent="." instance=ExtResource("3_ahjnr")]
+position = Vector2(-243, 68)

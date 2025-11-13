@@ -1,7 +1,7 @@
 extends CharacterBody2D
 signal dor
 signal Stop
-
+@onready var progress_bar: ProgressBar = $ProgressBar
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
@@ -11,7 +11,9 @@ func _physics_process(delta: float) -> void:
 	
 	# Reset velocity
 	velocity = Vector2.ZERO
-	
+
+
+
 	# Movement logic
 	if direction_x != 0 || direction_y != 0:
 		velocity.x = direction_x * SPEED
@@ -54,3 +56,6 @@ func _physics_process(delta: float) -> void:
 func _die():
 	queue_free()
 	emit_signal("dor")
+
+func take_damage():
+	progress_bar.value -=1
