@@ -1902,6 +1902,20 @@ theme_override_fonts/font = ExtResource("18_msl6a")
 theme_override_font_sizes/font_size = 20
 text = "Deixar"
 
+[node name="LabelTimer" type="Label" parent="."]
+offset_left = 560.0
+offset_top = 23.0
+offset_right = 600.0
+offset_bottom = 46.0
+
+[node name="TimerParaAcabar" type="Timer" parent="."]
+wait_time = 180.0
+one_shot = true
+autostart = true
+
+[node name="TimerParaDiminuir" type="Timer" parent="."]
+autostart = true
+
 [connection signal="body_entered" from="ChavePrateada" to="." method="_on_chave_prateada_body_entered"]
 [connection signal="body_entered" from="ChaveDourada" to="." method="_on_chave_dourada_body_entered"]
 [connection signal="body_entered" from="flechas" to="." method="_on_flechas_body_entered"]
@@ -1920,9 +1934,11 @@ text = "Deixar"
 [connection signal="timeout" from="Pergunta1/Timer1" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Pergunta1/Timeracabar1" to="." method="_on_timeracabar_1_timeout"]
 [connection signal="body_entered" from="Pergunta2" to="." method="_on_pergunta_2_body_entered"]
-[connection signal="timeout" from="Pergunta2/Timer4" to="." method="_on_timer_2_timeout"]
 [connection signal="timeout" from="Pergunta2/Timer4" to="." method="_on_timer_4_timeout"]
+[connection signal="timeout" from="Pergunta2/Timer4" to="." method="_on_timer_2_timeout"]
 [connection signal="timeout" from="Pergunta2/Timeracabar2" to="." method="_on_timeracabar_2_timeout"]
 [connection signal="body_entered" from="Pergunta3" to="." method="_on_pergunta_3_body_entered"]
 [connection signal="timeout" from="Pergunta3/Timer6" to="." method="_on_timer_6_timeout"]
 [connection signal="timeout" from="Pergunta3/Timeracabar3" to="." method="_on_timeracabar_3_timeout"]
+[connection signal="timeout" from="TimerParaAcabar" to="." method="_on_timer_para_acabar_timeout"]
+[connection signal="timeout" from="TimerParaDiminuir" to="." method="_on_timer_para_diminuir_timeout"]

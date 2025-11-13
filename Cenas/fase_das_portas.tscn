@@ -3404,11 +3404,11 @@ b = Vector2(1851, 410)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_obpvj"]
 a = Vector2(2168, 147)
-b = Vector2(2167, 73)
+b = Vector2(2169, 81)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_j8do2"]
 a = Vector2(2385, 144)
-b = Vector2(2384, 75)
+b = Vector2(2385, 82)
 
 [node name="FaseDasPortas" type="Node"]
 script = ExtResource("1_t2rxp")
