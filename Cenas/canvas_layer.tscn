@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://baeedfpw1t7tu"]
+[gd_scene load_steps=3 format=3 uid="uid://baeedfpw1t7tu"]
 
 [ext_resource type="Script" uid="uid://btkp6mgbohxs3" path="res://Cenas/canvas_layer.gd" id="1_83l6y"]
-[ext_resource type="Texture2D" uid="uid://dt8ypt6lgxvm5" path="res://Assets Cle├│patra/1618a48c-d14d-4349-9246-ace5c3115484.jpg" id="1_wfeud"]
 [ext_resource type="Texture2D" uid="uid://kh8y3hqefdsi" path="res://fundos/MainMenu.jpg" id="3_62agy"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
@@ -10,7 +9,6 @@ script = ExtResource("1_83l6y")
 [node name="TelaInicial" type="Sprite2D" parent="."]
 position = Vector2(600.0391, 324.50003)
 scale = Vector2(0.9374389, 0.9011143)
-texture = ExtResource("1_wfeud")
 
 [node name="MainMenu" type="Sprite2D" parent="."]
 position = Vector2(613, 336.5)
