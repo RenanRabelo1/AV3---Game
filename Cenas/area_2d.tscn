@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://cedb4nee2ihay" path="res://Cenas/area_2d.gd" id="1_evr6y"]
 [ext_resource type="Texture2D" uid="uid://dd6h1jtujti1p" path="res://Assets/Pixel Ancient Egypt/Pyramid with Door.png" id="1_qwbcd"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_evr6y"]
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_evr6y"]
+a = Vector2(-1, -268)
+b = Vector2(12, 728)
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_evr6y")
@@ -14,5 +16,5 @@ scale = Vector2(0.2109375, 0.1796875)
 texture = ExtResource("1_qwbcd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(162, 180)
-shape = SubResource("CircleShape2D_evr6y")
+position = Vector2(141, 181)
+shape = SubResource("SegmentShape2D_evr6y")
