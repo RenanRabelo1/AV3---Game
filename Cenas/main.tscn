@@ -330,7 +330,7 @@ offset_bottom = 64.0
 text = "Aperte P para pular"
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.001
+wait_time = 0.05
 one_shot = true
 
 [node name="entrando" type="Area2D" parent="."]

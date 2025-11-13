@@ -151,7 +151,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Place holder 3"
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.001
+wait_time = 0.05
 one_shot = true
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
@@ -269,9 +269,10 @@ shape = SubResource("SegmentShape2D_tbfwu")
 position = Vector2(215, 0.625)
 shape = SubResource("SegmentShape2D_tbfwu")
 
-[node name="Jose" parent="." instance=ExtResource("5_84nx8")]
+[node name="carol" parent="." instance=ExtResource("6_7w1x0")]
 position = Vector2(286, 271)
 
-[node name="carol" parent="Jose" instance=ExtResource("6_7w1x0")]
+[node name="Jose" parent="." instance=ExtResource("5_84nx8")]
+position = Vector2(286, 271)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
