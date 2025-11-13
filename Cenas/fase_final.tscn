@@ -1758,6 +1758,20 @@ position = Vector2(673, 346)
 rotation = 1.5707964
 sprite_frames = SubResource("SpriteFrames_msl6a")
 
+[node name="TimerTempoFInal" type="Timer" parent="."]
+wait_time = 300.0
+one_shot = true
+autostart = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 564.0
+offset_top = 22.0
+offset_right = 717.0
+offset_bottom = 73.0
+
+[node name="TimerConta" type="Timer" parent="."]
+autostart = true
+
 [connection signal="body_entered" from="ChavePrateada" to="." method="_on_chave_prateada_body_entered"]
 [connection signal="body_entered" from="ChaveDourada" to="." method="_on_chave_dourada_body_entered"]
 [connection signal="body_entered" from="flechas" to="." method="_on_flechas_body_entered"]
@@ -1782,3 +1796,5 @@ sprite_frames = SubResource("SpriteFrames_msl6a")
 [connection signal="body_entered" from="Pergunta3" to="." method="_on_pergunta_3_body_entered"]
 [connection signal="timeout" from="Pergunta3/Timer6" to="." method="_on_timer_6_timeout"]
 [connection signal="timeout" from="Pergunta3/Timeracabar3" to="." method="_on_timeracabar_3_timeout"]
+[connection signal="timeout" from="TimerTempoFInal" to="." method="_on_timer_tempo_f_inal_timeout"]
+[connection signal="timeout" from="TimerConta" to="." method="_on_timer_conta_timeout"]

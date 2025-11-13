@@ -23,6 +23,7 @@ size = Vector2(572, 75)
 [node name="piso" type="Area2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(560, 518.25)
 scale = Vector2(12.478261, 1.3189658)
 sprite_frames = SubResource("SpriteFrames_kijln")

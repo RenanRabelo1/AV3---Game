@@ -4,7 +4,7 @@ var jose = 6
 var cena_flechas = preload("res://Cenas/flechas.tscn")
 var pistas_esquerda_direita_y = [28, 103, -91]
 var chave_prateada = 0
-
+var tempo = 0
 # Pistas para carros da DIREITA → ESQUERDA  
 var pistas_direita_esquerda_y = [160, 216, 324, 384, 438, 544, 600]
 
@@ -22,6 +22,7 @@ func _process(delta: float) -> void:
 	morrer()
 	life_animated_carol()
 	life_animated_jose()
+	$Label.text = str("Tempo restante: ", 300 - tempo)
 
 
 
@@ -223,3 +224,11 @@ func _on_pergunta_3_body_entered(body: Node2D) -> void:
 
 func _on_timer_6_timeout() -> void:
 	$Pergunta3/CollisionShape2D.disabled = true
+
+
+func _on_timer_tempo_f_inal_timeout() -> void:
+	get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
+
+
+func _on_timer_conta_timeout() -> void:
+	tempo += 1
