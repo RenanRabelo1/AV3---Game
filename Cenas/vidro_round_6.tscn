@@ -4502,19 +4502,15 @@ theme_override_font_sizes/font_size = 19
 text = "8 + 6 + 3 - 10"
 
 [node name="piso6" parent="." instance=ExtResource("5_grsvf")]
-visible = false
 position = Vector2(-182, 67)
 
 [node name="piso7" parent="." instance=ExtResource("5_grsvf")]
-visible = false
 position = Vector2(57, 70)
 
 [node name="piso8" parent="." instance=ExtResource("5_grsvf")]
-visible = false
 position = Vector2(-185, 171)
 
 [node name="piso9" parent="." instance=ExtResource("5_grsvf")]
-visible = false
 position = Vector2(52, 169)
 
 [node name="piso10" parent="." instance=ExtResource("5_grsvf")]

@@ -18,10 +18,11 @@ offset_right = 832.0
 offset_bottom = 645.0
 
 [node name="Button3" type="Button" parent="."]
-offset_left = 948.0
+offset_left = 935.0
 offset_top = 32.0
 offset_right = 1082.0
 offset_bottom = 95.0
+text = "FINALIZAR"
 
 [node name="Button2" type="Button" parent="."]
 offset_left = 320.0
