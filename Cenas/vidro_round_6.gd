@@ -29,6 +29,7 @@ var passar=0
 var falha=0
 var tempo0 = 0
 var falha2=0
+var mensagem=0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -126,11 +127,13 @@ func _process(delta: float) -> void:
 				$hud_vidro/op1.text=str("+")
 				$hud_vidro/op2.text=str("+")
 				$hud_vidro/ponto.text=str("1")
+				
 				repete+=1
 				soma1_j=0
 				hud1=0
 				print(repete)
 				round3_j=0
+				mensagem=1
 			
 				
 			elif (soma1_j==35 && repete==1):
@@ -167,6 +170,7 @@ func _process(delta: float) -> void:
 				hud2=0
 				print(repete_c)
 				round3_c=0
+				mensagem=1
 				
 			elif (soma1_c==40 && repete_c==1):
 				$hud_carol/num1.text=str("ACERTOU")
@@ -191,9 +195,11 @@ func _process(delta: float) -> void:
 				$hud_carol/op2.hide()
 				falha2=1
 			
+		if mensagem==1:
 			
-			
-		
+			$Node/Label.hide()
+			$Node/Label2.hide()
+			$Node/Label4.show()
 					
 					
 			

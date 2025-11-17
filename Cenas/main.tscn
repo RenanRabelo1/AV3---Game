@@ -3336,7 +3336,7 @@ offset_bottom = 234.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_btbr3")
 theme_override_font_sizes/font_size = 20
-text = "Bem vindos exploradores!
+text = "Bem-vindos, exploradores!
 O que os trazem aqui?
 Desejam explorar a pirâmide?"
 
@@ -3374,7 +3374,7 @@ offset_left = 726.0
 offset_top = 41.0
 offset_right = 877.0
 offset_bottom = 64.0
-text = "Aperte P para pular"
+text = "Aperte P para pular."
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.001
