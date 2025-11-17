@@ -63,9 +63,9 @@ func _on_errada_body_entered(body: Node2D) -> void:
 
 func morrer():
 	if carol == 0:
-		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
+		$Node2D2.show()
 	if jose == 0:
-		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
+		$Node2D2.show()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Jose":
@@ -103,3 +103,28 @@ func _on_porta_certa_2_body_entered(body: Node2D) -> void:
 
 func _on_porta_certa_3_body_entered(body: Node2D) -> void:
 	$"Props+door6".hide()
+
+
+
+	
+
+	
+
+
+func _on_dano_body_entered(body: Node2D) -> void:
+	if body.name=="Jose":
+		$Node2D2.show()
+		$Area2D/Camera2D2.enabled=false
+	elif body.name=="carol":
+		$Node2D2.show()
+		$Area2D/Camera2D2.enabled=false
+		
+
+
+func _on_button_3_pressed() -> void:
+	get_tree().reload_current_scene()
+
+
+func _on_parar_body_entered(body: Node2D) -> void:
+	if body.name=="pedra_rolando":
+		$pedra_rolando/pedra.stop()
