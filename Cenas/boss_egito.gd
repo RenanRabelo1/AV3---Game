@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 	morrer()
 	life_animated_carol()
 	life_animated_jose()
-	
+
 
 
 func morrer():
@@ -103,3 +103,9 @@ func _on_area_2d4_body_entered(body: Node2D) -> void:
 
 func _on_area_2d1_body_entered(body: Node2D) -> void:
 	body.take_damage()
+
+
+func _on_timer2_timeout() -> void:
+	$AnimatedSprite2D.hide()
+	$Back.hide()
+	$Label9.hide()
