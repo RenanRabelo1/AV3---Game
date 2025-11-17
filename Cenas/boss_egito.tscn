@@ -150,7 +150,7 @@ scale = Vector2(1.0549451, 0.432)
 texture = ExtResource("2_4xnwc")
 
 [node name="carol" parent="." instance=ExtResource("1_523wv")]
-position = Vector2(767, 81)
+position = Vector2(-8, 75)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="carol"]
 position = Vector2(196.00005, 142.00002)
@@ -162,7 +162,7 @@ animation = &"6"
 position = Vector2(-8, 31)
 
 [node name="Jose" parent="." instance=ExtResource("3_ahjnr")]
-position = Vector2(-241, 44)
+position = Vector2(535, 40)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Jose"]
 position = Vector2(434.00006, 183.00009)
@@ -171,17 +171,17 @@ sprite_frames = SubResource("SpriteFrames_4xnwc")
 animation = &"6"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 529.0
-offset_top = 166.0
-offset_right = 566.0
-offset_bottom = 196.0
+offset_left = 548.0
+offset_top = 188.0
+offset_right = 585.0
+offset_bottom = 218.0
 text = "4>=5"
 
 [node name="Area2D" type="Area2D" parent="Label"]
-position = Vector2(22, 12)
+position = Vector2(27, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label/Area2D"]
-position = Vector2(-2, 1)
+position = Vector2(-8, -6)
 shape = SubResource("RectangleShape2D_urdpw")
 
 [node name="Label4" type="Label" parent="."]
@@ -335,10 +335,10 @@ position = Vector2(648, 561)
 texture = ExtResource("8_v0fwt")
 
 [node name="Label9" type="Label" parent="."]
-offset_left = 505.0
-offset_top = 508.0
-offset_right = 760.0
-offset_bottom = 583.0
+offset_left = 503.0
+offset_top = 507.0
+offset_right = 758.0
+offset_bottom = 582.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 15
 text = "Vá para a 
