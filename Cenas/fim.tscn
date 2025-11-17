@@ -329,8 +329,8 @@ texture = ExtResource("7_7w1x0")
 
 [node name="Preta" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.6745098)
-position = Vector2(582, 323.3125)
-scale = Vector2(2.6599998, 2.222826)
+position = Vector2(575, 324.5)
+scale = Vector2(2.5777779, 2.1705685)
 texture = ExtResource("9_d2yqj")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
