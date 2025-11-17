@@ -346,12 +346,12 @@ position = Vector2(197, 206)
 shape = SubResource("CapsuleShape2D_lae8x")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
 offset_left = 167.0
 offset_top = 145.0
 offset_right = 224.0
 offset_bottom = 172.0
-max_value = 10.0
 step = 1.0
-value = 10.0
+value = 100.0
 
 [connection signal="Stop" from="." to="." method="_on_stop"]
