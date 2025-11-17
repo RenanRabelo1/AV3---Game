@@ -63,4 +63,4 @@ func _on_stop() -> void:
 @onready var progress_bar: ProgressBar = $ProgressBar
 
 func take_damage():
-	progress_bar.value -= 25
+	progress_bar.value -= 10
