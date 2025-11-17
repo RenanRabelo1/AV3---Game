@@ -15,10 +15,12 @@ func _process(delta: float) -> void:
 
 
 func morrer():
-	if $carol.progress_bar.value == 0:
-		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
-	if $Jose.progress_bar.value == 0:
-		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
+	if $carol.progress_bar.value <= 0 || $Jose.progress_bar.value <= 0:
+		file()
+
+func file():
+	get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
+
 
 func life_animated_jose():
 	if $Jose.progress_bar.value == 100:

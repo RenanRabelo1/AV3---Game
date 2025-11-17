@@ -58,4 +58,4 @@ func _die():
 	emit_signal("dor")
 
 func take_damage():
-	progress_bar.value -= 25
+	progress_bar.value -= 10

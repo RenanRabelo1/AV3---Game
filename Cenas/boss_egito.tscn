@@ -1,8 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://cgsbff1hc0b78"]
+[gd_scene load_steps=26 format=3 uid="uid://cgsbff1hc0b78"]
 
 [ext_resource type="PackedScene" uid="uid://di2y0wbeuqb53" path="res://Cenas/carol.tscn" id="1_523wv"]
 [ext_resource type="PackedScene" uid="uid://bd8oxh6ppsycf" path="res://Cenas/cleopatra.tscn" id="1_hjcgo"]
 [ext_resource type="Script" uid="uid://mnadqffyspgf" path="res://Cenas/boss_egito.gd" id="1_uhfvs"]
+[ext_resource type="Texture2D" uid="uid://c7fm2cceitkh0" path="res://Assets Cle├│patra/Cen├írios/Tileset/MapaBoss.jpg" id="2_4xnwc"]
 [ext_resource type="PackedScene" uid="uid://d3jkc0pqmw4x0" path="res://Cenas/jose.tscn" id="3_ahjnr"]
 [ext_resource type="Texture2D" uid="uid://bettet0lmliyg" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/vecteezy_pixel-game-life-bar-vector_14235511-removebg-preview.png" id="3_urdpw"]
 
@@ -105,8 +106,26 @@ size = Vector2(77, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6ow3"]
 size = Vector2(129, 20)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_sevl8"]
+b = Vector2(1, 648)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_140kd"]
+a = Vector2(2, 2)
+b = Vector2(1152, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rysmx"]
+size = Vector2(186, 63)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p0xob"]
+radius = 33.24154
+
 [node name="boss_egito" type="Node2D"]
 script = ExtResource("1_uhfvs")
+
+[node name="MapaBoss" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1.0549451, 0.432)
+texture = ExtResource("2_4xnwc")
 
 [node name="carol" parent="." instance=ExtResource("1_523wv")]
 
@@ -117,7 +136,7 @@ sprite_frames = SubResource("SpriteFrames_4xnwc")
 animation = &"6"
 
 [node name="cleopatra" parent="." instance=ExtResource("1_hjcgo")]
-position = Vector2(-30, 31)
+position = Vector2(-8, 31)
 
 [node name="Jose" parent="." instance=ExtResource("3_ahjnr")]
 position = Vector2(-243, 68)
@@ -126,45 +145,46 @@ position = Vector2(-243, 68)
 position = Vector2(434.00006, 183.00009)
 scale = Vector2(0.28186268, 0.26715687)
 sprite_frames = SubResource("SpriteFrames_4xnwc")
-animation = &"3"
+animation = &"6"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 520.0
-offset_top = 164.0
-offset_right = 557.0
-offset_bottom = 194.0
+offset_left = 529.0
+offset_top = 166.0
+offset_right = 566.0
+offset_bottom = 196.0
 text = "4>=5"
 
 [node name="Area2D" type="Area2D" parent="Label"]
 position = Vector2(22, 12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label/Area2D"]
+position = Vector2(-2, 1)
 shape = SubResource("RectangleShape2D_urdpw")
 
 [node name="Label4" type="Label" parent="."]
-offset_left = 499.0
-offset_top = 420.0
-offset_right = 582.0
-offset_bottom = 450.0
+offset_left = 531.0
+offset_top = 385.0
+offset_right = 614.0
+offset_bottom = 415.0
 text = "7 + 5 = 13"
 
 [node name="Area2D" type="Area2D" parent="Label4"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label4/Area2D"]
-position = Vector2(37.25, 11)
+position = Vector2(37, 13)
 shape = SubResource("RectangleShape2D_4xnwc")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 381.0
+offset_left = 402.0
 offset_top = 287.0
-offset_right = 464.0
+offset_right = 485.0
 offset_bottom = 317.0
 text = "7 x 5 = 35"
 
 [node name="Area2D" type="Area2D" parent="Label2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label2/Area2D"]
-position = Vector2(36, 12)
+position = Vector2(34, 12)
 shape = SubResource("RectangleShape2D_sevl8")
 
 [node name="Timer" type="Timer" parent="Label2"]
@@ -239,6 +259,48 @@ text = "500 - 473 = 37"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label5/Area2D"]
 position = Vector2(48, 12)
 shape = SubResource("RectangleShape2D_l6ow3")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+collision_layer = 128
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("SegmentShape2D_sevl8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(1148, 1)
+shape = SubResource("SegmentShape2D_sevl8")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("SegmentShape2D_140kd")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(3, 641)
+shape = SubResource("SegmentShape2D_140kd")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(305, 551)
+shape = SubResource("RectangleShape2D_rysmx")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(849, 554)
+shape = SubResource("RectangleShape2D_rysmx")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(261, 191)
+shape = SubResource("CircleShape2D_p0xob")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(255, 429)
+shape = SubResource("CircleShape2D_p0xob")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(898, 425)
+shape = SubResource("CircleShape2D_p0xob")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(890, 193)
+shape = SubResource("CircleShape2D_p0xob")
 
 [connection signal="body_entered" from="Label/Area2D" to="." method="_on_area_2d1_body_entered"]
 [connection signal="body_entered" from="Label4/Area2D" to="." method="_on_area_2d4_body_entered"]
