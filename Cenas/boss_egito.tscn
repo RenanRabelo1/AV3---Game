@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cgsbff1hc0b78"]
+[gd_scene load_steps=30 format=3 uid="uid://cgsbff1hc0b78"]
 
 [ext_resource type="PackedScene" uid="uid://di2y0wbeuqb53" path="res://Cenas/carol.tscn" id="1_523wv"]
 [ext_resource type="PackedScene" uid="uid://bd8oxh6ppsycf" path="res://Cenas/cleopatra.tscn" id="1_hjcgo"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://c7fm2cceitkh0" path="res://Assets Cle├│patra/Cen├írios/Tileset/MapaBoss.jpg" id="2_4xnwc"]
 [ext_resource type="PackedScene" uid="uid://d3jkc0pqmw4x0" path="res://Cenas/jose.tscn" id="3_ahjnr"]
 [ext_resource type="Texture2D" uid="uid://bettet0lmliyg" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/vecteezy_pixel-game-life-bar-vector_14235511-removebg-preview.png" id="3_urdpw"]
+[ext_resource type="Texture2D" uid="uid://bwsfdo6jdfhkj" path="res://Assets Cle├│patra/Chat BalloonsBubbles - Pixel Art/Chat-1.png" id="7_140kd"]
+[ext_resource type="Texture2D" uid="uid://bnyxstp45nv8k" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Back.png" id="8_v0fwt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kkcg1"]
 atlas = ExtResource("3_urdpw")
@@ -119,8 +121,28 @@ size = Vector2(186, 63)
 [sub_resource type="CircleShape2D" id="CircleShape2D_p0xob"]
 radius = 33.24154
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhg2v"]
+atlas = ExtResource("7_140kd")
+region = Rect2(404, 156, 101, 78)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mlywk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhg2v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="boss_egito" type="Node2D"]
 script = ExtResource("1_uhfvs")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
 
 [node name="MapaBoss" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
@@ -128,6 +150,7 @@ scale = Vector2(1.0549451, 0.432)
 texture = ExtResource("2_4xnwc")
 
 [node name="carol" parent="." instance=ExtResource("1_523wv")]
+position = Vector2(767, 81)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="carol"]
 position = Vector2(196.00005, 142.00002)
@@ -139,7 +162,7 @@ animation = &"6"
 position = Vector2(-8, 31)
 
 [node name="Jose" parent="." instance=ExtResource("3_ahjnr")]
-position = Vector2(-243, 68)
+position = Vector2(-241, 44)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Jose"]
 position = Vector2(434.00006, 183.00009)
@@ -302,6 +325,27 @@ shape = SubResource("CircleShape2D_p0xob")
 position = Vector2(890, 193)
 shape = SubResource("CircleShape2D_p0xob")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(551, 538.00006)
+scale = Vector2(2.360149, 1.644231)
+sprite_frames = SubResource("SpriteFrames_mlywk")
+
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(648, 561)
+texture = ExtResource("8_v0fwt")
+
+[node name="Label9" type="Label" parent="."]
+offset_left = 505.0
+offset_top = 508.0
+offset_right = 760.0
+offset_bottom = 583.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+text = "Vá para a 
+conta que está
+ correta!"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer2_timeout"]
 [connection signal="body_entered" from="Label/Area2D" to="." method="_on_area_2d1_body_entered"]
 [connection signal="body_entered" from="Label4/Area2D" to="." method="_on_area_2d4_body_entered"]
 [connection signal="body_entered" from="Label2/Area2D" to="." method="_on_area_2d_body_entered"]
