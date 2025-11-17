@@ -1,0 +1,251 @@
+[gd_scene load_steps=21 format=3 uid="uid://cgsbff1hc0b78"]
+
+[ext_resource type="PackedScene" uid="uid://di2y0wbeuqb53" path="res://Cenas/carol.tscn" id="1_523wv"]
+[ext_resource type="PackedScene" uid="uid://bd8oxh6ppsycf" path="res://Cenas/cleopatra.tscn" id="1_hjcgo"]
+[ext_resource type="Script" uid="uid://mnadqffyspgf" path="res://Cenas/boss_egito.gd" id="1_uhfvs"]
+[ext_resource type="PackedScene" uid="uid://d3jkc0pqmw4x0" path="res://Cenas/jose.tscn" id="3_ahjnr"]
+[ext_resource type="Texture2D" uid="uid://bettet0lmliyg" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/vecteezy_pixel-game-life-bar-vector_14235511-removebg-preview.png" id="3_urdpw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkcg1"]
+atlas = ExtResource("3_urdpw")
+region = Rect2(408, 204, 204, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4ng7"]
+atlas = ExtResource("3_urdpw")
+region = Rect2(204, 204, 204, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wthdh"]
+atlas = ExtResource("3_urdpw")
+region = Rect2(0, 204, 204, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7gdm"]
+atlas = ExtResource("3_urdpw")
+region = Rect2(408, 0, 204, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hclq0"]
+atlas = ExtResource("3_urdpw")
+region = Rect2(204, 0, 204, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3d8d0"]
+atlas = ExtResource("3_urdpw")
+region = Rect2(0, 0, 204, 204)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4xnwc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkcg1")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4ng7")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wthdh")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7gdm")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hclq0")
+}],
+"loop": true,
+"name": &"5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3d8d0")
+}],
+"loop": true,
+"name": &"6",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_urdpw"]
+size = Vector2(65, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xnwc"]
+size = Vector2(73.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sevl8"]
+size = Vector2(77, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_140kd"]
+size = Vector2(70, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0fwt"]
+size = Vector2(72, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yhg2v"]
+size = Vector2(71, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlywk"]
+size = Vector2(77, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6ow3"]
+size = Vector2(129, 20)
+
+[node name="boss_egito" type="Node2D"]
+script = ExtResource("1_uhfvs")
+
+[node name="carol" parent="." instance=ExtResource("1_523wv")]
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="carol"]
+position = Vector2(196.00005, 142.00002)
+scale = Vector2(0.28186268, 0.26715687)
+sprite_frames = SubResource("SpriteFrames_4xnwc")
+animation = &"6"
+
+[node name="cleopatra" parent="." instance=ExtResource("1_hjcgo")]
+position = Vector2(-30, 31)
+
+[node name="Jose" parent="." instance=ExtResource("3_ahjnr")]
+position = Vector2(-243, 68)
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Jose"]
+position = Vector2(434.00006, 183.00009)
+scale = Vector2(0.28186268, 0.26715687)
+sprite_frames = SubResource("SpriteFrames_4xnwc")
+animation = &"3"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 520.0
+offset_top = 164.0
+offset_right = 557.0
+offset_bottom = 194.0
+text = "4>=5"
+
+[node name="Area2D" type="Area2D" parent="Label"]
+position = Vector2(22, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label/Area2D"]
+shape = SubResource("RectangleShape2D_urdpw")
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 499.0
+offset_top = 420.0
+offset_right = 582.0
+offset_bottom = 450.0
+text = "7 + 5 = 13"
+
+[node name="Area2D" type="Area2D" parent="Label4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label4/Area2D"]
+position = Vector2(37.25, 11)
+shape = SubResource("RectangleShape2D_4xnwc")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 381.0
+offset_top = 287.0
+offset_right = 464.0
+offset_bottom = 317.0
+text = "7 x 5 = 35"
+
+[node name="Area2D" type="Area2D" parent="Label2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label2/Area2D"]
+position = Vector2(36, 12)
+shape = SubResource("RectangleShape2D_sevl8")
+
+[node name="Timer" type="Timer" parent="Label2"]
+wait_time = 0.5
+one_shot = true
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 632.0
+offset_top = 289.0
+offset_right = 684.0
+offset_bottom = 319.0
+text = "9/4 = 3"
+
+[node name="Area2D" type="Area2D" parent="Label3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label3/Area2D"]
+position = Vector2(27, 11)
+shape = SubResource("RectangleShape2D_140kd")
+
+[node name="Label8" type="Label" parent="."]
+visible = false
+offset_left = 410.0
+offset_top = 201.0
+offset_right = 482.0
+offset_bottom = 224.0
+text = "6 x 7 = 45"
+
+[node name="Area2D" type="Area2D" parent="Label8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label8/Area2D"]
+position = Vector2(35, 11)
+shape = SubResource("RectangleShape2D_v0fwt")
+
+[node name="Label7" type="Label" parent="."]
+visible = false
+offset_left = 623.0
+offset_top = 216.0
+offset_right = 682.0
+offset_bottom = 239.0
+text = "27/9 = 3"
+
+[node name="Area2D" type="Area2D" parent="Label7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label7/Area2D"]
+position = Vector2(29, 12)
+shape = SubResource("RectangleShape2D_yhg2v")
+
+[node name="Label6" type="Label" parent="."]
+visible = false
+offset_left = 413.0
+offset_top = 353.0
+offset_right = 463.0
+offset_bottom = 376.0
+text = "5x5 = 30"
+
+[node name="Area2D" type="Area2D" parent="Label6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label6/Area2D"]
+position = Vector2(27, 10)
+shape = SubResource("RectangleShape2D_mlywk")
+
+[node name="Label5" type="Label" parent="."]
+visible = false
+offset_left = 599.0
+offset_top = 367.0
+offset_right = 704.0
+offset_bottom = 390.0
+text = "500 - 473 = 37"
+
+[node name="Area2D" type="Area2D" parent="Label5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label5/Area2D"]
+position = Vector2(48, 12)
+shape = SubResource("RectangleShape2D_l6ow3")
+
+[connection signal="body_entered" from="Label/Area2D" to="." method="_on_area_2d1_body_entered"]
+[connection signal="body_entered" from="Label4/Area2D" to="." method="_on_area_2d4_body_entered"]
+[connection signal="body_entered" from="Label2/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Label2/Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Label3/Area2D" to="." method="_on_area_2d3_body_entered"]
+[connection signal="body_entered" from="Label8/Area2D" to="." method="_on_area_2d8_body_entered"]
+[connection signal="body_entered" from="Label7/Area2D" to="." method="_on_area_2d2_body_entered"]
+[connection signal="body_entered" from="Label6/Area2D" to="." method="_on_area_2d6_body_entered"]
+[connection signal="body_entered" from="Label5/Area2D" to="." method="_on_area_2d5_body_entered"]

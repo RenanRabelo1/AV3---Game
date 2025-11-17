@@ -324,6 +324,7 @@ radius = 19.0
 height = 58.0
 
 [node name="carol" type="CharacterBody2D"]
+collision_mask = 3
 script = ExtResource("1_g65h1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -343,5 +344,14 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(197, 206)
 shape = SubResource("CapsuleShape2D_lae8x")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
+offset_left = 167.0
+offset_top = 145.0
+offset_right = 224.0
+offset_bottom = 172.0
+step = 1.0
+value = 100.0
 
 [connection signal="Stop" from="." to="." method="_on_stop"]
