@@ -16,6 +16,11 @@ position = Vector2(240, 339)
 scale = Vector2(0.7711443, 0.79698384)
 texture = ExtResource("1_grcin")
 
+[node name="Narrador2" type="Sprite2D" parent="."]
+position = Vector2(234, 345)
+scale = Vector2(0.7711443, 0.79698384)
+texture = ExtResource("1_grcin")
+
 [node name="Narradortriste" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(246.99998, 339)
@@ -69,10 +74,10 @@ theme_override_font_sizes/font_size = 35
 text = "Demétrio"
 
 [node name="Label4" type="Label" parent="."]
-offset_left = 522.0
-offset_top = 265.0
-offset_right = 2146.0
-offset_bottom = 436.0
+offset_left = 511.0
+offset_top = 268.0
+offset_right = 2135.0
+offset_bottom = 439.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 23
 text = "Explorador Veterano"
