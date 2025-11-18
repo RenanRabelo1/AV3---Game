@@ -250,8 +250,11 @@ offset_bottom = 239.0
 text = "27/9 = 3"
 
 [node name="Area2D" type="Area2D" parent="Label7"]
+visible = false
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label7/Area2D"]
+visible = false
 position = Vector2(29, 12)
 shape = SubResource("RectangleShape2D_yhg2v")
 
