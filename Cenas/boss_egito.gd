@@ -77,7 +77,7 @@ func _on_area_2d2_body_entered(body: Node2D) -> void:
 	$Label7.hide()
 	$Label6.hide()
 	$Label5.hide()
-	get_tree().change_scene_to_file("res://Cenas/fim.tscn")
+	get_tree().change_scene_to_file("res://Cenas/end.tscn")
 
 
 

@@ -51,11 +51,11 @@ func _jose_die():
 func _on_errada_body_entered(body: Node2D) -> void:
 	if body.name == "Jose":
 		_jose_die()
-		body.global_position.x -= 150
+		body.global_position.x -= 100
 		print("gol")
 	if body.name == "carol":
 		_carol_die()
-		body.global_position.x -= 150
+		body.global_position.x -= 100
 		print("gol")
 
 
@@ -63,15 +63,15 @@ func _on_errada_body_entered(body: Node2D) -> void:
 
 func morrer():
 	if carol == 0:
-		$Node2D2.show()
+		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 	if jose == 0:
-		$Node2D2.show()
+		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name == "Jose":
-		jose = 0
-	if body.name == "carol":
-		carol = 0
+	if body.name=="Jose":
+		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
+	elif body.name=="carol":
+		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 
 
 
@@ -117,10 +117,6 @@ func _on_dano_body_entered(body: Node2D) -> void:
 	elif body.name=="carol":
 		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 		
-
-
-func _on_button_3_pressed() -> void:
-	get_tree().reload_current_scene()
 
 
 func _on_parar_body_entered(body: Node2D) -> void:
