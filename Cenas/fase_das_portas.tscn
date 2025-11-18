@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=4 uid="uid://b87qu7l3pj37e"]
+[gd_scene load_steps=79 format=4 uid="uid://b87qu7l3pj37e"]
 
 [ext_resource type="Script" uid="uid://b20lxkv2qnl0v" path="res://Cenas/fase_das_portas.gd" id="1_t2rxp"]
 [ext_resource type="Texture2D" uid="uid://c12l72fh8a3cj" path="res://Assets/Desert_Dungeon_Pack/Tileset_Dungeon.png" id="1_u0akp"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://3s3o5lbdio45" path="res://fundos/pedra (2).png" id="17_hclq0"]
 [ext_resource type="Texture2D" uid="uid://1hoos0xno2x" path="res://egito01.jpg" id="19_wjm8o"]
 [ext_resource type="Texture2D" uid="uid://btu245pahvriy" path="res://fundos/preta.jpg" id="20_y78na"]
+[ext_resource type="Texture2D" uid="uid://c7fm2cceitkh0" path="res://Assets Cle├│patra/Cen├írios/Tileset/MapaBoss.jpg" id="21_y78na"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s4ng7"]
 texture = ExtResource("3_gpu8x")
@@ -4055,6 +4056,11 @@ position = Vector2(1008, 207)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="parar"]
 position = Vector2(160, 64)
 shape = SubResource("RectangleShape2D_wjm8o")
+
+[node name="MapaBoss" type="Sprite2D" parent="."]
+position = Vector2(3368, 493.00006)
+scale = Vector2(1.2408421, 0.7899999)
+texture = ExtResource("21_y78na")
 
 [connection signal="body_entered" from="fim" to="." method="_on_fim_body_entered"]
 [connection signal="body_shape_entered" from="fim" to="." method="_on_fim_body_shape_entered"]

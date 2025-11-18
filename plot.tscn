@@ -1,0 +1,156 @@
+[gd_scene load_steps=17 format=3 uid="uid://brwgejh3uojwc"]
+
+[ext_resource type="Script" uid="uid://bpvef78rsmuby" path="res://plot.gd" id="1_bhrig"]
+[ext_resource type="Texture2D" uid="uid://c7fm2cceitkh0" path="res://Assets Cle├│patra/Cen├írios/Tileset/MapaBoss.jpg" id="1_c2jwi"]
+[ext_resource type="Texture2D" uid="uid://btu245pahvriy" path="res://fundos/preta.jpg" id="2_bhrig"]
+[ext_resource type="Texture2D" uid="uid://fkikx2fbqw2w" path="res://fundos/narrador.png" id="3_lbukb"]
+[ext_resource type="Texture2D" uid="uid://jukolqsmrglo" path="res://fundos/branco.jpg" id="4_1oo2w"]
+[ext_resource type="Texture2D" uid="uid://ce2tsnj01ihbs" path="res://fundos/brancoarredondado.png" id="5_osdy5"]
+[ext_resource type="Texture2D" uid="uid://cyjv8vqyjkuyi" path="res://Assets Cle├│patra/Personagens/Monstros/Monstro 2 (m├║mia)/Mummy.png" id="7_lbukb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcef0"]
+atlas = ExtResource("7_lbukb")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrnrb"]
+atlas = ExtResource("7_lbukb")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b26vl"]
+atlas = ExtResource("7_lbukb")
+region = Rect2(32, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8oo5"]
+atlas = ExtResource("7_lbukb")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2bka"]
+atlas = ExtResource("7_lbukb")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41ero"]
+atlas = ExtResource("7_lbukb")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efl8c"]
+atlas = ExtResource("7_lbukb")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dt20i"]
+atlas = ExtResource("7_lbukb")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1oo2w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcef0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrnrb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b26vl")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8oo5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2bka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41ero")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efl8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dt20i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="plot" type="Node2D"]
+script = ExtResource("1_bhrig")
+
+[node name="MapaBoss" type="Sprite2D" parent="."]
+position = Vector2(575.99994, 370)
+scale = Vector2(1.040293, 0.5)
+texture = ExtResource("1_c2jwi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Preta" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.70980394)
+position = Vector2(574, 373.25)
+scale = Vector2(2.5377777, 2.5535116)
+texture = ExtResource("2_bhrig")
+
+[node name="Narrador2" type="Sprite2D" parent="."]
+position = Vector2(214.00002, 356)
+scale = Vector2(0.045442924, 0.046365045)
+texture = ExtResource("3_lbukb")
+
+[node name="Branco" type="Sprite2D" parent="."]
+position = Vector2(682.99994, 252.99998)
+scale = Vector2(0.32372713, 0.06637807)
+texture = ExtResource("4_1oo2w")
+
+[node name="Brancoarredondado" type="Sprite2D" parent="."]
+position = Vector2(249.17284, 380.99075)
+scale = Vector2(0.06290561, 0.017228415)
+texture = ExtResource("5_osdy5")
+
+[node name="Preta2" type="Sprite2D" parent="."]
+position = Vector2(680, 303)
+scale = Vector2(0.7477779, 0.18311039)
+texture = ExtResource("2_bhrig")
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 528.0
+offset_top = 289.0
+offset_right = 2152.0
+offset_bottom = 460.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 23
+text = "Explorador Veterano"
+
+[node name="Brancoarredondado2" type="Sprite2D" parent="."]
+position = Vector2(767.15625, 514.21875)
+scale = Vector2(1.2298582, 0.47180176)
+texture = ExtResource("5_osdy5")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 531.0
+offset_top = 229.0
+offset_right = 2155.0
+offset_bottom = 400.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Demétrio"
+
+[node name="balao1" type="Label" parent="."]
+offset_left = 482.0
+offset_top = 406.0
+offset_right = 1603.0
+offset_bottom = 593.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 33
+text = "
+"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(208, 436.00003)
+scale = Vector2(32.85938, 38.093754)
+sprite_frames = SubResource("SpriteFrames_1oo2w")
+animation = &"attack"
+autoplay = "idle"
+frame_progress = 0.114547245

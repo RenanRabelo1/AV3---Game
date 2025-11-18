@@ -76,7 +76,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 
 func _on_fim_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://Cenas/boss_egito.tscn")
+	get_tree().change_scene_to_file("res://plot.tscn")
 
 
 func _on_pergunta_body_entered(body: Node2D) -> void:
@@ -113,11 +113,9 @@ func _on_porta_certa_3_body_entered(body: Node2D) -> void:
 
 func _on_dano_body_entered(body: Node2D) -> void:
 	if body.name=="Jose":
-		$Node2D2.show()
-		$Area2D/Camera2D2.enabled=false
+		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 	elif body.name=="carol":
-		$Node2D2.show()
-		$Area2D/Camera2D2.enabled=false
+		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 		
 
 
