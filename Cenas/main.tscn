@@ -3284,8 +3284,8 @@ position = Vector2(215, 0.625)
 shape = SubResource("SegmentShape2D_erht2")
 
 [node name="Arvre" type="Sprite2D" parent="RigidBody2D"]
-position = Vector2(944, -38.375)
-scale = Vector2(0.3395722, 0.29732314)
+position = Vector2(920, -47.374992)
+scale = Vector2(0.35695174, 0.26912042)
 texture = ExtResource("4_x6di6")
 
 [node name="AreaColisãoFora" type="Area2D" parent="."]
@@ -3399,23 +3399,23 @@ shape = SubResource("SegmentShape2D_vi8pf")
 tile_set = SubResource("TileSet_btbr3")
 
 [node name="Arvre" type="Sprite2D" parent="."]
-position = Vector2(1085, 548)
-scale = Vector2(0.36898395, 0.29541108)
+position = Vector2(1059, 574)
+scale = Vector2(0.42245987, 0.24521999)
 texture = ExtResource("4_x6di6")
 
 [node name="Arvre2" type="Sprite2D" parent="."]
-position = Vector2(245.99998, 514.00006)
-scale = Vector2(0.32085577, 0.23183568)
+position = Vector2(244.5, 521.31256)
+scale = Vector2(0.32887703, 0.203872)
 texture = ExtResource("4_x6di6")
 
 [node name="Arvre3" type="Sprite2D" parent="."]
-position = Vector2(75, 306)
-scale = Vector2(0.32085577, 0.23183568)
+position = Vector2(108.5, 302.65625)
+scale = Vector2(0.33422464, 0.21283466)
 texture = ExtResource("4_x6di6")
 
 [node name="Arvre4" type="Sprite2D" parent="."]
-position = Vector2(304, 79.000046)
-scale = Vector2(0.32085577, 0.23183568)
+position = Vector2(280.5, 93.40626)
+scale = Vector2(0.30748662, 0.20423043)
 texture = ExtResource("4_x6di6")
 
 [connection signal="body_entered" from="AreaEsfingeTexto" to="." method="_on_area_esfinge_texto_body_entered"]

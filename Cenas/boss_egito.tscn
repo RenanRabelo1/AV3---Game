@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cgsbff1hc0b78"]
+[gd_scene load_steps=31 format=3 uid="uid://cgsbff1hc0b78"]
 
 [ext_resource type="PackedScene" uid="uid://di2y0wbeuqb53" path="res://Cenas/carol.tscn" id="1_523wv"]
 [ext_resource type="PackedScene" uid="uid://bd8oxh6ppsycf" path="res://Cenas/cleopatra.tscn" id="1_hjcgo"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d3jkc0pqmw4x0" path="res://Cenas/jose.tscn" id="3_ahjnr"]
 [ext_resource type="Texture2D" uid="uid://bettet0lmliyg" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/vecteezy_pixel-game-life-bar-vector_14235511-removebg-preview.png" id="3_urdpw"]
 [ext_resource type="Texture2D" uid="uid://bwsfdo6jdfhkj" path="res://Assets Cle├│patra/Chat BalloonsBubbles - Pixel Art/Chat-1.png" id="7_140kd"]
+[ext_resource type="FontFile" uid="uid://c5g13loq0foeb" path="res://Assets Cle├│patra/Fontes/Font_Display/static/PlayfairDisplay-Medium.ttf" id="7_v0fwt"]
 [ext_resource type="Texture2D" uid="uid://bnyxstp45nv8k" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Back.png" id="8_v0fwt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kkcg1"]
@@ -85,28 +86,28 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_urdpw"]
-size = Vector2(65, 20)
+size = Vector2(67.75, 28)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xnwc"]
-size = Vector2(73.5, 22)
+size = Vector2(123.75, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sevl8"]
-size = Vector2(77, 20)
+size = Vector2(125.25, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_140kd"]
-size = Vector2(70, 20)
+size = Vector2(93, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v0fwt"]
-size = Vector2(72, 20)
+size = Vector2(127, 37)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yhg2v"]
-size = Vector2(71, 20)
+size = Vector2(106, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mlywk"]
-size = Vector2(77, 20)
+size = Vector2(124.5, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6ow3"]
-size = Vector2(129, 20)
+size = Vector2(203, 27)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_sevl8"]
 b = Vector2(1, 648)
@@ -171,44 +172,53 @@ sprite_frames = SubResource("SpriteFrames_4xnwc")
 animation = &"6"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 248.0
-offset_top = 73.0
-offset_right = 285.0
-offset_bottom = 103.0
+offset_left = 230.0
+offset_top = 58.0
+offset_right = 336.0
+offset_bottom = 102.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_v0fwt")
+theme_override_font_sizes/font_size = 32
 text = "4>=5"
 
 [node name="Area2D" type="Area2D" parent="Label"]
 position = Vector2(27, -79)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label/Area2D"]
-position = Vector2(-12, 90)
+position = Vector2(5.875, 107)
 shape = SubResource("RectangleShape2D_urdpw")
 
 [node name="Label4" type="Label" parent="."]
-offset_left = 762.0
-offset_top = 287.0
-offset_right = 845.0
-offset_bottom = 317.0
+offset_left = 831.0
+offset_top = 445.0
+offset_right = 953.0
+offset_bottom = 489.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_v0fwt")
+theme_override_font_sizes/font_size = 32
 text = "7 + 5 = 13"
 
 [node name="Area2D" type="Area2D" parent="Label4"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label4/Area2D"]
-position = Vector2(37, 11)
+position = Vector2(63.125, 30.5)
 shape = SubResource("RectangleShape2D_4xnwc")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 302.0
-offset_top = 287.0
-offset_right = 385.0
-offset_bottom = 317.0
+offset_left = 199.0
+offset_top = 452.0
+offset_right = 321.0
+offset_bottom = 496.0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_v0fwt")
+theme_override_font_sizes/font_size = 32
 text = "7 x 5 = 35"
 
 [node name="Area2D" type="Area2D" parent="Label2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label2/Area2D"]
-position = Vector2(30, 12)
+position = Vector2(59.625, 29.5)
 shape = SubResource("RectangleShape2D_sevl8")
 
 [node name="Timer" type="Timer" parent="Label2"]
@@ -216,75 +226,88 @@ wait_time = 0.5
 one_shot = true
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 857.0
-offset_top = 74.0
-offset_right = 909.0
+offset_left = 846.0
+offset_top = 60.0
+offset_right = 939.0
 offset_bottom = 104.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_v0fwt")
+theme_override_font_sizes/font_size = 32
 text = "9/4 = 3"
 
 [node name="Area2D" type="Area2D" parent="Label3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label3/Area2D"]
-position = Vector2(27, 11)
+position = Vector2(44.5, 27)
 shape = SubResource("RectangleShape2D_140kd")
 
 [node name="Label8" type="Label" parent="."]
 visible = false
-offset_left = 353.0
-offset_top = 132.0
-offset_right = 425.0
-offset_bottom = 155.0
+offset_left = 196.0
+offset_top = 52.0
+offset_right = 323.0
+offset_bottom = 96.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_v0fwt")
+theme_override_font_sizes/font_size = 32
 text = "6 x 7 = 45"
 
 [node name="Area2D" type="Area2D" parent="Label8"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label8/Area2D"]
-position = Vector2(41, 11)
+position = Vector2(63.5, 26.5)
 shape = SubResource("RectangleShape2D_v0fwt")
 
 [node name="Label7" type="Label" parent="."]
 visible = false
-offset_left = 714.0
-offset_top = 142.0
-offset_right = 775.0
-offset_bottom = 165.0
+offset_left = 830.0
+offset_top = 55.0
+offset_right = 938.0
+offset_bottom = 99.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_v0fwt")
+theme_override_font_sizes/font_size = 32
 text = "27/9 = 3"
 
 [node name="Area2D" type="Area2D" parent="Label7"]
-visible = false
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label7/Area2D"]
-visible = false
-position = Vector2(29, 12)
+position = Vector2(55, 28.5)
 shape = SubResource("RectangleShape2D_yhg2v")
 
 [node name="Label6" type="Label" parent="."]
 visible = false
-offset_left = 328.0
-offset_top = 421.0
-offset_right = 391.0
-offset_bottom = 444.0
+offset_left = 213.0
+offset_top = 458.0
+offset_right = 327.0
+offset_bottom = 502.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_v0fwt")
+theme_override_font_sizes/font_size = 32
 text = "5x5 = 30"
 
 [node name="Area2D" type="Area2D" parent="Label6"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label6/Area2D"]
-position = Vector2(32, 11)
+position = Vector2(55.75, 27)
 shape = SubResource("RectangleShape2D_mlywk")
 
 [node name="Label5" type="Label" parent="."]
 visible = false
-offset_left = 705.0
-offset_top = 430.0
-offset_right = 810.0
-offset_bottom = 453.0
+offset_left = 805.0
+offset_top = 452.0
+offset_right = 997.0
+offset_bottom = 496.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_v0fwt")
+theme_override_font_sizes/font_size = 32
 text = "500 - 473 = 37"
 
 [node name="Area2D" type="Area2D" parent="Label5"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label5/Area2D"]
-position = Vector2(48, 12)
+position = Vector2(99.5, 28.5)
 shape = SubResource("RectangleShape2D_l6ow3")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
