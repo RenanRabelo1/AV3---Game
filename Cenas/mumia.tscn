@@ -132,8 +132,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xl4jm"]
-radius = 102.0
-height = 204.0
+radius = 50.0
+height = 104.0
 
 [node name="mumia" type="CharacterBody2D"]
 script = ExtResource("1_uahof")
@@ -154,7 +154,7 @@ autoplay = "attack"
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(143, 87)
+position = Vector2(162, 115)
 shape = SubResource("CapsuleShape2D_xl4jm")
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

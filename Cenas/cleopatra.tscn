@@ -268,7 +268,7 @@ _data = {
 radius = 183.01093
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_efl8c"]
-radius = 295.20502
+radius = 245.09998
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dt20i"]
 radius = 53.0
@@ -302,19 +302,19 @@ shape = SubResource("CircleShape2D_41ero")
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(570, 276)
+position = Vector2(570, 257)
 shape = SubResource("CircleShape2D_efl8c")
 disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="HitBox"]
 visible = false
-position = Vector2(664, 260)
-scale = Vector2(0.29812282, 0.24682336)
+position = Vector2(565.00006, 247)
+scale = Vector2(1.6862653, 1.5839264)
 texture = ExtResource("3_7s6yc")
 
 [node name="Sprite2D2" type="Sprite2D" parent="HitBox"]
 visible = false
-position = Vector2(463, 265)
+position = Vector2(568, 267.00003)
 scale = Vector2(0.29812282, 0.24682336)
 texture = ExtResource("3_7s6yc")
 
