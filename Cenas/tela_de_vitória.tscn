@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://7e0jvhucf3es"]
 
 [ext_resource type="Texture2D" uid="uid://bot43yfk5ftp6" path="res://fundos/TelaDeVitória.jpg" id="1_ax0x4"]
-[ext_resource type="Script" uid="uid://m4hbv75b2lpw" path="res://Cenas/tela_de_vitória.gd" id="1_ii7ww"]
+[ext_resource type="Script" path="res://Cenas/tela_de_vitória.gd" id="1_ii7ww"]
 
 [node name="TelaDeVitória" type="CanvasLayer"]
 script = ExtResource("1_ii7ww")

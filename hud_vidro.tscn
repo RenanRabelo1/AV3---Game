@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://dj7mvlgmfwhb2"]
+[gd_scene load_steps=13 format=3 uid="uid://dj7mvlgmfwhb2"]
 
+[ext_resource type="Texture2D" uid="uid://ce2tsnj01ihbs" path="res://fundos/brancoarredondado.png" id="1_ce4gr"]
 [ext_resource type="Texture2D" uid="uid://c5hyxrpxexi67" path="res://Assets/Pixel Art Ancient Egypt Full Version Asset Pack/preta.jpg" id="1_l1i3f"]
 [ext_resource type="Texture2D" uid="uid://cy2wug0h630wr" path="res://Assets Cle├│patra/Personagens/Jos├®(Masc)/Idle/idle.png" id="2_lf6r0"]
 
@@ -62,7 +63,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0hiwt")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 8.0
 }]
@@ -70,66 +71,70 @@ animations = [{
 [node name="hud_vidro" type="CanvasLayer"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(151.50003, 133.00003)
-scale = Vector2(0.4377779, 0.13377915)
-texture = ExtResource("1_l1i3f")
+position = Vector2(392, 32.75)
+scale = Vector2(0.5126953, 0.10449218)
+texture = ExtResource("1_ce4gr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(276.0001, 134)
-scale = Vector2(0.07777786, 0.13712363)
+position = Vector2(497, 31.75)
+scale = Vector2(0.07055556, 0.11454847)
 texture = ExtResource("1_l1i3f")
 
 [node name="num1" type="Label" parent="."]
-offset_left = 68.0
-offset_top = 115.0
-offset_right = 99.0
-offset_bottom = 184.0
+offset_left = 330.0
+offset_top = 13.75
+offset_right = 361.0
+offset_bottom = 82.75
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "X"
 
 [node name="num2" type="Label" parent="."]
-offset_left = 134.0
-offset_top = 116.0
-offset_right = 174.0
-offset_bottom = 185.0
+offset_left = 389.0
+offset_top = 12.75
+offset_right = 429.0
+offset_bottom = 81.75
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "X"
 
 [node name="num3" type="Label" parent="."]
-offset_left = 206.0
-offset_top = 115.0
-offset_right = 246.0
-offset_bottom = 184.0
+offset_left = 447.0
+offset_top = 13.75
+offset_right = 487.0
+offset_bottom = 82.75
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "X"
 
 [node name="op1" type="Label" parent="."]
-offset_left = 173.0
-offset_top = 110.0
-offset_right = 213.0
-offset_bottom = 152.0
+offset_left = 418.0
+offset_top = 9.75
+offset_right = 458.0
+offset_bottom = 51.75
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "+"
 
 [node name="op2" type="Label" parent="."]
-offset_left = 105.0
-offset_top = 111.0
-offset_right = 145.0
-offset_bottom = 153.0
+offset_left = 359.0
+offset_top = 9.75
+offset_right = 399.0
+offset_bottom = 51.75
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "+"
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(292, 31.75)
+scale = Vector2(2.0416667, 1.3359375)
+sprite_frames = SubResource("SpriteFrames_4i85i")
+
 [node name="ponto" type="Label" parent="."]
-offset_left = 267.00006
-offset_top = 112.0
-offset_right = 307.00006
-offset_bottom = 199.0
-theme_override_font_sizes/font_size = 30
+offset_left = 488.0
+offset_top = 12.0
+offset_right = 528.0
+offset_bottom = 99.0
+theme_override_font_sizes/font_size = 24
 text = "0
 "
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(317, 136)
-scale = Vector2(2.5833333, 1.609375)
-sprite_frames = SubResource("SpriteFrames_4i85i")
-autoplay = "default"

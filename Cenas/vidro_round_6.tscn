@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://cc1bgpqwwfm6x"]
+[gd_scene load_steps=36 format=4 uid="uid://cc1bgpqwwfm6x"]
 
 [ext_resource type="Texture2D" uid="uid://c12l72fh8a3cj" path="res://Assets/Desert_Dungeon_Pack/Tileset_Dungeon.png" id="1_77efa"]
 [ext_resource type="Script" uid="uid://ik0otsthtfnd" path="res://Cenas/vidro_round_6.gd" id="1_fhhku"]
@@ -10,13 +10,14 @@
 [ext_resource type="PackedScene" uid="uid://daanfvvtqyuyr" path="res://huf_vidroC.tscn" id="7_5pa74"]
 [ext_resource type="PackedScene" uid="uid://dufkhhevbgc4p" path="res://lava.tscn" id="8_y8ht4"]
 [ext_resource type="PackedScene" uid="uid://wqwpq3042hjj" path="res://hud_tempo.tscn" id="9_oa68q"]
-[ext_resource type="Texture2D" uid="uid://1hoos0xno2x" path="res://egito01.jpg" id="10_idj1e"]
+[ext_resource type="Texture2D" uid="uid://bncj2p5qxm5v4" path="res://egito01.jpg" id="10_idj1e"]
 [ext_resource type="FontFile" uid="uid://c5g13loq0foeb" path="res://Assets Cle├│patra/Fontes/Font_Display/static/PlayfairDisplay-Medium.ttf" id="10_xxfdn"]
-[ext_resource type="Texture2D" uid="uid://btu245pahvriy" path="res://fundos/preta.jpg" id="11_k3jvn"]
+[ext_resource type="Texture2D" uid="uid://vws2jx4hkpd8" path="res://fundos/preta.jpg" id="11_k3jvn"]
 [ext_resource type="Texture2D" uid="uid://ulh0bkmisglt" path="res://Assets/Desert_Dungeon_Pack/Fire.png" id="12_k3jvn"]
 [ext_resource type="Texture2D" uid="uid://w4k32iyxix5p" path="res://Assets Cle├│patra/buttons-pixel-art-set-square-600nw-2194665507-removebg-preview.png" id="14_pi688"]
 [ext_resource type="Texture2D" uid="uid://bnyxstp45nv8k" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Back.png" id="15_dntu8"]
 [ext_resource type="Texture2D" uid="uid://ce2tsnj01ihbs" path="res://fundos/brancoarredondado.png" id="16_xxfdn"]
+[ext_resource type="Texture2D" uid="uid://jukolqsmrglo" path="res://fundos/branco.jpg" id="18_3it7h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhhku"]
 texture = ExtResource("1_77efa")
@@ -4401,6 +4402,18 @@ size = Vector2(95, 92)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gs01c"]
 size = Vector2(94, 95)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3it7h"]
+size = Vector2(1168, 43)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oiqv0"]
+size = Vector2(77, 698)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbr5f"]
+size = Vector2(1098, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4rosn"]
+size = Vector2(96.5, 254)
+
 [node name="vidro_round6" type="Node"]
 script = ExtResource("1_fhhku")
 
@@ -4637,10 +4650,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -443.0
-offset_top = -72.0
-offset_right = -381.0
-offset_bottom = -41.0
+offset_left = -849.0
+offset_top = -90.0
+offset_right = -787.0
+offset_bottom = -59.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "SKIP
@@ -4652,10 +4665,10 @@ text = "SKIP
 
 [node name="Button2" type="Button" parent="."]
 visible = false
-offset_left = 119.0
-offset_top = 229.0
-offset_right = 190.0
-offset_bottom = 260.0
+offset_left = -271.0
+offset_top = 198.0
+offset_right = -200.0
+offset_bottom = 229.0
 text = "RELOAD
 "
 
@@ -4798,6 +4811,7 @@ shape = SubResource("RectangleShape2D_gs01c")
 disabled = true
 
 [node name="hudTempo" parent="." instance=ExtResource("9_oa68q")]
+visible = false
 
 [node name="Node2D2" type="Node2D" parent="."]
 visible = false
@@ -4832,32 +4846,33 @@ text = "TENTAR NOVAMENTE
 "
 
 [node name="alerta" type="Node2D" parent="."]
-visible = false
 
 [node name="Back" type="Sprite2D" parent="alerta"]
-position = Vector2(168, 444)
-scale = Vector2(2.125, 2.03125)
+position = Vector2(179, 412.00003)
+scale = Vector2(2.8515625, 2.7734375)
 texture = ExtResource("15_dntu8")
 
 [node name="Preta" type="Sprite2D" parent="alerta"]
-position = Vector2(170, 558)
-scale = Vector2(0.48666665, 0.49498326)
+position = Vector2(184.00002, 578)
+scale = Vector2(0.64777774, 0.67892975)
 texture = ExtResource("11_k3jvn")
 
 [node name="Label" type="Label" parent="alerta"]
-offset_left = 84.0
-offset_top = 533.0
-offset_right = 265.0
-offset_bottom = 582.0
+offset_left = 49.0
+offset_top = 539.0
+offset_right = 340.0
+offset_bottom = 616.0
+theme_override_font_sizes/font_size = 25
 text = "LAVA ESTÁ CHEGANDO
 VÁ PARA A SEGURANÇA"
 
 [node name="ButtonsPixelArtSetSquare600Nw2194665507RemovebgPreview" type="Sprite2D" parent="alerta"]
-position = Vector2(350, 598)
+position = Vector2(424, 603)
 scale = Vector2(1.1209674, 1.195402)
 texture = ExtResource("14_pi688")
 
 [node name="Node2D3" type="Node2D" parent="."]
+visible = false
 
 [node name="Back" type="Sprite2D" parent="Node2D3"]
 position = Vector2(190, 454)
@@ -4886,6 +4901,36 @@ offset_bottom = 586.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "VÁ PARA O GERADOR"
+
+[node name="resetar" type="Node2D" parent="."]
+visible = false
+
+[node name="Branco" type="Sprite2D" parent="resetar"]
+position = Vector2(392.00003, 78)
+scale = Vector2(0.24942967, 0.044417392)
+texture = ExtResource("18_3it7h")
+
+[node name="Branco2" type="Sprite2D" parent="resetar"]
+position = Vector2(845.00006, 79)
+scale = Vector2(0.24942967, 0.044417392)
+texture = ExtResource("18_3it7h")
+
+[node name="resetar_j" type="Button" parent="resetar"]
+offset_left = 357.0
+offset_top = 66.0
+offset_right = 408.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 10
+text = "RESETAR"
+
+[node name="resetar_c" type="Button" parent="resetar"]
+offset_left = 818.0
+offset_top = 66.0
+offset_right = 869.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 10
+text = "RESETAR
+"
 
 [node name="Node2D4" type="Node2D" parent="."]
 visible = false
@@ -4957,6 +5002,33 @@ text = "EXISTE MAIS UMA SOMA ONDE A RESPOSTA É 40
 
 EXISTE MAIS UMA SOMA QUE A RESPOSTA É 35"
 
+[node name="Node2D5" type="Node2D" parent="."]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D5"]
+position = Vector2(-9, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D5/CharacterBody2D"]
+position = Vector2(568, 677.5)
+shape = SubResource("RectangleShape2D_3it7h")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D5/CharacterBody2D"]
+position = Vector2(15, 344)
+shape = SubResource("RectangleShape2D_oiqv0")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D5/CharacterBody2D"]
+position = Vector2(1157, 381)
+shape = SubResource("RectangleShape2D_oiqv0")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D5/CharacterBody2D"]
+position = Vector2(604, 85)
+shape = SubResource("RectangleShape2D_tbr5f")
+debug_color = Color(0.47601163, 0.5566745, 0.53807706, 0.41960785)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Node2D5/CharacterBody2D"]
+position = Vector2(584.75, 248)
+shape = SubResource("RectangleShape2D_4rosn")
+debug_color = Color(0.7422398, 0.46350384, 0.11318556, 0.41960785)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
@@ -4985,3 +5057,5 @@ EXISTE MAIS UMA SOMA QUE A RESPOSTA É 35"
 [connection signal="dor" from="Jose" to="." method="_on_jose_dor"]
 [connection signal="timeout" from="timerHud" to="." method="_on_timer_hud_timeout"]
 [connection signal="pressed" from="Node2D2/Button3" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="resetar/resetar_j" to="." method="_on_resetar_j_pressed"]
+[connection signal="pressed" from="resetar/resetar_c" to="." method="_on_resetar_c_pressed"]
