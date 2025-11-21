@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=4 uid="uid://b87qu7l3pj37e"]
+[gd_scene load_steps=78 format=4 uid="uid://bxcfnpn8gog1e"]
 
 [ext_resource type="Script" uid="uid://b20lxkv2qnl0v" path="res://Cenas/fase_das_portas.gd" id="1_t2rxp"]
 [ext_resource type="Texture2D" uid="uid://c12l72fh8a3cj" path="res://Assets/Desert_Dungeon_Pack/Tileset_Dungeon.png" id="1_u0akp"]
@@ -16,7 +16,7 @@
 [ext_resource type="FontFile" uid="uid://b04giyiylbs8o" path="res://Assets Cle├│patra/Fontes/Font_Display/static/PlayfairDisplay-Bold.ttf" id="13_k7gdm"]
 [ext_resource type="FontFile" uid="uid://b1t8vifcb2tqg" path="res://Assets Cle├│patra/Fontes/Font_Display/static/PlayfairDisplay-Black.ttf" id="14_hclq0"]
 [ext_resource type="AudioStream" uid="uid://1s372kwn2r1l" path="res://Assets Cle├│patra/Cen├írios/monster-footstep-162883.mp3" id="16_k7gdm"]
-[ext_resource type="Script" uid="uid://0j583rdpo2a2" path="res://Cenas/pedra_rolando.gd" id="17_fv5ix"]
+[ext_resource type="Script" path="res://Cenas/pedra_rolando.gd" id="17_fv5ix"]
 [ext_resource type="Texture2D" uid="uid://3s3o5lbdio45" path="res://fundos/pedra (2).png" id="17_hclq0"]
 [ext_resource type="Texture2D" uid="uid://1hoos0xno2x" path="res://egito01.jpg" id="19_wjm8o"]
 [ext_resource type="Texture2D" uid="uid://btu245pahvriy" path="res://fundos/preta.jpg" id="20_y78na"]

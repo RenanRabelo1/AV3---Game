@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://cc1bgpqwwfm6x"]
+[gd_scene load_steps=31 format=4 uid="uid://cc1bgpqwwfm6x"]
 
 [ext_resource type="Texture2D" uid="uid://c12l72fh8a3cj" path="res://Assets/Desert_Dungeon_Pack/Tileset_Dungeon.png" id="1_77efa"]
 [ext_resource type="Script" uid="uid://ik0otsthtfnd" path="res://Cenas/vidro_round_6.gd" id="1_fhhku"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dufkhhevbgc4p" path="res://lava.tscn" id="8_y8ht4"]
 [ext_resource type="PackedScene" uid="uid://wqwpq3042hjj" path="res://hud_tempo.tscn" id="9_oa68q"]
 [ext_resource type="Texture2D" uid="uid://1hoos0xno2x" path="res://egito01.jpg" id="10_idj1e"]
+[ext_resource type="FontFile" uid="uid://c5g13loq0foeb" path="res://Assets Cle├│patra/Fontes/Font_Display/static/PlayfairDisplay-Medium.ttf" id="10_xxfdn"]
 [ext_resource type="Texture2D" uid="uid://btu245pahvriy" path="res://fundos/preta.jpg" id="11_k3jvn"]
 [ext_resource type="Texture2D" uid="uid://ulh0bkmisglt" path="res://Assets/Desert_Dungeon_Pack/Fire.png" id="12_k3jvn"]
 [ext_resource type="Texture2D" uid="uid://w4k32iyxix5p" path="res://Assets Cle├│patra/buttons-pixel-art-set-square-600nw-2194665507-removebg-preview.png" id="14_pi688"]
@@ -4630,6 +4631,7 @@ sprite_frames = SubResource("SpriteFrames_oiqv0")
 autoplay = "default"
 
 [node name="Button" type="Button" parent="."]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -4645,12 +4647,11 @@ text = "SKIP
 "
 
 [node name="hud_vidro" parent="." instance=ExtResource("6_6h80e")]
-visible = false
 
 [node name="hud_carol" parent="." instance=ExtResource("7_5pa74")]
-visible = false
 
 [node name="Button2" type="Button" parent="."]
+visible = false
 offset_left = 119.0
 offset_top = 229.0
 offset_right = 190.0
@@ -4696,19 +4697,25 @@ collision_mask = 9
 
 [node name="Label" type="Label" parent="Jose"]
 visible = false
-offset_left = 427.0
-offset_top = 196.0
-offset_right = 467.0
-offset_bottom = 245.0
+offset_left = 421.0
+offset_top = 180.0
+offset_right = 461.0
+offset_bottom = 271.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("10_xxfdn")
+theme_override_font_sizes/font_size = 32
 text = "7
 "
 
 [node name="Label2" type="Label" parent="Jose"]
 visible = false
-offset_left = 427.0
-offset_top = 196.0
-offset_right = 467.0
-offset_bottom = 245.0
+offset_left = 414.0
+offset_top = 182.0
+offset_right = 454.0
+offset_bottom = 414.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("10_xxfdn")
+theme_override_font_sizes/font_size = 32
 text = "67
 
 
@@ -4717,10 +4724,13 @@ text = "67
 
 [node name="Label3" type="Label" parent="Jose"]
 visible = false
-offset_left = 425.0
-offset_top = 228.0
-offset_right = 465.0
-offset_bottom = 277.0
+offset_left = 414.0
+offset_top = 180.0
+offset_right = 454.0
+offset_bottom = 271.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("10_xxfdn")
+theme_override_font_sizes/font_size = 32
 text = "35
 "
 
@@ -4731,19 +4741,25 @@ collision_mask = 5
 
 [node name="Label" type="Label" parent="carol"]
 visible = false
-offset_left = 175.0
-offset_top = 143.0
-offset_right = 215.0
-offset_bottom = 166.0
+offset_left = 181.7657
+offset_top = 136.7195
+offset_right = 221.7657
+offset_bottom = 227.7195
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("10_xxfdn")
+theme_override_font_sizes/font_size = 32
 text = "11
 "
 
 [node name="Label2" type="Label" parent="carol"]
 visible = false
-offset_left = 175.0
-offset_top = 143.0
-offset_right = 215.0
-offset_bottom = 166.0
+offset_left = 176.9571
+offset_top = 133.76872
+offset_right = 216.9571
+offset_bottom = 318.76874
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("10_xxfdn")
+theme_override_font_sizes/font_size = 32
 text = "34
 
 
@@ -4751,10 +4767,13 @@ text = "34
 
 [node name="Label3" type="Label" parent="carol"]
 visible = false
-offset_left = 181.766
-offset_top = 179.998
-offset_right = 221.766
-offset_bottom = 254.998
+offset_left = 174.07193
+offset_top = 132.78514
+offset_right = 214.07193
+offset_bottom = 270.78516
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("10_xxfdn")
+theme_override_font_sizes/font_size = 32
 text = "40
 
 "

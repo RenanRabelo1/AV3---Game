@@ -70,13 +70,15 @@ func _on_timer_timeout() -> void:
 	$Label7.show()
 	$Label6.show()
 	$Label5.show()
+	$Label7/Area2D.set_collision_mask_value(1, true)
 
 func _on_area_2d2_body_entered(body: Node2D) -> void:
 	$Label8.hide()
 	$Label7.hide()
 	$Label6.hide()
 	$Label5.hide()
-	get_tree().change_scene_to_file("res://Cenas/fim.tscn")
+	get_tree().change_scene_to_file("res://Cenas/end.tscn")
+	
 
 
 
