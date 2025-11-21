@@ -1,6 +1,71 @@
-[gd_scene load_steps=2 format=3 uid="uid://dj7mvlgmfwhb2"]
+[gd_scene load_steps=12 format=3 uid="uid://dj7mvlgmfwhb2"]
 
 [ext_resource type="Texture2D" uid="uid://c5hyxrpxexi67" path="res://Assets/Pixel Art Ancient Egypt Full Version Asset Pack/preta.jpg" id="1_l1i3f"]
+[ext_resource type="Texture2D" uid="uid://cy2wug0h630wr" path="res://Assets Cle├│patra/Personagens/Jos├®(Masc)/Idle/idle.png" id="2_lf6r0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ce4gr"]
+atlas = ExtResource("2_lf6r0")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vbf5"]
+atlas = ExtResource("2_lf6r0")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k051f"]
+atlas = ExtResource("2_lf6r0")
+region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hi8ox"]
+atlas = ExtResource("2_lf6r0")
+region = Rect2(144, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fg6mv"]
+atlas = ExtResource("2_lf6r0")
+region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyh7d"]
+atlas = ExtResource("2_lf6r0")
+region = Rect2(240, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q64er"]
+atlas = ExtResource("2_lf6r0")
+region = Rect2(288, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hiwt"]
+atlas = ExtResource("2_lf6r0")
+region = Rect2(336, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4i85i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ce4gr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vbf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k051f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hi8ox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fg6mv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xyh7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q64er")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hiwt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
 
 [node name="hud_vidro" type="CanvasLayer"]
 
@@ -62,3 +127,9 @@ offset_bottom = 199.0
 theme_override_font_sizes/font_size = 30
 text = "0
 "
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(317, 136)
+scale = Vector2(2.5833333, 1.609375)
+sprite_frames = SubResource("SpriteFrames_4i85i")
+autoplay = "default"

@@ -15,6 +15,10 @@ run/main_scene="uid://baeedfpw1t7tu"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[gui]
+
+theme/custom_font="uid://dxkaf6vlyn4v"
+
 [input]
 
 esquerda={

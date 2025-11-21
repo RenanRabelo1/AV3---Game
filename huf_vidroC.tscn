@@ -1,6 +1,71 @@
-[gd_scene load_steps=2 format=3 uid="uid://daanfvvtqyuyr"]
+[gd_scene load_steps=12 format=3 uid="uid://daanfvvtqyuyr"]
 
 [ext_resource type="Texture2D" uid="uid://c5hyxrpxexi67" path="res://Assets/Pixel Art Ancient Egypt Full Version Asset Pack/preta.jpg" id="1_xl880"]
+[ext_resource type="Texture2D" uid="uid://cjaj0d6kfc0f2" path="res://Assets Cle├│patra/Personagens/Carol(Fem)/Idle/Idle.png" id="2_jd544"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbl8g"]
+atlas = ExtResource("2_jd544")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d58pd"]
+atlas = ExtResource("2_jd544")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuaj4"]
+atlas = ExtResource("2_jd544")
+region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebhtu"]
+atlas = ExtResource("2_jd544")
+region = Rect2(144, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ib3n"]
+atlas = ExtResource("2_jd544")
+region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xo0ko"]
+atlas = ExtResource("2_jd544")
+region = Rect2(240, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctqgf"]
+atlas = ExtResource("2_jd544")
+region = Rect2(288, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oql21"]
+atlas = ExtResource("2_jd544")
+region = Rect2(336, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uiln5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbl8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d58pd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yuaj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebhtu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ib3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xo0ko")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctqgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oql21")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
 
 [node name="hud_carol" type="CanvasLayer"]
 
@@ -61,3 +126,9 @@ offset_right = 147.0
 offset_bottom = 219.0
 theme_override_font_sizes/font_size = 30
 text = "+"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(317, 199)
+scale = Vector2(2.5833333, 1.609375)
+sprite_frames = SubResource("SpriteFrames_uiln5")
+autoplay = "default"
