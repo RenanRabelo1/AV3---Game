@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cgsbff1hc0b78"]
+[gd_scene load_steps=31 format=3 uid="uid://cct7brpscvqg0"]
 
 [ext_resource type="PackedScene" uid="uid://di2y0wbeuqb53" path="res://Cenas/carol.tscn" id="1_523wv"]
 [ext_resource type="PackedScene" uid="uid://bd8oxh6ppsycf" path="res://Cenas/cleopatra.tscn" id="1_hjcgo"]

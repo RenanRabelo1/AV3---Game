@@ -927,7 +927,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p0lct"]
-size = Vector2(213, 144)
+size = Vector2(213, 117)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_773te"]
 atlas = ExtResource("16_p0lct")
@@ -1623,7 +1623,7 @@ texture = ExtResource("12_yl3xy")
 [node name="Pergunta1" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pergunta1"]
-position = Vector2(134, 220)
+position = Vector2(134, 233.5)
 shape = SubResource("RectangleShape2D_p0lct")
 
 [node name="Timer1" type="Timer" parent="Pergunta1"]

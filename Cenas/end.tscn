@@ -1,13 +1,13 @@
-[gd_scene load_steps=19 format=3 uid="uid://brrn0tbcf45ra"]
+[gd_scene load_steps=19 format=3 uid="uid://bm8xiuvo4nc0n"]
 
 [ext_resource type="Texture2D" uid="uid://c7fm2cceitkh0" path="res://Assets Cle├│patra/Cen├írios/Tileset/MapaBoss.jpg" id="1_bqyop"]
-[ext_resource type="Script" uid="uid://c1hbg8ukoovhl" path="res://Cenas/end.gd" id="1_mh82j"]
+[ext_resource type="Script" uid="uid://d07nfc68ym3wp" path="res://Cenas/end.gd" id="1_mh82j"]
 [ext_resource type="Texture2D" uid="uid://ce2tsnj01ihbs" path="res://fundos/brancoarredondado.png" id="2_07ps1"]
 [ext_resource type="Texture2D" uid="uid://cyjv8vqyjkuyi" path="res://Assets Cle├│patra/Personagens/Monstros/Monstro 2 (m├║mia)/Mummy.png" id="2_skube"]
 [ext_resource type="Texture2D" uid="uid://jukolqsmrglo" path="res://fundos/branco.jpg" id="4_mh82j"]
 [ext_resource type="Texture2D" uid="uid://btu245pahvriy" path="res://fundos/preta.jpg" id="5_6u81g"]
 [ext_resource type="Texture2D" uid="uid://dsovlr358i3ek" path="res://Assets Cle├│patra/Personagens/Monstros/Explosion-removebg-preview.png" id="5_ta3jy"]
-[ext_resource type="Texture2D" uid="uid://fkikx2fbqw2w" path="res://fundos/narrador.png" id="7_6u81g"]
+[ext_resource type="Texture2D" uid="uid://wv0aco6pit85" path="res://narrador-removebg-preview.png" id="7_ta3jy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fcef0"]
 atlas = ExtResource("2_skube")
@@ -103,6 +103,7 @@ scale = Vector2(1.0277911, 0.84625244)
 texture = ExtResource("2_07ps1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(203, 398)
 scale = Vector2(26.867191, 31.859379)
 sprite_frames = SubResource("SpriteFrames_dxg7t")
@@ -146,10 +147,9 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 
 [node name="Narrador2" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(214.00002, 356)
-scale = Vector2(0.045442924, 0.046365045)
-texture = ExtResource("7_6u81g")
+position = Vector2(224.62563, 394.03998)
+scale = Vector2(0.9204515, 0.8273368)
+texture = ExtResource("7_ta3jy")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 visible = false
