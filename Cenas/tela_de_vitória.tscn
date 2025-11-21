@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://7e0jvhucf3es"]
+
+[ext_resource type="Texture2D" uid="uid://bot43yfk5ftp6" path="res://fundos/TelaDeVitória.jpg" id="1_ax0x4"]
+[ext_resource type="Script" uid="uid://m4hbv75b2lpw" path="res://Cenas/tela_de_vitória.gd" id="1_ii7ww"]
+
+[node name="TelaDeVitória" type="CanvasLayer"]
+script = ExtResource("1_ii7ww")
+
+[node name="TelaDeVitória" type="Sprite2D" parent="."]
+position = Vector2(576, 334)
+scale = Vector2(1.4617347, 0.57191783)
+texture = ExtResource("1_ax0x4")
+
+[node name="JogarDenovo" type="Button" parent="."]
+offset_left = 743.0
+offset_top = 555.0
+offset_right = 1100.0
+offset_bottom = 598.0
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 735.0
+offset_top = 607.0
+offset_right = 1102.0
+offset_bottom = 650.0
+
+[connection signal="pressed" from="JogarDenovo" to="." method="_on_jogar_denovo_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

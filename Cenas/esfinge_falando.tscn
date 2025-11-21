@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bob4xukvkefi7"]
+[gd_scene load_steps=7 format=3 uid="uid://b0dfw83vdcwvr"]
 
-[ext_resource type="Script" uid="uid://c7g3724a0tqw6" path="res://Cenas/esfinge_falando.gd" id="1_227tr"]
-[ext_resource type="AudioStream" uid="uid://dkk4g0dp0s2c8" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/monster-footstep-162883.mp3" id="1_ynijy"]
+[ext_resource type="Script" uid="uid://pk8ran7qdtla" path="res://Cenas/esfinge_falando.gd" id="1_227tr"]
+[ext_resource type="AudioStream" uid="uid://1s372kwn2r1l" path="res://Assets Cle├│patra/Cen├írios/monster-footstep-162883.mp3" id="1_ynijy"]
 [ext_resource type="Texture2D" uid="uid://d2xh8082p54te" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Screenshot 2025-11-07 at 18-56-55 Pixel Art Game Cutscene – Figma Make.png" id="2_ytnj6"]
 [ext_resource type="Texture2D" uid="uid://e8dhyx2uayoq" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Screenshot 2025-11-07 at 18-57-19 Pixel Art Game Cutscene – Figma Make.png" id="3_k2km7"]
 [ext_resource type="Texture2D" uid="uid://bhn1802ves4kx" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Screenshot 2025-11-07 at 18-57-10 Pixel Art Game Cutscene – Figma Make.png" id="4_xpkdt"]

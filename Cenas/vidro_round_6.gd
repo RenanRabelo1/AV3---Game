@@ -25,18 +25,29 @@ var parou = 0
 var lava = false
 var impedir_j=0
 var impedir_c=0
+<<<<<<< HEAD
 
 var tempo0 = 0
+=======
+var passar=0
+var falha=0
+var tempo0 = 0
+var falha2=0
+>>>>>>> 660a1c9142a5e09316cf6748daed1b9868bcdb5a
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	jose = get_node_or_null("Jose")
 	carol = get_node_or_null("carol")
 	
-
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 660a1c9142a5e09316cf6748daed1b9868bcdb5a
 	if not lava:
 		tempo0 += delta
 		
@@ -49,6 +60,9 @@ func _process(delta: float) -> void:
 
 	_derrota()
 	_DanoLava()
+	
+	if passar>=1:
+		get_tree().change_scene_to_file("res://Cenas/esfinge_falando - Copia (3).tscn")
 	if entrou_c==0 && entrou_j==0:
 		$piso6/CollisionShape2D.disabled = true
 		$piso7/CollisionShape2D.disabled = true
@@ -125,6 +139,7 @@ func _process(delta: float) -> void:
 				hud1=0
 				print(repete)
 				round3_j=0
+			
 				
 			elif (soma1_j==35 && repete==1):
 				$hud_vidro/num1.text=str("ACERTOU")
@@ -133,6 +148,10 @@ func _process(delta: float) -> void:
 				$hud_vidro/op1.hide()
 				$hud_vidro/op2.hide()
 				$hud_vidro/ponto.text=str("2")
+<<<<<<< HEAD
+=======
+				passar+=1
+>>>>>>> 660a1c9142a5e09316cf6748daed1b9868bcdb5a
 			
 				
 				
@@ -144,6 +163,7 @@ func _process(delta: float) -> void:
 				$hud_vidro/num3.hide()
 				$hud_vidro/op1.hide()
 				$hud_vidro/op2.hide()
+				falha=1
 				
 		if (hud2>=3):
 			if (soma1_c==40 && repete_c<1):
@@ -166,6 +186,10 @@ func _process(delta: float) -> void:
 				$hud_carol/op1.hide()
 				$hud_carol/op2.hide()
 				$hud_carol/ponto.text=str("2")
+<<<<<<< HEAD
+=======
+				passar+=1
+>>>>>>> 660a1c9142a5e09316cf6748daed1b9868bcdb5a
 			
 			# 10 + 13 + 17
 			# 8 + 15 + 17
@@ -179,7 +203,7 @@ func _process(delta: float) -> void:
 				$hud_carol/num3.hide()
 				$hud_carol/op1.hide()
 				$hud_carol/op2.hide()
-				
+				falha2=1
 			
 			
 			
@@ -663,6 +687,11 @@ func _on_timer_timeout() -> void:
 		$lava2.show()
 		$lava3.show()
 		$lava4.show()
+<<<<<<< HEAD
+=======
+		$lava5.show()
+		$lava6.show()
+>>>>>>> 660a1c9142a5e09316cf6748daed1b9868bcdb5a
 		$lava/CollisionShape2D.disabled = false
 		$Timer.wait_time = 5.0
 		lava = true
@@ -685,22 +714,26 @@ func _on_piso_lava_body_entered(body: Node2D) -> void:
 	if body.name=="carol":
 		salvo_c=true
 		
-
+var dentro_c=0
+var dentro_j=0
 
 func _on_piso_lava_2_body_entered(body: Node2D) -> void:
 	if body.name=="Jose":
 		salvo_j=true
 		
+		
 	if body.name=="carol":
 		salvo_c=true
+		
 		
 
 
 func _on_piso_lava_2_body_exited(body: Node2D) -> void:
-	if body.name=="Jose" && virou==1:
+	if body.name=="Jose" :
 		salvo_j=false
 		
-	if body.name=="carol":
+		
+	if body.name=="carol" :
 		salvo_c=false
 		
 
@@ -716,23 +749,20 @@ func _on_piso_lava_body_exited(body: Node2D) -> void:
 		
 func _DanoLava():
 	if virou == 1:
-		
-
 		if jose and not salvo_j:
-			jose.queue_free()
+			get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 		
-		if carol and not salvo_c:
-			carol.queue_free()
-
-	
-	
-		
-
+		elif carol and not salvo_c:
+			get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 
 func _on_timer_hud_timeout() -> void:
 	if virou == 0:
 		tempo += 1
+<<<<<<< HEAD
 		$hudTempo/Label.text = str(tempo)
+=======
+		$hudTempo/Label.text = str("Tempo restante: ", 35 - tempo)
+>>>>>>> 660a1c9142a5e09316cf6748daed1b9868bcdb5a
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -772,8 +802,15 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		
 func _derrota():
 		if !jose || !carol:
+<<<<<<< HEAD
 			$Node2D2.show()
 			$hudTempo.hide()
+=======
+			get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
+			
+		elif falha==1 && falha2==1:
+			get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
+>>>>>>> 660a1c9142a5e09316cf6748daed1b9868bcdb5a
 
 
 func _on_aviso_timeout() -> void:

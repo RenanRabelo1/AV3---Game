@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://01t2thuno540"]
+
+[ext_resource type="Script" uid="uid://dxfhxwsf1onlp" path="res://Cenas/tela_de_derrota.gd" id="1_pf4to"]
+[ext_resource type="Texture2D" uid="uid://d3e8pv1dhiksd" path="res://fundos/TelaDeDerrota.jpg" id="2_pf4to"]
+
+[node name="TelaDederrota" type="CanvasLayer"]
+script = ExtResource("1_pf4to")
+
+[node name="TelaDeDerrota4" type="Sprite2D" parent="."]
+position = Vector2(575, 336)
+scale = Vector2(1.4566327, 0.57020545)
+texture = ExtResource("2_pf4to")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 321.0
+offset_top = 598.0
+offset_right = 832.0
+offset_bottom = 645.0
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 948.0
+offset_top = 32.0
+offset_right = 1082.0
+offset_bottom = 95.0
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 320.0
+offset_top = 537.0
+offset_right = 830.0
+offset_bottom = 581.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
