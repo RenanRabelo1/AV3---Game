@@ -59,3 +59,8 @@ func _on_stop() -> void:
 	velocity.x = 0
 	velocity.y = 0
 	print("Oi")
+
+@onready var progress_bar: ProgressBar = $ProgressBar
+
+func take_damage():
+	progress_bar.value -= 10

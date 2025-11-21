@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=3 uid="uid://bllmrc5wa241k"]
+
+[ext_resource type="Script" uid="uid://cmmwi6kgv5iyb" path="res://introducao.gd" id="1_8p734"]
+[ext_resource type="Texture2D" uid="uid://dk6m4x2dpxdy3" path="res://Assets Cle├│patra/narrador.png" id="1_grcin"]
+[ext_resource type="Texture2D" uid="uid://cysga1jgkltot" path="res://Assets Cle├│patra/fundonarrador.png" id="2_m1j4r"]
+[ext_resource type="Texture2D" uid="uid://8inwroy27ccd" path="res://fundos/narradortriste.png" id="3_oxeqw"]
+[ext_resource type="Texture2D" uid="uid://btu245pahvriy" path="res://fundos/preta.jpg" id="3_rxrhu"]
+[ext_resource type="Texture2D" uid="uid://ce2tsnj01ihbs" path="res://fundos/brancoarredondado.png" id="4_oxeqw"]
+[ext_resource type="Texture2D" uid="uid://jukolqsmrglo" path="res://fundos/branco.jpg" id="6_f01ky"]
+
+[node name="introducao" type="Node2D"]
+script = ExtResource("1_8p734")
+
+[node name="Narrador" type="Sprite2D" parent="."]
+position = Vector2(240, 339)
+scale = Vector2(0.7711443, 0.79698384)
+texture = ExtResource("1_grcin")
+
+[node name="Narrador2" type="Sprite2D" parent="."]
+position = Vector2(234, 345)
+scale = Vector2(0.7711443, 0.79698384)
+texture = ExtResource("1_grcin")
+
+[node name="Narradortriste" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(246.99998, 339)
+scale = Vector2(0.8213114, 0.8177624)
+texture = ExtResource("3_oxeqw")
+
+[node name="Fundonarrador" type="Sprite2D" parent="."]
+position = Vector2(812.5, 338.76566)
+scale = Vector2(14.795919, 6.164899)
+texture = ExtResource("2_m1j4r")
+
+[node name="Fundonarrador2" type="Sprite2D" parent="."]
+position = Vector2(1397, 464)
+scale = Vector2(8.266577, 5.9458704)
+texture = ExtResource("2_m1j4r")
+
+[node name="Brancoarredondado" type="Sprite2D" parent="."]
+position = Vector2(774, 539)
+scale = Vector2(1.3842773, 0.37158197)
+texture = ExtResource("4_oxeqw")
+
+[node name="balao1" type="Label" parent="."]
+offset_left = 443.0
+offset_top = 462.0
+offset_right = 2067.0
+offset_bottom = 633.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+
+[node name="Label2" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Preta" type="Sprite2D" parent="."]
+position = Vector2(676, 279)
+scale = Vector2(0.7477779, 0.18311039)
+texture = ExtResource("3_rxrhu")
+
+[node name="Branco" type="Sprite2D" parent="."]
+position = Vector2(679, 228)
+scale = Vector2(0.32372713, 0.06637807)
+texture = ExtResource("6_f01ky")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 520.0
+offset_top = 206.0
+offset_right = 2144.0
+offset_bottom = 377.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Demétrio"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 511.0
+offset_top = 268.0
+offset_right = 2135.0
+offset_bottom = 439.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 23
+text = "Explorador Veterano"
+
+[node name="Timer" type="Timer" parent="."]

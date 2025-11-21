@@ -51,11 +51,11 @@ func _jose_die():
 func _on_errada_body_entered(body: Node2D) -> void:
 	if body.name == "Jose":
 		_jose_die()
-		body.global_position.x -= 150
+		body.global_position.x -= 100
 		print("gol")
 	if body.name == "carol":
 		_carol_die()
-		body.global_position.x -= 150
+		body.global_position.x -= 100
 		print("gol")
 
 
@@ -68,15 +68,15 @@ func morrer():
 		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name == "Jose":
-		jose = 0
-	if body.name == "carol":
-		carol = 0
+	if body.name=="Jose":
+		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
+	elif body.name=="carol":
+		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 
 
 
 func _on_fim_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://Cenas/fim.tscn")
+	get_tree().change_scene_to_file("res://plot.tscn")
 
 
 func _on_pergunta_body_entered(body: Node2D) -> void:
@@ -103,3 +103,22 @@ func _on_porta_certa_2_body_entered(body: Node2D) -> void:
 
 func _on_porta_certa_3_body_entered(body: Node2D) -> void:
 	$"Props+door6".hide()
+
+
+
+	
+
+	
+
+
+func _on_dano_body_entered(body: Node2D) -> void:
+	if body.name=="Jose":
+		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
+	elif body.name=="carol":
+		get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
+		
+
+
+func _on_parar_body_entered(body: Node2D) -> void:
+	if body.name=="pedra_rolando":
+		$pedra_rolando/pedra.stop()

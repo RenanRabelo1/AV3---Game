@@ -25,15 +25,23 @@ var parou = 0
 var lava = false
 var impedir_j=0
 var impedir_c=0
-<<<<<<< HEAD
+var passar_c=0
+var passar_j=0
+var evitar_repeticao_carol01=0
+var evitar_repeticao_carol02=0
+var evitar_repeticao_jose01=0
+var evitar_repeticao_jose02=0
+
 
 var tempo0 = 0
-=======
+
 var passar=0
 var falha=0
-var tempo0 = 0
+
 var falha2=0
->>>>>>> 660a1c9142a5e09316cf6748daed1b9868bcdb5a
+
+var mensagem=0
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -44,24 +52,26 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-<<<<<<< HEAD
-=======
+
 	
->>>>>>> 660a1c9142a5e09316cf6748daed1b9868bcdb5a
+
 	if not lava:
 		tempo0 += delta
 		
 		if tempo >= 25 and tempo <= 31:
 			$alerta.show()
+			
 		else:
 			$alerta.hide()
+			
 	else:
 		$alerta.hide()
+		
 
 	_derrota()
 	_DanoLava()
 	
-	if passar>=1:
+	if passar_j==1 && passar_c==1:
 		get_tree().change_scene_to_file("res://Cenas/esfinge_falando - Copia (3).tscn")
 	if entrou_c==0 && entrou_j==0:
 		$piso6/CollisionShape2D.disabled = true
@@ -118,6 +128,7 @@ func _process(delta: float) -> void:
 		$round3.show()
 		$hud_vidro.show()
 		$hud_carol.show()
+		$resetar.show()
 		
 		$piso6/CollisionShape2D.disabled = false
 		$piso7/CollisionShape2D.disabled = false
@@ -126,39 +137,54 @@ func _process(delta: float) -> void:
 		$piso10/CollisionShape2D.disabled = false
 		$piso11/CollisionShape2D.disabled = false
 		
+		var impedir_dnv=0
+		
 		if (hud1>=3):
 			if (soma1_j==35 && repete<1):
-				$hud_vidro/num1.text=str("X")
-				$hud_vidro/num2.text=str("X")
-				$hud_vidro/num3.text=str("X")
-				$hud_vidro/op1.text=str("+")
-				$hud_vidro/op2.text=str("+")
-				$hud_vidro/ponto.text=str("1")
-				repete+=1
-				soma1_j=0
-				hud1=0
-				print(repete)
-				round3_j=0
+				
+					$hud_vidro/num1.text=str("X")
+					$hud_vidro/num2.text=str("X")
+					$hud_vidro/num3.text=str("X")
+					$hud_vidro/op1.text=str("+")
+					$hud_vidro/op2.text=str("+")
+					$hud_vidro/ponto.text=str("1")
+					
+					repete+=1
+					soma1_j=0
+					hud1=0
+					print(repete)
+					round3_j=0
+					mensagem=1
 			
 				
 			elif (soma1_j==35 && repete==1):
-				$hud_vidro/num1.text=str("ACERTOU")
-				$hud_vidro/num2.hide()
-				$hud_vidro/num3.hide()
-				$hud_vidro/op1.hide()
-				$hud_vidro/op2.hide()
-				$hud_vidro/ponto.text=str("2")
-<<<<<<< HEAD
-=======
-				passar+=1
->>>>>>> 660a1c9142a5e09316cf6748daed1b9868bcdb5a
+				if (evitar_repeticao_jose01>=6 || evitar_repeticao_jose02>=6):
+					$hud_vidro/num1.text=str("REPETIÇÃO")
+					$hud_vidro/num2.hide()
+					$hud_vidro/num3.hide()
+					$hud_vidro/op1.hide()
+					$hud_vidro/op2.hide()
+					falha=1
+					
+				else:
+					
+					$hud_vidro/num1.text=str("ACERTOU")
+					$hud_vidro/num2.hide()
+					$hud_vidro/num3.hide()
+					$hud_vidro/op1.hide()
+					$hud_vidro/op2.hide()
+					$hud_vidro/ponto.text=str("2")
+					passar_j=1
+					$resetar/Branco.hide()
+					$resetar/resetar_j.hide()
+
 			
 				
 				
 				
 			else:
 		
-				$hud_vidro/num1.text=str(soma1_j)
+				$hud_vidro/num1.text=str("ERRADO")
 				$hud_vidro/num2.hide()
 				$hud_vidro/num3.hide()
 				$hud_vidro/op1.hide()
@@ -178,18 +204,30 @@ func _process(delta: float) -> void:
 				hud2=0
 				print(repete_c)
 				round3_c=0
+				mensagem=1
 				
 			elif (soma1_c==40 && repete_c==1):
-				$hud_carol/num1.text=str("ACERTOU")
-				$hud_carol/num2.hide()
-				$hud_carol/num3.hide()
-				$hud_carol/op1.hide()
-				$hud_carol/op2.hide()
-				$hud_carol/ponto.text=str("2")
-<<<<<<< HEAD
-=======
-				passar+=1
->>>>>>> 660a1c9142a5e09316cf6748daed1b9868bcdb5a
+				if (evitar_repeticao_carol01>=6 || evitar_repeticao_carol02>=6):
+					$hud_carol/num1.text=str("REPETIÇÃO")
+					$hud_carol/num2.hide()
+					$hud_carol/num3.hide()
+					$hud_carol/op1.hide()
+					$hud_carol/op2.hide()
+					
+					
+					
+					falha=1
+				else:
+					$hud_carol/num1.text=str("ACERTOU")
+					$hud_carol/num2.hide()
+					$hud_carol/num3.hide()
+					$hud_carol/op1.hide()
+					$hud_carol/op2.hide()
+					$hud_carol/ponto.text=str("2")
+					$resetar/Branco2.hide()
+					$resetar/resetar_c.hide()
+					passar_c=1
+
 			
 			# 10 + 13 + 17
 			# 8 + 15 + 17
@@ -205,9 +243,11 @@ func _process(delta: float) -> void:
 				$hud_carol/op2.hide()
 				falha2=1
 			
+		if mensagem==1:
 			
-			
-		
+			$Node/Label.hide()
+			$Node/Label2.hide()
+			$Node/Label4.show()
 					
 					
 			
@@ -319,7 +359,7 @@ func _on_piso_8_body_entered(body: Node2D) -> void:
 			print("entrou")
 			
 			round3_j+=1 
-			
+			evitar_repeticao_jose01+=1
 			if limite==1 && round3_j==1:
 				$hud_vidro/num1.text=str(nome_j)
 				soma1_j+=10
@@ -342,7 +382,7 @@ func _on_piso_8_body_entered(body: Node2D) -> void:
 			if round_c==3:
 				var limite=0
 				limite+=1
-		
+				evitar_repeticao_carol02+=1
 				nome_c="10"
 				
 				round3_c+=1 
@@ -379,7 +419,7 @@ func _on_piso_9_body_entered(body: Node2D) -> void:
 			nome_j="15"
 			
 			round3_j+=1 
-			
+			evitar_repeticao_jose02+=1
 			if limite==1 && round3_j==1:
 				$hud_vidro/num1.text=str(nome_j)
 				soma1_j+=15
@@ -400,7 +440,7 @@ func _on_piso_9_body_entered(body: Node2D) -> void:
 			if round_c==3:
 				var limite=0
 				limite+=1
-		
+				evitar_repeticao_carol01+=1
 				nome_c="15"
 				
 				round3_c+=1 
@@ -435,6 +475,7 @@ func _on_piso_6_body_entered(body: Node2D) -> void:
 	
 	
 	if body.name=="Jose":
+	
 		var limite=0
 		
 		if round_j==3:
@@ -442,13 +483,14 @@ func _on_piso_6_body_entered(body: Node2D) -> void:
 			limite+=1
 			print("entrou 2")
 			nome_j="13"
-			
+			evitar_repeticao_jose01+=1
 			round3_j+=1 
 			
 			if limite==1 && round3_j==1:
 				$hud_vidro/num1.text=str(nome_j)
 				soma1_j+=13
 				hud1+=1
+				
 			if limite==1 && round3_j==2:
 				$hud_vidro/num2.text=str(nome_j)
 				soma1_j+=13
@@ -463,10 +505,11 @@ func _on_piso_6_body_entered(body: Node2D) -> void:
 			if round_c==3:
 				var limite=0
 				limite+=1
-		
+				evitar_repeticao_carol01+=1
 				nome_c="13"
-				
+				evitar_repeticao_carol02+=1
 				round3_c+=1 
+				
 				
 				if limite==1 && round3_c==1:
 					$hud_carol/num1.text=str(nome_c)
@@ -497,9 +540,9 @@ func _on_piso_7_body_entered(body: Node2D) -> void:
 			limite+=1
 			print("entrou 2")
 			nome_j="12"
-			
+			evitar_repeticao_jose01+=1
 			round3_j+=1 
-			
+			evitar_repeticao_jose02+=1
 			if limite==1 && round3_j==1:
 				$hud_vidro/num1.text=str(nome_j)
 				soma1_j+=12
@@ -518,7 +561,7 @@ func _on_piso_7_body_entered(body: Node2D) -> void:
 	if body.name=="carol":
 		var limite=0
 		if round_c==3:
-			
+			evitar_repeticao_carol01+=1
 			limite+=1
 	
 			nome_c="12"
@@ -551,7 +594,7 @@ func _on_piso_10_body_entered(body: Node2D) -> void:
 			limite+=1
 			print("entrou 2")
 			nome_j="8"
-			
+			evitar_repeticao_jose02+=1
 			round3_j+=1 
 			
 			if limite==1 && round3_j==1:
@@ -616,6 +659,7 @@ func _on_piso_11_body_entered(body: Node2D) -> void:
 				soma1_j+=17
 				hud1+=1
 				
+				
 			if limite==1 && round3_j==2:
 				$hud_vidro/num2.text=str(nome_j)
 				soma1_j+=17
@@ -633,7 +677,7 @@ func _on_piso_11_body_entered(body: Node2D) -> void:
 			limite+=1
 	
 			nome_c="17"
-			
+			evitar_repeticao_carol02+=1
 			round3_c+=1 
 			
 			if limite==1 && round3_c==1:
@@ -667,6 +711,8 @@ func _on_timer_timeout() -> void:
 	
 	if lava:
 		$Timer.wait_time = 35.0
+		$lava6.hide()
+		$lava5.hide()
 		$lava.hide()
 		$lava2.hide()
 		$lava3.hide()
@@ -687,11 +733,10 @@ func _on_timer_timeout() -> void:
 		$lava2.show()
 		$lava3.show()
 		$lava4.show()
-<<<<<<< HEAD
-=======
+
 		$lava5.show()
 		$lava6.show()
->>>>>>> 660a1c9142a5e09316cf6748daed1b9868bcdb5a
+
 		$lava/CollisionShape2D.disabled = false
 		$Timer.wait_time = 5.0
 		lava = true
@@ -758,15 +803,16 @@ func _DanoLava():
 func _on_timer_hud_timeout() -> void:
 	if virou == 0:
 		tempo += 1
-<<<<<<< HEAD
+
 		$hudTempo/Label.text = str(tempo)
-=======
+
 		$hudTempo/Label.text = str("Tempo restante: ", 35 - tempo)
->>>>>>> 660a1c9142a5e09316cf6748daed1b9868bcdb5a
+
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("entrou")	
+	$Node2D3.hide()
 	
 	if body.name=="Jose":
 		round_j+=1
@@ -799,19 +845,75 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		if round_c==3:
 			$carol/Label3.show()
 			$impedir_carol/c_c.call_deferred("set_disabled", false)
+			
+	if round_j==1 && round_c==1:
+		$Node2D4.show()
 		
+	elif round_j==2 && round_c==2:
+		$Node2D4.hide()
+		
+	elif round_j==3 && round_c==3:
+		$Node.show()
 func _derrota():
 		if !jose || !carol:
-<<<<<<< HEAD
+
 			$Node2D2.show()
 			$hudTempo.hide()
-=======
+
 			get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
 			
 		elif falha==1 && falha2==1:
 			get_tree().change_scene_to_file("res://Cenas/TelaDeDerrota.tscn")
->>>>>>> 660a1c9142a5e09316cf6748daed1b9868bcdb5a
+
 
 
 func _on_aviso_timeout() -> void:
 	pass
+
+
+func _on_resetar_j_pressed() -> void:
+	
+	repete=0
+	soma1_j=0
+	hud1=0
+	falha=0
+	round3_j=0
+	mensagem=0
+	
+	
+	$hud_vidro/num2.show()
+	$hud_vidro/num3.show()
+	$hud_vidro/op1.show()
+	$hud_vidro/op2.show()
+	$hud_vidro/num1.text=str("X")
+	$hud_vidro/num2.text=str("X")
+	$hud_vidro/num3.text=str("X")
+	$hud_vidro/op1.text=str("+")
+	$hud_vidro/op2.text=str("+")
+	$hud_vidro/ponto.text=str("0")
+	evitar_repeticao_jose01=0
+	evitar_repeticao_jose02=0
+	
+	
+
+
+func _on_resetar_c_pressed() -> void:
+	repete_c=0
+	soma1_c=0
+	hud2=0
+	falha2=0		
+	round3_c=0
+	mensagem=0
+	evitar_repeticao_carol01=0
+	evitar_repeticao_carol02=0 
+	
+	$hud_carol/num2.show()
+	$hud_carol/num3.show()
+	$hud_carol/op1.show()
+	$hud_carol/op2.show()
+	$hud_carol/num1.text=str("X")
+	$hud_carol/num2.text=str("X")
+	$hud_carol/num3.text=str("X")
+	$hud_carol/op1.text=str("+")
+	$hud_carol/op2.text=str("+")
+	$hud_carol/ponto.text=str("0")

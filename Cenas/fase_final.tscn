@@ -1,4 +1,4 @@
-[gd_scene load_steps=113 format=4 uid="uid://broaga8mm7ir6"]
+[gd_scene load_steps=114 format=4 uid="uid://broaga8mm7ir6"]
 
 [ext_resource type="PackedScene" uid="uid://d3jkc0pqmw4x0" path="res://Cenas/jose.tscn" id="1_jjlrl"]
 [ext_resource type="Script" uid="uid://88ksfib3po44" path="res://Cenas/fase_final.gd" id="1_lbji7"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://bwsfdo6jdfhkj" path="res://Assets Cle├│patra/Chat BalloonsBubbles - Pixel Art/Chat-1.png" id="16_p0lct"]
 [ext_resource type="Texture2D" uid="uid://bnyxstp45nv8k" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Back.png" id="17_oaado"]
 [ext_resource type="Texture2D" uid="uid://w4k32iyxix5p" path="res://Assets Cle├│patra/buttons-pixel-art-set-square-600nw-2194665507-removebg-preview.png" id="18_fqw0j"]
+[ext_resource type="FontFile" uid="uid://c5g13loq0foeb" path="res://Assets Cle├│patra/Fontes/Font_Display/static/PlayfairDisplay-Medium.ttf" id="18_msl6a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p0lct"]
 texture = ExtResource("8_c1blg")
@@ -752,10 +753,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xepik"]
-size = Vector2(37, 34)
+size = Vector2(55, 34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lrpn3"]
-size = Vector2(40, 40)
+size = Vector2(87, 40)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lrpn3"]
 
@@ -817,7 +818,7 @@ size = Vector2(430, 42)
 size = Vector2(40, 39)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kdqhk"]
-size = Vector2(37.25, 36.5)
+size = Vector2(61.5, 36.5)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_a8iuh"]
 a = Vector2(-50, -518)
@@ -926,7 +927,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p0lct"]
-size = Vector2(213, 144)
+size = Vector2(213, 117)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_773te"]
 atlas = ExtResource("16_p0lct")
@@ -1065,20 +1066,20 @@ sprite_frames = SubResource("SpriteFrames_5dk8m")
 animation = &"6"
 
 [node name="flechas" parent="." instance=ExtResource("4_ca6vr")]
-position = Vector2(-463, 14)
+position = Vector2(-605, -367)
 
 [node name="Certa2" type="Area2D" parent="."]
 position = Vector2(293, 577)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Certa2"]
-position = Vector2(27.5, 25)
+position = Vector2(45, 25)
 shape = SubResource("RectangleShape2D_xepik")
 
 [node name="Certa" type="Area2D" parent="."]
 position = Vector2(35, 577)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Certa"]
-position = Vector2(99, -464)
+position = Vector2(97.5, -509)
 shape = SubResource("RectangleShape2D_lrpn3")
 
 [node name="PortaChavePrateada" type="RigidBody2D" parent="."]
@@ -1223,7 +1224,7 @@ shape = SubResource("RectangleShape2D_fqw0j")
 position = Vector2(49, 519)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Errada"]
-position = Vector2(12, -407)
+position = Vector2(1.5, -408)
 shape = SubResource("RectangleShape2D_kdqhk")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Errada"]
@@ -1231,7 +1232,7 @@ position = Vector2(28.625, 82.75)
 shape = SubResource("RectangleShape2D_kdqhk")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Errada"]
-position = Vector2(147, -406)
+position = Vector2(156.75, -407)
 shape = SubResource("RectangleShape2D_kdqhk")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Errada"]
@@ -1314,305 +1315,307 @@ sprite_frames = SubResource("SpriteFrames_pq2lp")
 position = Vector2(908, 551)
 shape = SubResource("RectangleShape2D_l6j1d")
 
-[node name="Props+itemsAll" type="Sprite2D" parent="."]
+[node name="Parede" type="Node" parent="."]
+
+[node name="Props+itemsAll" type="Sprite2D" parent="Parede"]
 position = Vector2(247, 376)
 
-[node name="Wall28" type="Sprite2D" parent="."]
+[node name="Wall28" type="Sprite2D" parent="Parede"]
 position = Vector2(824, 453)
 scale = Vector2(4.5190225, 1.4354838)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall" type="Sprite2D" parent="."]
+[node name="Wall" type="Sprite2D" parent="Parede"]
 position = Vector2(280, 121)
 scale = Vector2(2.3478258, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall2" type="Sprite2D" parent="."]
+[node name="Wall2" type="Sprite2D" parent="Parede"]
 position = Vector2(241.80722, 59.00917)
 rotation = 1.5707964
 scale = Vector2(2.587355, 1.0124369)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall30" type="Sprite2D" parent="."]
+[node name="Wall30" type="Sprite2D" parent="Parede"]
 position = Vector2(1045.0001, 453)
 scale = Vector2(4.5190225, 1.4354838)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall4" type="Sprite2D" parent="."]
+[node name="Wall4" type="Sprite2D" parent="Parede"]
 position = Vector2(452.00003, 122)
 scale = Vector2(1.8260871, 0.9677419)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall3" type="Sprite2D" parent="."]
+[node name="Wall3" type="Sprite2D" parent="Parede"]
 position = Vector2(479, 61.58025)
 rotation = -1.5707964
 scale = Vector2(2.624233, 1.0124369)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall34" type="Sprite2D" parent="."]
+[node name="Wall34" type="Sprite2D" parent="Parede"]
 position = Vector2(739.3939, 73.12367)
 rotation = 1.5707964
 scale = Vector2(3.4848063, 1.057653)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall5" type="Sprite2D" parent="."]
+[node name="Wall5" type="Sprite2D" parent="Parede"]
 position = Vector2(358, 3)
 scale = Vector2(5.7826095, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall6" type="Sprite2D" parent="."]
+[node name="Wall6" type="Sprite2D" parent="Parede"]
 position = Vector2(623, 3)
 scale = Vector2(5.7826095, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall27" type="Sprite2D" parent="."]
+[node name="Wall27" type="Sprite2D" parent="Parede"]
 position = Vector2(623, 586)
 rotation = 1.5707964
 scale = Vector2(2.3348045, 1.1313202)
 texture = ExtResource("9_vhf5j")
 
-[node name="Pillar" type="Sprite2D" parent="."]
+[node name="Pillar" type="Sprite2D" parent="Parede"]
 position = Vector2(530, 48)
 scale = Vector2(2.046875, 1.875)
 texture = ExtResource("10_xepik")
 
-[node name="Wall7" type="Sprite2D" parent="."]
+[node name="Wall7" type="Sprite2D" parent="Parede"]
 position = Vector2(887, 3)
 scale = Vector2(5.7826095, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall8" type="Sprite2D" parent="."]
+[node name="Wall8" type="Sprite2D" parent="Parede"]
 position = Vector2(1151, 3)
 scale = Vector2(5.7826095, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall9" type="Sprite2D" parent="."]
+[node name="Wall9" type="Sprite2D" parent="Parede"]
 position = Vector2(114.000015, 3.0000153)
 scale = Vector2(4.8695645, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall10" type="Sprite2D" parent="."]
+[node name="Wall10" type="Sprite2D" parent="Parede"]
 position = Vector2(357.99997, 650.5)
-rotation = 3.1415927
+rotation = -3.1415925
 scale = Vector2(5.7826095, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall11" type="Sprite2D" parent="."]
+[node name="Wall11" type="Sprite2D" parent="Parede"]
 position = Vector2(623, 650.5)
-rotation = 3.1415927
+rotation = -3.1415925
 scale = Vector2(5.7826095, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall12" type="Sprite2D" parent="."]
+[node name="Wall12" type="Sprite2D" parent="Parede"]
 position = Vector2(887, 650.5)
-rotation = 3.1415927
+rotation = -3.1415925
 scale = Vector2(5.7826095, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall29" type="Sprite2D" parent="."]
+[node name="Wall29" type="Sprite2D" parent="Parede"]
 position = Vector2(1030.0001, 452.99997)
 scale = Vector2(4.5190225, 1.4354838)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall13" type="Sprite2D" parent="."]
+[node name="Wall13" type="Sprite2D" parent="Parede"]
 position = Vector2(1151, 650.5)
-rotation = 3.1415927
+rotation = -3.1415925
 scale = Vector2(5.7826095, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall14" type="Sprite2D" parent="."]
+[node name="Wall14" type="Sprite2D" parent="Parede"]
 position = Vector2(113.999985, 650.5)
-rotation = 3.1415927
+rotation = -3.1415925
 scale = Vector2(4.8695645, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall15" type="Sprite2D" parent="."]
+[node name="Wall15" type="Sprite2D" parent="Parede"]
 position = Vector2(6, 261)
-rotation = 4.712389
+rotation = -1.5707964
 scale = Vector2(5.7826095, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall16" type="Sprite2D" parent="."]
+[node name="Wall16" type="Sprite2D" parent="Parede"]
 position = Vector2(6, 527)
-rotation = 4.712389
+rotation = -1.5707964
 scale = Vector2(5.7826095, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall19" type="Sprite2D" parent="."]
+[node name="Wall19" type="Sprite2D" parent="Parede"]
 position = Vector2(6, 18)
-rotation = 4.712389
+rotation = -1.5707964
 scale = Vector2(4.8695645, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall17" type="Sprite2D" parent="."]
+[node name="Wall17" type="Sprite2D" parent="Parede"]
 position = Vector2(1157.5, 267)
 rotation = 1.5707964
 scale = Vector2(5.7826095, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall18" type="Sprite2D" parent="."]
+[node name="Wall18" type="Sprite2D" parent="Parede"]
 position = Vector2(1157.5, 533)
 rotation = 1.5707964
 scale = Vector2(5.7826095, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall20" type="Sprite2D" parent="."]
+[node name="Wall20" type="Sprite2D" parent="Parede"]
 position = Vector2(1157.5, 23.999985)
 rotation = 1.5707964
 scale = Vector2(4.8695645, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Pila2" type="Sprite2D" parent="."]
+[node name="Pila2" type="Sprite2D" parent="Parede"]
 position = Vector2(275, 36.000004)
 scale = Vector2(2.1875005, 2.171875)
 texture = ExtResource("11_xepik")
 
-[node name="Butao" type="Sprite2D" parent="."]
-position = Vector2(61, 112)
-scale = Vector2(1.28125, 1.2968746)
+[node name="Butao" type="Sprite2D" parent="Parede"]
+position = Vector2(50, 111.99999)
+scale = Vector2(2.1875002, 1.2968746)
 texture = ExtResource("12_yl3xy")
 
-[node name="Butao2" type="Sprite2D" parent="."]
-position = Vector2(195.99998, 113)
-scale = Vector2(1.28125, 1.2968746)
+[node name="Butao2" type="Sprite2D" parent="Parede"]
+position = Vector2(202.49998, 113)
+scale = Vector2(1.6562498, 1.2968746)
 texture = ExtResource("12_yl3xy")
 
-[node name="Butao3" type="Sprite2D" parent="."]
-position = Vector2(134.5, 112.74999)
-scale = Vector2(1.28125, 1.2968746)
+[node name="Butao3" type="Sprite2D" parent="Parede"]
+position = Vector2(134, 68)
+scale = Vector2(2.8125005, 1.2968746)
 texture = ExtResource("12_yl3xy")
 
-[node name="Butao4" type="Sprite2D" parent="."]
-position = Vector2(78, 602.00006)
-scale = Vector2(1.2812501, 1.3437507)
+[node name="Butao4" type="Sprite2D" parent="Parede"]
+position = Vector2(79, 599.00006)
+scale = Vector2(2, 1.3437507)
 texture = ExtResource("12_yl3xy")
 
-[node name="Butao5" type="Sprite2D" parent="."]
+[node name="Butao5" type="Sprite2D" parent="Parede"]
 position = Vector2(195, 603.00006)
-scale = Vector2(1.2812501, 1.3437507)
+scale = Vector2(2, 1.3437507)
 texture = ExtResource("12_yl3xy")
 
-[node name="Butao6" type="Sprite2D" parent="."]
-position = Vector2(321, 604.00006)
-scale = Vector2(1.2812501, 1.3437507)
+[node name="Butao6" type="Sprite2D" parent="Parede"]
+position = Vector2(338.75, 604.5)
+scale = Vector2(1.7968752, 1.3437507)
 texture = ExtResource("12_yl3xy")
 
-[node name="Wall21" type="Sprite2D" parent="."]
+[node name="Wall21" type="Sprite2D" parent="Parede"]
 position = Vector2(280, 121)
 scale = Vector2(2.3478258, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall24" type="Sprite2D" parent="."]
+[node name="Wall24" type="Sprite2D" parent="Parede"]
 position = Vector2(414.0993, 585.9976)
 rotation = 1.5707964
 scale = Vector2(2.28311, 1.1478748)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall35" type="Sprite2D" parent="."]
+[node name="Wall35" type="Sprite2D" parent="Parede"]
 position = Vector2(413, 515)
 rotation = 1.5707964
 scale = Vector2(2.28311, 1.1478748)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall22" type="Sprite2D" parent="."]
+[node name="Wall22" type="Sprite2D" parent="Parede"]
 position = Vector2(293.625, 473)
 scale = Vector2(4.407608, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall23" type="Sprite2D" parent="."]
+[node name="Wall23" type="Sprite2D" parent="Parede"]
 position = Vector2(18.000002, 474)
 scale = Vector2(4.326087, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall26" type="Sprite2D" parent="."]
+[node name="Wall26" type="Sprite2D" parent="Parede"]
 position = Vector2(552, 584)
 rotation = 1.5707964
 scale = Vector2(2.28311, 1.1478748)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall25" type="Sprite2D" parent="."]
+[node name="Wall25" type="Sprite2D" parent="Parede"]
 position = Vector2(572, 520)
 scale = Vector2(2.4565215, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall36" type="Sprite2D" parent="."]
+[node name="Wall36" type="Sprite2D" parent="Parede"]
 position = Vector2(419, 520)
 scale = Vector2(1.0543478, 1)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall31" type="Sprite2D" parent="."]
+[node name="Wall31" type="Sprite2D" parent="Parede"]
 position = Vector2(623.00006, 482)
 rotation = 1.5707964
 scale = Vector2(2.3348045, 1.1313202)
 texture = ExtResource("9_vhf5j")
 
-[node name="Pila3" type="Sprite2D" parent="."]
+[node name="Pila3" type="Sprite2D" parent="Parede"]
 position = Vector2(1101.75, 569.875)
 scale = Vector2(3.96875, 3.6171877)
 texture = ExtResource("11_xepik")
 
-[node name="Vase" type="Sprite2D" parent="."]
+[node name="Vase" type="Sprite2D" parent="Parede"]
 position = Vector2(1158, 657)
 scale = Vector2(2.84375, 1.9765625)
 texture = ExtResource("13_wo8nk")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Parede"]
 position = Vector2(678, 587.25)
 scale = Vector2(5.250003, 3.6406252)
 sprite_frames = SubResource("SpriteFrames_773te")
 animation = &"fogueira"
 autoplay = "fogueira"
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Parede"]
 position = Vector2(1121, 121)
 scale = Vector2(4.3750033, 2.8515654)
 sprite_frames = SubResource("SpriteFrames_773te")
 animation = &"fogueira"
 autoplay = "fogueira"
 
-[node name="Wall32" type="Sprite2D" parent="."]
+[node name="Wall32" type="Sprite2D" parent="Parede"]
 position = Vector2(739.19037, 399.13712)
 rotation = 1.5707964
 scale = Vector2(1.9190047, 1.057653)
 texture = ExtResource("9_vhf5j")
 
-[node name="Wall33" type="Sprite2D" parent="."]
+[node name="Wall33" type="Sprite2D" parent="Parede"]
 position = Vector2(739.19025, 303.76746)
 rotation = 1.5707964
 scale = Vector2(2.2942379, 1.0576627)
 texture = ExtResource("9_vhf5j")
 
-[node name="Butao7" type="Sprite2D" parent="."]
-position = Vector2(813.99994, 69)
-scale = Vector2(1.28125, 1.2968746)
+[node name="Butao7" type="Sprite2D" parent="Parede"]
+position = Vector2(818.00006, 69)
+scale = Vector2(2.6875, 1.2968746)
 texture = ExtResource("12_yl3xy")
 
-[node name="Butao8" type="Sprite2D" parent="."]
-position = Vector2(925.00006, 70)
-scale = Vector2(1.28125, 1.2968746)
+[node name="Butao8" type="Sprite2D" parent="Parede"]
+position = Vector2(927.50006, 70)
+scale = Vector2(2.65625, 1.2968746)
 texture = ExtResource("12_yl3xy")
 
-[node name="Butao9" type="Sprite2D" parent="."]
-position = Vector2(1071, 69)
-scale = Vector2(1.28125, 1.2968746)
+[node name="Butao9" type="Sprite2D" parent="Parede"]
+position = Vector2(1070, 69)
+scale = Vector2(2.6875005, 1.2968746)
 texture = ExtResource("12_yl3xy")
 
-[node name="Butao10" type="Sprite2D" parent="."]
+[node name="Butao10" type="Sprite2D" parent="Parede"]
 position = Vector2(1069.5, 213.75)
-scale = Vector2(1.28125, 1.2968746)
+scale = Vector2(2.5312502, 1.2968746)
 texture = ExtResource("12_yl3xy")
 
-[node name="Butao11" type="Sprite2D" parent="."]
+[node name="Butao11" type="Sprite2D" parent="Parede"]
 position = Vector2(1071.0001, 377)
 scale = Vector2(1.28125, 1.2968746)
 texture = ExtResource("12_yl3xy")
 
-[node name="Butao12" type="Sprite2D" parent="."]
-position = Vector2(933.0001, 379)
-scale = Vector2(1.28125, 1.2968746)
+[node name="Butao12" type="Sprite2D" parent="Parede"]
+position = Vector2(933.5, 379)
+scale = Vector2(1.9062498, 1.2968746)
 texture = ExtResource("12_yl3xy")
 
-[node name="Butao13" type="Sprite2D" parent="."]
+[node name="Butao13" type="Sprite2D" parent="Parede"]
 position = Vector2(804, 378.00003)
 scale = Vector2(1.28125, 1.2968746)
 texture = ExtResource("12_yl3xy")
@@ -1620,7 +1623,7 @@ texture = ExtResource("12_yl3xy")
 [node name="Pergunta1" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pergunta1"]
-position = Vector2(134, 220)
+position = Vector2(134, 233.5)
 shape = SubResource("RectangleShape2D_p0lct")
 
 [node name="Timer1" type="Timer" parent="Pergunta1"]
@@ -1628,24 +1631,28 @@ one_shot = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pergunta1"]
 visible = false
-position = Vector2(101.25, 50.5)
-scale = Vector2(3.0454545, 1.6964285)
+position = Vector2(352.00003, 160)
+rotation = 6.2831855
+scale = Vector2(3.9147024, 1.9602833)
 sprite_frames = SubResource("SpriteFrames_5pxke")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Pergunta1"]
 visible = false
-position = Vector2(309.00003, 160.00003)
+position = Vector2(431.99997, 251)
 scale = Vector2(1.1926491, 0.7583705)
 sprite_frames = SubResource("SpriteFrames_c1ai6")
 
 [node name="Label" type="Label" parent="Pergunta1"]
 visible = false
-offset_left = 69.0
-offset_top = 25.000002
-offset_right = 197.0
-offset_bottom = 85.0
+offset_left = 263.0
+offset_top = 118.0
+offset_right = 448.0
+offset_bottom = 178.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "PlaceHolder"
+theme_override_fonts/font = ExtResource("18_msl6a")
+theme_override_font_sizes/font_size = 20
+text = "Qual palavra é 
+sinônimo de \"abrir\"?"
 
 [node name="Timeracabar1" type="Timer" parent="Pergunta1"]
 wait_time = 5.0
@@ -1656,6 +1663,7 @@ position = Vector2(101.25, 50.5)
 scale = Vector2(3.0454545, 1.6964285)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pergunta2"]
+visible = false
 position = Vector2(19.619396, 249.41579)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_pq2lp")
@@ -1663,8 +1671,8 @@ disabled = true
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Pergunta2"]
 visible = false
-position = Vector2(77.082085, 240.8)
-scale = Vector2(1.2242194, 0.86926705)
+position = Vector2(108.60449, 124.6737)
+scale = Vector2(2.3592997, 1.318844)
 sprite_frames = SubResource("SpriteFrames_5pxke")
 
 [node name="Timer4" type="Timer" parent="Pergunta2"]
@@ -1672,13 +1680,15 @@ one_shot = true
 
 [node name="Label2" type="Label" parent="Pergunta2"]
 visible = false
-offset_left = 63.94776
-offset_top = 236.08421
-offset_right = 157.94775
-offset_bottom = 259.08423
+offset_left = 52.126865
+offset_top = 96.96842
+offset_right = 164.12686
+offset_bottom = 141.96841
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 9
-text = "PlaceHolder"
+theme_override_fonts/font = ExtResource("18_msl6a")
+theme_override_font_sizes/font_size = 15
+text = "Qual o sinônimo
+de \"amar\"?"
 
 [node name="Timeracabar2" type="Timer" parent="Pergunta2"]
 wait_time = 5.0
@@ -1686,7 +1696,7 @@ one_shot = true
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Pergunta2"]
 visible = false
-position = Vector2(101.70896, 200.71579)
+position = Vector2(156.54478, 177.72632)
 scale = Vector2(0.545534, 0.5898026)
 sprite_frames = SubResource("SpriteFrames_hwx0j")
 
@@ -1702,26 +1712,100 @@ one_shot = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pergunta3"]
 visible = false
-position = Vector2(631, 76)
+position = Vector2(507, 379)
 scale = Vector2(1.8737373, 1)
 sprite_frames = SubResource("SpriteFrames_ujhqd")
-
-[node name="Label" type="Label" parent="Pergunta3"]
-visible = false
-offset_left = 613.0
-offset_top = 67.0
-offset_right = 680.0
-offset_bottom = 90.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "PlaceHolder"
 
 [node name="Timeracabar3" type="Timer" parent="Pergunta3"]
 autostart = true
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Pergunta3"]
 visible = false
-position = Vector2(644, 76)
+position = Vector2(385.00003, 305)
+scale = Vector2(5.5864196, 2.0172415)
 sprite_frames = SubResource("SpriteFrames_qtw11")
+
+[node name="Label" type="Label" parent="Pergunta3"]
+visible = false
+offset_left = 266.0
+offset_top = 273.0
+offset_right = 366.0
+offset_bottom = 298.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_msl6a")
+theme_override_font_sizes/font_size = 18
+text = "Qual o antônimo da palavra
+ \"bonito\"?"
+
+[node name="Label7" type="Label" parent="Pergunta3"]
+offset_left = 784.0
+offset_top = 365.0
+offset_right = 824.0
+offset_bottom = 395.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_msl6a")
+theme_override_font_sizes/font_size = 20
+text = "Belo"
+
+[node name="Label8" type="Label" parent="Pergunta3"]
+offset_left = 908.0
+offset_top = 365.0
+offset_right = 961.0
+offset_bottom = 395.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_msl6a")
+theme_override_font_sizes/font_size = 20
+text = "Lindo"
+
+[node name="Label9" type="Label" parent="Pergunta3"]
+offset_left = 774.0
+offset_top = 52.0
+offset_right = 856.0
+offset_bottom = 82.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_msl6a")
+theme_override_font_sizes/font_size = 20
+text = "Cheiroso"
+
+[node name="Label10" type="Label" parent="Pergunta3"]
+offset_left = 884.0
+offset_top = 54.0
+offset_right = 968.0
+offset_bottom = 84.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_msl6a")
+theme_override_font_sizes/font_size = 20
+text = "Esquisito"
+
+[node name="Label11" type="Label" parent="Pergunta3"]
+offset_left = 1028.0
+offset_top = 55.0
+offset_right = 1114.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_msl6a")
+theme_override_font_sizes/font_size = 20
+text = "Diferente"
+
+[node name="Label12" type="Label" parent="Pergunta3"]
+offset_left = 1028.0
+offset_top = 197.0
+offset_right = 1114.0
+offset_bottom = 227.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_msl6a")
+theme_override_font_sizes/font_size = 20
+text = "Estranho"
+
+[node name="Label13" type="Label" parent="Pergunta3"]
+offset_left = 1053.0
+offset_top = 360.0
+offset_right = 1092.0
+offset_bottom = 390.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_msl6a")
+theme_override_font_sizes/font_size = 20
+text = "Feio"
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
 position = Vector2(71, 354)
@@ -1758,6 +1842,80 @@ position = Vector2(673, 346)
 rotation = 1.5707964
 sprite_frames = SubResource("SpriteFrames_msl6a")
 
+[node name="Label" type="Label" parent="."]
+offset_left = 14.0
+offset_top = 94.0
+offset_right = 85.0
+offset_bottom = 124.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_msl6a")
+theme_override_font_sizes/font_size = 20
+text = "Colocar"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 87.0
+offset_top = 53.0
+offset_right = 189.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_msl6a")
+theme_override_font_sizes/font_size = 18
+text = "Destrancar"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 176.0
+offset_top = 98.0
+offset_right = 232.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_msl6a")
+theme_override_font_sizes/font_size = 18
+text = "Fechar"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 309.0
+offset_top = 589.0
+offset_right = 380.0
+offset_bottom = 619.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_msl6a")
+theme_override_font_sizes/font_size = 20
+text = "Gostar"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 168.0
+offset_top = 587.0
+offset_right = 239.0
+offset_bottom = 617.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_msl6a")
+theme_override_font_sizes/font_size = 20
+text = "Odiar"
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 49.0
+offset_top = 585.0
+offset_right = 120.0
+offset_bottom = 615.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_msl6a")
+theme_override_font_sizes/font_size = 20
+text = "Deixar"
+
+[node name="LabelTimer" type="Label" parent="."]
+offset_left = 560.0
+offset_top = 23.0
+offset_right = 600.0
+offset_bottom = 46.0
+
+[node name="TimerParaAcabar" type="Timer" parent="."]
+wait_time = 180.0
+one_shot = true
+autostart = true
+
+[node name="TimerParaDiminuir" type="Timer" parent="."]
+autostart = true
+
 [connection signal="body_entered" from="ChavePrateada" to="." method="_on_chave_prateada_body_entered"]
 [connection signal="body_entered" from="ChaveDourada" to="." method="_on_chave_dourada_body_entered"]
 [connection signal="body_entered" from="flechas" to="." method="_on_flechas_body_entered"]
@@ -1776,9 +1934,11 @@ sprite_frames = SubResource("SpriteFrames_msl6a")
 [connection signal="timeout" from="Pergunta1/Timer1" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Pergunta1/Timeracabar1" to="." method="_on_timeracabar_1_timeout"]
 [connection signal="body_entered" from="Pergunta2" to="." method="_on_pergunta_2_body_entered"]
-[connection signal="timeout" from="Pergunta2/Timer4" to="." method="_on_timer_4_timeout"]
 [connection signal="timeout" from="Pergunta2/Timer4" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Pergunta2/Timer4" to="." method="_on_timer_4_timeout"]
 [connection signal="timeout" from="Pergunta2/Timeracabar2" to="." method="_on_timeracabar_2_timeout"]
 [connection signal="body_entered" from="Pergunta3" to="." method="_on_pergunta_3_body_entered"]
 [connection signal="timeout" from="Pergunta3/Timer6" to="." method="_on_timer_6_timeout"]
 [connection signal="timeout" from="Pergunta3/Timeracabar3" to="." method="_on_timeracabar_3_timeout"]
+[connection signal="timeout" from="TimerParaAcabar" to="." method="_on_timer_para_acabar_timeout"]
+[connection signal="timeout" from="TimerParaDiminuir" to="." method="_on_timer_para_diminuir_timeout"]

@@ -1,11 +1,14 @@
-[gd_scene load_steps=28 format=3 uid="uid://boxlec6xmkkuu"]
+[gd_scene load_steps=31 format=3 uid="uid://boxlec6xmkkuu"]
 
-[ext_resource type="Script" uid="uid://bep8buge7ic1k" path="res://fim.gd" id="1_1i7i0"]
+[ext_resource type="Script" path="res://fim.gd" id="1_1i7i0"]
 [ext_resource type="Texture2D" uid="uid://bw5o54x77xdag" path="res://Assets/Pixel Ancient Egypt/Mapa inicial.png" id="2_alv5u"]
 [ext_resource type="Texture2D" uid="uid://bwsfdo6jdfhkj" path="res://Assets Cle├│patra/Chat BalloonsBubbles - Pixel Art/Chat-1.png" id="3_alv5u"]
 [ext_resource type="Texture2D" uid="uid://cmkdepvxxufi2" path="res://Assets/Pixel Ancient Egypt/Back.png" id="3_f8j1y"]
 [ext_resource type="PackedScene" uid="uid://d3jkc0pqmw4x0" path="res://Cenas/jose.tscn" id="5_84nx8"]
 [ext_resource type="PackedScene" uid="uid://di2y0wbeuqb53" path="res://Cenas/carol.tscn" id="6_7w1x0"]
+[ext_resource type="FontFile" uid="uid://c5g13loq0foeb" path="res://Assets Cle├│patra/Fontes/Font_Display/static/PlayfairDisplay-Medium.ttf" id="6_s0r4d"]
+[ext_resource type="Texture2D" uid="uid://che2fm6refph" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/arvre.png" id="7_7w1x0"]
+[ext_resource type="Texture2D" uid="uid://btu245pahvriy" path="res://fundos/preta.jpg" id="9_d2yqj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n00j1"]
 atlas = ExtResource("3_alv5u")
@@ -31,24 +34,24 @@ a = Vector2(945, -394.375)
 b = Vector2(944, 253.625)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_84nx8"]
-a = Vector2(44, 249.625)
-b = Vector2(943, 250.625)
+a = Vector2(-96, 249.625)
+b = Vector2(1051, 252.625)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_7w1x0"]
-a = Vector2(943, -393.375)
-b = Vector2(44, -394.375)
+a = Vector2(1059, -393.375)
+b = Vector2(-98, -393.375)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_s0r4d"]
-a = Vector2(230, 3.625)
+a = Vector2(244, 3)
 b = Vector2(233, 58.625)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_d2yqj"]
-a = Vector2(640, 59.625)
+a = Vector2(614, 58)
 b = Vector2(761, 56.625)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ixce0"]
 a = Vector2(233, 58.625)
-b = Vector2(351, 58.625)
+b = Vector2(387, 59)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_qb71m"]
 a = Vector2(762, 2.625)
@@ -59,8 +62,8 @@ a = Vector2(741, 2.625)
 b = Vector2(736, -214.375)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_yk4uc"]
-a = Vector2(760, 3.625)
-b = Vector2(744, 2.625)
+a = Vector2(799, 8.625)
+b = Vector2(824, 5.625)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_l6r8y"]
 a = Vector2(249, 2.625)
@@ -68,11 +71,11 @@ b = Vector2(270, -216.375)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_eexj3"]
 a = Vector2(495, -378.375)
-b = Vector2(272, -219.375)
+b = Vector2(186, -211.375)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ut3wo"]
 a = Vector2(499, -381.375)
-b = Vector2(734, -217.375)
+b = Vector2(792, -211.375)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xi005"]
 radius = 21.000004
@@ -91,18 +94,23 @@ height = 85.25
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_hwm1q"]
 a = Vector2(350, -64.375)
-b = Vector2(355, 63.625)
+b = Vector2(352, 60)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_tbfwu"]
-a = Vector2(350, -63.375)
-b = Vector2(445, -64)
+a = Vector2(342, -66)
+b = Vector2(458, -66)
 
 [node name="Fim" type="Node"]
 script = ExtResource("1_1i7i0")
 
-[node name="MapaInicial" type="Sprite2D" parent="."]
-position = Vector2(588, 324)
-scale = Vector2(0.353125, 0.252441)
+[node name="Arvre5" type="Sprite2D" parent="."]
+position = Vector2(1038, 357)
+scale = Vector2(0.3395722, 0.29732314)
+texture = ExtResource("7_7w1x0")
+
+[node name="MapaInicial2" type="Sprite2D" parent="."]
+position = Vector2(577.5, 324.99997)
+scale = Vector2(0.4503907, 0.252441)
 texture = ExtResource("2_alv5u")
 
 [node name="Back" type="Sprite2D" parent="."]
@@ -112,9 +120,14 @@ position = Vector2(580.99994, 302)
 scale = Vector2(1.7061437, 1.8012891)
 texture = ExtResource("3_f8j1y")
 
+[node name="Arvre4" type="Sprite2D" parent="."]
+position = Vector2(304, 79.000046)
+scale = Vector2(0.32085577, 0.23183568)
+texture = ExtResource("7_7w1x0")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(448.00003, 150)
-scale = Vector2(4.160117, 3.8103447)
+position = Vector2(432, 153)
+scale = Vector2(5.7533264, 3.8103447)
 sprite_frames = SubResource("SpriteFrames_f8j1y")
 
 [node name="Label4" type="Label" parent="."]
@@ -125,44 +138,60 @@ offset_bottom = 43.0
 text = "Aperte P para pular"
 
 [node name="Label5" type="Label" parent="."]
-offset_left = 379.0
-offset_top = 77.0
-offset_right = 530.0
-offset_bottom = 100.0
+offset_left = 325.0
+offset_top = 82.0
+offset_right = 550.0
+offset_bottom = 193.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Place holder 1"
+theme_override_fonts/font = ExtResource("6_s0r4d")
+theme_override_font_sizes/font_size = 25
+text = "Vocês conseguiram!
+Da pirâmide, saíram
+com o tesouro."
 
 [node name="Label6" type="Label" parent="."]
 visible = false
-offset_left = 379.0
-offset_top = 77.0
-offset_right = 530.0
-offset_bottom = 100.0
+offset_left = 321.0
+offset_top = 69.0
+offset_right = 564.0
+offset_bottom = 221.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Place holder 2"
+theme_override_fonts/font = ExtResource("6_s0r4d")
+theme_override_font_sizes/font_size = 20
+text = "Parabenizo vocês.
+Se provaram capazes
+de enfrentar os desafios 
+criados  pela antiga Rainha."
 
 [node name="Label7" type="Label" parent="."]
 visible = false
-offset_left = 379.0
-offset_top = 77.0
-offset_right = 530.0
-offset_bottom = 100.0
+offset_left = 300.0
+offset_top = 79.0
+offset_right = 612.0
+offset_bottom = 190.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Place holder 3"
+theme_override_fonts/font = ExtResource("6_s0r4d")
+theme_override_font_sizes/font_size = 25
+text = "Agora levem a gema 
+para o museu.
+Parabéns pela conquista."
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.001
+wait_time = 0.05
 one_shot = true
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2(94, 395.375)
+collision_mask = 2
 mass = 10000.0
 gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-136, -8.375)
 shape = SubResource("SegmentShape2D_f8j1y")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(114, 1.625)
 shape = SubResource("SegmentShape2D_sjdxe")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D"]
@@ -172,24 +201,30 @@ shape = SubResource("SegmentShape2D_84nx8")
 shape = SubResource("SegmentShape2D_7w1x0")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-84, -0.375)
 shape = SubResource("SegmentShape2D_s0r4d")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(57, 0.625)
 shape = SubResource("SegmentShape2D_d2yqj")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-88, -1.375)
 shape = SubResource("SegmentShape2D_ixce0")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(64, 1.625)
 shape = SubResource("SegmentShape2D_qb71m")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(57, 2.625)
 shape = SubResource("SegmentShape2D_i1hh4")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource("SegmentShape2D_yk4uc")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-79, 4.625)
 shape = SubResource("SegmentShape2D_l6r8y")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="RigidBody2D"]
@@ -199,55 +234,56 @@ shape = SubResource("SegmentShape2D_eexj3")
 shape = SubResource("SegmentShape2D_ut3wo")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(150, -290.375)
+position = Vector2(46, -290.375)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xi005")
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(132, 49.625)
+position = Vector2(149, 82.625)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_01r8x")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(314, 143.625)
+position = Vector2(248, 147.625)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_565ns")
 
 [node name="CollisionShape2D22" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(709, 108.625)
+position = Vector2(756, 110.625)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_565ns")
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(851, -304.375)
+position = Vector2(939, -293.375)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_565ns")
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(317, 207.625)
+position = Vector2(251, 210.625)
 shape = SubResource("CapsuleShape2D_v06rc")
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(142, 110.625)
+position = Vector2(159, 143.625)
 shape = SubResource("CapsuleShape2D_v06rc")
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(150, -224.375)
+position = Vector2(46, -224.375)
 shape = SubResource("CapsuleShape2D_v06rc")
 
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(710, 168.625)
+position = Vector2(757, 170.625)
 shape = SubResource("CapsuleShape2D_v06rc")
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(852, -242.375)
+position = Vector2(940, -231.375)
 shape = SubResource("CapsuleShape2D_v06rc")
 
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-53, -4.375)
 shape = SubResource("SegmentShape2D_hwm1q")
 
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(287, -3.375)
+position = Vector2(324, -2.375)
 shape = SubResource("SegmentShape2D_hwm1q")
 
 [node name="CollisionShape2D29" type="CollisionShape2D" parent="RigidBody2D"]
@@ -259,6 +295,7 @@ position = Vector2(86, -72.375)
 shape = SubResource("SegmentShape2D_hwm1q")
 
 [node name="CollisionShape2D26" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-29, 3.625)
 shape = SubResource("SegmentShape2D_tbfwu")
 
 [node name="CollisionShape2D28" type="CollisionShape2D" parent="RigidBody2D"]
@@ -269,9 +306,31 @@ shape = SubResource("SegmentShape2D_tbfwu")
 position = Vector2(215, 0.625)
 shape = SubResource("SegmentShape2D_tbfwu")
 
-[node name="Jose" parent="." instance=ExtResource("5_84nx8")]
-position = Vector2(286, 271)
+[node name="carol" parent="." instance=ExtResource("6_7w1x0")]
+position = Vector2(326, 304)
 
-[node name="carol" parent="Jose" instance=ExtResource("6_7w1x0")]
+[node name="Jose" parent="." instance=ExtResource("5_84nx8")]
+position = Vector2(190, 260)
+
+[node name="Arvre2" type="Sprite2D" parent="."]
+position = Vector2(250, 518)
+scale = Vector2(0.32085577, 0.23183568)
+texture = ExtResource("7_7w1x0")
+
+[node name="Arvre" type="Sprite2D" parent="."]
+position = Vector2(1085, 548)
+scale = Vector2(0.36898395, 0.29541108)
+texture = ExtResource("7_7w1x0")
+
+[node name="Arvre3" type="Sprite2D" parent="."]
+position = Vector2(75, 306)
+scale = Vector2(0.32085577, 0.23183568)
+texture = ExtResource("7_7w1x0")
+
+[node name="Preta" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.6745098)
+position = Vector2(575, 324.5)
+scale = Vector2(2.5777779, 2.1705685)
+texture = ExtResource("9_d2yqj")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

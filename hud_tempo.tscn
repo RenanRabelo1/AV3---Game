@@ -1,8 +1,15 @@
-[gd_scene format=3 uid="uid://wqwpq3042hjj"]
+[gd_scene load_steps=2 format=3 uid="uid://wqwpq3042hjj"]
+
+[ext_resource type="Texture2D" uid="uid://vws2jx4hkpd8" path="res://fundos/preta.jpg" id="1_sg8cs"]
 
 [node name="hudTempo" type="CanvasLayer"]
 offset = Vector2(0, -180)
 transform = Transform2D(1, 0, 0, 1, 0, -180)
+
+[node name="Preta" type="Sprite2D" parent="."]
+position = Vector2(922.125, 772.4375)
+scale = Vector2(0.61833334, 0.2637961)
+texture = ExtResource("1_sg8cs")
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 8
@@ -10,12 +17,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -140.0
-offset_top = -43.5
-offset_right = 140.0
-offset_bottom = 43.5
+offset_left = 217.25
+offset_top = 423.0
+offset_right = 497.25
+offset_bottom = 510.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
-text = "Tempo restante: 35
+text = "Tempo restante 35
 "
