@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://do0tml5m2xd4c"]
+[gd_scene load_steps=41 format=3 uid="uid://do0tml5m2xd4c"]
 
 [ext_resource type="Texture2D" uid="uid://bw5o54x77xdag" path="res://Assets/Pixel Ancient Egypt/Mapa inicial.png" id="1_74bqr"]
 [ext_resource type="Script" uid="uid://chh271dwc8t0f" path="res://Cenas/main.gd" id="1_ruij7"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bwsfdo6jdfhkj" path="res://Assets Cle├│patra/Chat BalloonsBubbles - Pixel Art/Chat-1.png" id="6_qns0q"]
 [ext_resource type="Texture2D" uid="uid://60lmk5mkvv2u" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Environment.png" id="7_n00j1"]
 [ext_resource type="FontFile" uid="uid://c5g13loq0foeb" path="res://Assets Cle├│patra/Fontes/Font_Display/static/PlayfairDisplay-Medium.ttf" id="8_btbr3"]
+[ext_resource type="AudioStream" uid="uid://nnafqdoopgwq" path="res://Assets Cle├│patra/Main2.mp3" id="10_jjrtw"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_qns0q"]
 a = Vector2(46, -390.375)
@@ -3417,6 +3418,11 @@ texture = ExtResource("4_x6di6")
 position = Vector2(280.5, 93.40626)
 scale = Vector2(0.30748662, 0.20423043)
 texture = ExtResource("4_x6di6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_jjrtw")
+volume_db = 24.0
+autoplay = true
 
 [connection signal="body_entered" from="AreaEsfingeTexto" to="." method="_on_area_esfinge_texto_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

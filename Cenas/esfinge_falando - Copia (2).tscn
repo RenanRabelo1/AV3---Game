@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cl2bv84kyovrl"]
 
 [ext_resource type="Script" uid="uid://bi8tceoa86mqo" path="res://Cenas/esfinge_falando___copia_(2).gd" id="1_imahg"]
-[ext_resource type="AudioStream" uid="uid://1s372kwn2r1l" path="res://Assets Cle├│patra/Cen├írios/monster-footstep-162883.mp3" id="1_ynijy"]
+[ext_resource type="AudioStream" uid="uid://dy5acuu0ref70" path="res://Assets Cle├│patra/Menu1.mp3" id="2_imahg"]
 [ext_resource type="Texture2D" uid="uid://donr5waw70s5d" path="res://Assets Cle├│patra/Cleopatra falando/pós-main 3.png" id="3_imahg"]
 [ext_resource type="Texture2D" uid="uid://bo2v3lueuoi2l" path="res://Assets Cle├│patra/Cleopatra falando/pós-main 2.png" id="4_rerdm"]
 [ext_resource type="Texture2D" uid="uid://dhw8yatxjcmiy" path="res://Assets Cle├│patra/Cleopatra falando/pós-main 1.png" id="5_1h8vq"]
@@ -12,8 +12,9 @@ script = ExtResource("1_imahg")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(573.5, 324.75)
 scale = Vector2(2.3225155, 1.7110817)
-stream = ExtResource("1_ynijy")
+stream = ExtResource("2_imahg")
 volume_db = 24.0
+autoplay = true
 
 [node name="Cena3" type="Sprite2D" parent="."]
 position = Vector2(575.5, 326.25)
