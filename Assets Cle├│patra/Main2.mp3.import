@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://nnafqdoopgwq"
+path="res://.godot/imported/Main2.mp3-755a71dfdd55a0b630d65f2aa3291e8d.mp3str"
+
+[deps]
+
+source_file="res://Assets Cle├│patra/Main2.mp3"
+dest_files=["res://.godot/imported/Main2.mp3-755a71dfdd55a0b630d65f2aa3291e8d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

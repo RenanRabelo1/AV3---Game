@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0dfw83vdcwvr"]
+[gd_scene load_steps=8 format=3 uid="uid://b0dfw83vdcwvr"]
 
 [ext_resource type="Script" uid="uid://pk8ran7qdtla" path="res://Cenas/esfinge_falando.gd" id="1_227tr"]
 [ext_resource type="AudioStream" uid="uid://1s372kwn2r1l" path="res://Assets Cle├│patra/Cen├írios/monster-footstep-162883.mp3" id="1_ynijy"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://e8dhyx2uayoq" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Screenshot 2025-11-07 at 18-57-19 Pixel Art Game Cutscene – Figma Make.png" id="3_k2km7"]
 [ext_resource type="Texture2D" uid="uid://bhn1802ves4kx" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/Screenshot 2025-11-07 at 18-57-10 Pixel Art Game Cutscene – Figma Make.png" id="4_xpkdt"]
 [ext_resource type="VideoStream" uid="uid://b5vx62p3r8pe3" path="res://Assets Cle├│patra/Cen├írios/Assets para enfeites/VideoBola.ogv" id="6_k2km7"]
+[ext_resource type="AudioStream" uid="uid://dy5acuu0ref70" path="res://Assets Cle├│patra/Menu1.mp3" id="7_xpkdt"]
 
 [node name="EsfingeFalando" type="CanvasLayer"]
 script = ExtResource("1_227tr")
@@ -44,6 +45,11 @@ offset_top = 2.0
 offset_right = 1158.0
 offset_bottom = 650.0
 stream = ExtResource("6_k2km7")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_xpkdt")
+volume_db = 8.78
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

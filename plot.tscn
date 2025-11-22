@@ -1,12 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://du24bt7igrwiv"]
+[gd_scene load_steps=18 format=3 uid="uid://du24bt7igrwiv"]
 
 [ext_resource type="Script" uid="uid://nursyr6c52l8" path="res://plot.gd" id="1_bhrig"]
 [ext_resource type="Texture2D" uid="uid://c7fm2cceitkh0" path="res://Assets Cle├│patra/Cen├írios/Tileset/MapaBoss.jpg" id="1_c2jwi"]
-[ext_resource type="Texture2D" uid="uid://btu245pahvriy" path="res://fundos/preta.jpg" id="2_bhrig"]
+[ext_resource type="Texture2D" uid="uid://vws2jx4hkpd8" path="res://fundos/preta.jpg" id="2_bhrig"]
 [ext_resource type="Texture2D" uid="uid://wv0aco6pit85" path="res://narrador-removebg-preview.png" id="3_lbukb"]
 [ext_resource type="Texture2D" uid="uid://jukolqsmrglo" path="res://fundos/branco.jpg" id="4_1oo2w"]
 [ext_resource type="Texture2D" uid="uid://ce2tsnj01ihbs" path="res://fundos/brancoarredondado.png" id="5_osdy5"]
 [ext_resource type="Texture2D" uid="uid://cyjv8vqyjkuyi" path="res://Assets Cle├│patra/Personagens/Monstros/Monstro 2 (m├║mia)/Mummy.png" id="7_lbukb"]
+[ext_resource type="AudioStream" uid="uid://wquo0e7ru834" path="res://Assets Cle├│patra/Boss6.mp3" id="8_1oo2w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fcef0"]
 atlas = ExtResource("7_lbukb")
@@ -154,3 +155,8 @@ sprite_frames = SubResource("SpriteFrames_1oo2w")
 animation = &"attack"
 autoplay = "idle"
 frame_progress = 0.114547245
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_1oo2w")
+volume_db = 24.0
+autoplay = true

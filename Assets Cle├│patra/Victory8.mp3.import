@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://j3ges5l0jpp1"
+path="res://.godot/imported/Victory8.mp3-116d850aee64d06dcab722a344587f7a.mp3str"
+
+[deps]
+
+source_file="res://Assets Cle├│patra/Victory8.mp3"
+dest_files=["res://.godot/imported/Victory8.mp3-116d850aee64d06dcab722a344587f7a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
